@@ -1,0 +1,118 @@
+/* ===========================================================================
+   Theme tokens.
+
+   The page is light. A handful of sections are built around full-bleed dark
+   media — a video, a canvas frame sequence, a photo that fills the viewport —
+   and dark text cannot sit on those, so they re-declare the same tokens with
+   the original dark values. Every rule in styles.css reads the tokens, so it
+   is correct in both scopes without knowing which one it is in.
+
+   Imported before styles.css.
+   =========================================================================== */
+
+:root {
+  /* --- ground & type ---------------------------------------------------- */
+  --bg: #ffffff;
+  --bg-elevated: #fbf8f4;
+  --fg: #1a1411; /* 18.2:1 on --bg. Off-black: pure #000 on pure #fff
+                             halates, and costs nothing to avoid. */
+  --fg-muted: #5c554f; /*  7.3:1 — body copy                       */
+  --fg-subtle: #6b645f; /*  5.8:1 — small print, marker labels      */
+  --fg-faint: #8d8884; /*  3.5:1 — ghost text only, never body      */
+
+  /* --- surfaces ---------------------------------------------------------
+     Alpha rather than flat greys, so a panel still picks up the photo or
+     video behind it. Warm-biased (38,24,14) to match the orange accent —
+     neutral grey reads cold against it.
+     The ladder is deliberately spaced: 1.06 / 1.15 / 1.25 / 1.39 vs --bg. */
+  --surface-faint: rgba(38, 24, 14, 0.03);
+  --surface-soft: rgba(38, 24, 14, 0.07);
+  --surface: rgba(38, 24, 14, 0.11);
+  --surface-strong: rgba(38, 24, 14, 0.16);
+  --track: rgba(38, 24, 14, 0.08);
+
+  /* --- lines & depth ----------------------------------------------------- */
+  --border: #d2ccc6; /* solid 1px card edge  */
+  --hairline: rgba(30, 20, 12, 0.46); /* .5px pill outline    */
+  --hairline-soft: rgba(30, 20, 12, 0.3);
+  --shadow: rgba(38, 28, 20, 0.12);
+  --scrim: rgba(252, 250, 248, 0.93); /* full-screen menu wash */
+
+  /* --- brand ------------------------------------------------------------
+     Identical in both scopes. Fills only — see --orange-text below. */
+  --orange: #f4783e;
+  --orange-soft: rgba(244, 120, 62, 0.23);
+  --orange-mid: #e76b35;
+  --orange-light: #ffa783;
+  --green: #2b6b22;
+  --green-soft: rgba(43, 107, 34, 0.23);
+
+  /* Brand orange as TEXT only. #f4783e is 2.76:1 on white — fine on black,
+     a readability failure on white. Same hue (19°) and saturation (0.89),
+     darkened to L=0.43, which is the first step that clears AA at 4.53:1.
+     Fills, glows and icons keep --orange; only glyphs use this. */
+  --orange-text: #cf4a0c;
+
+  /* Same idea one tier down: display-size orange glyphs only need AA-large
+     (3:1). L=0.55 gives 3.10:1 and keeps far more of the brand vibrancy than
+     --orange-text would at 130px. Also used for de-emphasised resting labels,
+     which matched ~3:1 against black in the original. */
+  --orange-display: #f36726;
+
+  /* --- misc -------------------------------------------------------------- */
+  --apple-base: #d4cec8; /* unfilled body of the loader apple */
+
+  /* .global-grid is a fixed near-black radial vignette. It reads as depth on
+     #0b0b0b and as a grey smudge on #ffffff, and there is no light equivalent
+     of it in the assets — so it is off in the light scope. Kept as a token
+     rather than deleted so a full-page dark scope still gets it back. */
+  --grid-display: none;
+}
+
+/* ---------------------------------------------------------------------------
+   Dark scope — the original values, unchanged.
+
+   `.is--on-dark` is toggled onto the two fixed overlays (.navbar, .markers) by
+   animations/adaptiveTheme.js as they pass over a dark section. The rest are
+   scoped by selector, so no component markup needs a theme class.
+
+   Same specificity as :root (0,1,0), so this block must stay *after* it.
+   --------------------------------------------------------------------------- */
+.is--on-dark,
+.loader,
+.vimeo-player,
+.delivered,
+.partners-sticky,
+.quality-sticky,
+.showreel,
+.flick-group__item,   /* NOT .flick-card — .flick-card__info is its SIBLING,
+                         not its child, so scoping the card misses the text */
+.design-swiper__slide,
+.goals-swiper-slide,
+.goals [data-accordion-status="active"] {
+  --bg: #0b0b0b;
+  --bg-elevated: #131313;
+  --fg: #ffffff;
+  --fg-muted: rgba(255, 255, 255, 0.6);
+  --fg-subtle: rgba(255, 255, 255, 0.5);
+  --fg-faint: rgba(255, 255, 255, 0.3);
+
+  --surface-faint: rgba(255, 255, 255, 0.03);
+  --surface-soft: rgba(255, 255, 255, 0.07);
+  --surface: rgba(255, 255, 255, 0.11);
+  --surface-strong: rgba(255, 255, 255, 0.12);
+  --track: rgba(217, 217, 217, 0.05);
+
+  --border: #363535;
+  --hairline: rgba(255, 255, 255, 0.3);
+  --hairline-soft: rgba(255, 255, 255, 0.2);
+  --shadow: rgba(0, 0, 0, 0.25);
+  --scrim: rgba(11, 11, 11, 0.87);
+
+  /* On black the brand orange is already 6.0:1 — no substitute needed. */
+  --orange-text: var(--orange);
+  --orange-display: var(--orange);
+
+  --apple-base: #333333;
+  --grid-display: block;
+}
