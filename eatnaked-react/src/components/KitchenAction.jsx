@@ -18,7 +18,7 @@ export default function KitchenAction() {
               </div>
 
               <p className="action-p is--portrait">
-                Actipro is made by Madhuri Refiners Pvt. Ltd., with over three decades in edible oil manufacturing —
+                Actipro is made by Madhuri Refiners Pvt. Ltd., with over three decades in edible oil manufacturing,
                 built as its own brand, with its own promise: upgrade everyday cooking into conscious living.
               </p>
 
@@ -257,7 +257,7 @@ export default function KitchenAction() {
             </div>
 
             <p className="action-p is--landscape">
-              Actipro is made by Madhuri Refiners Pvt. Ltd., with over three decades in edible oil manufacturing — built as its own
+              Actipro is made by Madhuri Refiners Pvt. Ltd., with over three decades in edible oil manufacturing, built as its own
               brand, with its own promise: upgrade everyday cooking into conscious living.
             </p>
           </div>

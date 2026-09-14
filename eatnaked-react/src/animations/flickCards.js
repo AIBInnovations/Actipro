@@ -1,7 +1,7 @@
 import { gsap, Draggable } from "./gsapSetup.js";
 
 /**
- * Port of the reference `FlickCards` — the desktop persona deck.
+ * Port of the reference `FlickCards` - the desktop persona deck.
  *
  * Each card's position comes from its signed distance to the active index, so
  * dragging can interpolate between the current and next layout continuously

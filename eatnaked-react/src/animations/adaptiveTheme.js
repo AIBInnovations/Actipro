@@ -4,7 +4,7 @@ import { gsap, ScrollTrigger } from "./gsapSetup.js";
  * The page is light, but a handful of sections are built around full-bleed
  * dark media (see styles/theme.css). `.navbar` and `.markers` are
  * `position: fixed`, so they float over whichever of the two happens to be
- * underneath them — a single colour would be unreadable over one or the other.
+ * underneath them - a single colour would be unreadable over one or the other.
  *
  * This module gives each overlay the dark token scope exactly while a dark
  * section is behind it, and takes it away again otherwise. It only ever writes
@@ -26,7 +26,7 @@ const OVERLAYS = [
     /**
      * The navbar is a bar, not a line: "spans the top edge of the viewport"
      * is really "spans the middle of the bar". Measuring it also keeps the
-     * line off zero, which the hero needs — see the seeding note in `init`.
+     * line off zero, which the hero needs - see the seeding note in `init`.
      */
     line: (el) => {
       const inner = el.querySelector(".navbar-container") || el;
@@ -47,20 +47,20 @@ const OVERLAYS = [
 /**
  * The dark-media sections, in document order.
  *
- * `.partners` and `.quality` are `position: sticky` children — the trigger has
+ * `.partners` and `.quality` are `position: sticky` children - the trigger has
  * to be the outer wrapper (400vh / 200vh), because that is what occupies the
  * scroll range. A top-stuck child's top and bottom coincide with its wrapper's
  * at both ends of that range, so the wrapper's geometry is exactly the span
  * over which the dark scene is on screen.
  *
  * `.loader` is deliberately absent. It is `position: fixed` and covers the
- * whole viewport, so it has no scroll range to trigger on — but it is only up
+ * whole viewport, so it has no scroll range to trigger on - but it is only up
  * at scroll 0, where `.hero` is behind both overlays anyway, so the state it
  * needs is the state it already gets.
  */
 const DARK_SECTIONS = [
   /**
-   * `.hero` is NOT here. It used to be — the showreel is shot against black —
+   * `.hero` is NOT here. It used to be - the showreel is shot against black -
    * but the hero is a light section now: `heroVideoKey` keys the black out so
    * the tray floats on white. The overlays must stay dark over it.
    */
@@ -74,7 +74,7 @@ const DARK_SECTIONS = [
      * `.showreel` is an empty 100vh slot until `flipVideoAnimation` lands the
      * video in it, which it finishes at the showreel's `top 10%`. Until then
      * the middle of the viewport is still the light `.action` behind it, so
-     * the markers must not switch at the slot's own top-centre crossing —
+     * the markers must not switch at the slot's own top-centre crossing -
      * 40vh too early. The navbar's line sits below 10% of the viewport, so it
      * needs no such adjustment.
      */
@@ -142,7 +142,7 @@ export class AdaptiveTheme {
             // its own first refresh, so seed from the trigger rather than wait
             // for a callback. This is the page-load state: the hero is behind
             // both overlays at scroll 0. (It is also why neither line above is
-            // ever 0 — ScrollTrigger counts progress of exactly 0 as inactive,
+            // ever 0 - ScrollTrigger counts progress of exactly 0 as inactive,
             // so a section starting at the very top of the document would
             // otherwise read as "not there" until the first pixel of scroll.)
             sync(trigger);

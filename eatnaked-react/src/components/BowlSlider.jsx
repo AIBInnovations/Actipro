@@ -14,16 +14,23 @@ export default function BowlSlider() {
               <div className="bowl-header__tag">What's actually inside</div>
               <div className="bowl-header__titles">
                 <h2 className="bowl-header__title is--active" data-custom-slider-title="">
-                  Refined Corn Oil — High Absorbent Refining Technology
+                  Refined Sunflower Oil with Advanced Dewaxing Technology
                 </h2>
                 <h2 className="bowl-header__title" data-custom-slider-title="">
-                  Refined Rice Bran Oil — Smart Fry Technology
+                  Refined Corn Oil with High Absorbent Refining Technology
+                </h2>
+                <h2 className="bowl-header__title" data-custom-slider-title="">
+                  Refined Rice Bran Oil with Smart Fry Technology
                 </h2>
               </div>
             </div>
 
             <div className="bowl-reference">
               <div className="bowl-reference__image is--active" data-custom-slider-image="">
+                <img src="/assets/img/pack-sunflower-scene.webp" alt="" loading="lazy" />
+              </div>
+
+              <div className="bowl-reference__image" data-custom-slider-image="">
                 <img src="/assets/img/pack-corn-scene.webp" alt="" loading="lazy" />
               </div>
 
@@ -178,6 +185,27 @@ export default function BowlSlider() {
               <div className="bowl-indicators__left-inner is--active" data-custom-slider-indicator="left">
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
+                    <img src="/assets/img/ing-sunflower.webp" alt="" />
+                  </div>
+                  <span className="bowl-indicators__tag-text">Low Wax</span>
+                </div>
+                <div className="bowl-indicators__tag">
+                  <div className="bowl-indicators__tag-img">
+                    <img src="/assets/img/ing-sunflower.webp" alt="" />
+                  </div>
+                  <span className="bowl-indicators__tag-text">Cryo Filtered</span>
+                </div>
+                <div className="bowl-indicators__tag">
+                  <div className="bowl-indicators__tag-img">
+                    <img src="/assets/img/tag-vitamin-e.webp" alt="" />
+                  </div>
+                  <span className="bowl-indicators__tag-text">Vitamin E</span>
+                </div>
+              </div>
+
+              <div className="bowl-indicators__left-inner" data-custom-slider-indicator="left">
+                <div className="bowl-indicators__tag">
+                  <div className="bowl-indicators__tag-img">
                     <img src="/assets/img/tag-vitamin-e.webp" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Vitamin E</span>
@@ -244,6 +272,27 @@ export default function BowlSlider() {
               </div>
 
               <div className="bowl-indicators__right-inner is--active" data-custom-slider-indicator="right">
+                <div className="bowl-indicators__tag">
+                  <div className="bowl-indicators__tag-img">
+                    <img src="/assets/img/tag-mild-taste.webp" alt="" />
+                  </div>
+                  <span className="bowl-indicators__tag-text">Light Texture</span>
+                </div>
+                <div className="bowl-indicators__tag">
+                  <div className="bowl-indicators__tag-img">
+                    <img src="/assets/img/tag-vitamin-a-d.webp" alt="" />
+                  </div>
+                  <span className="bowl-indicators__tag-text">Vitamin A &amp; D</span>
+                </div>
+                <div className="bowl-indicators__tag">
+                  <div className="bowl-indicators__tag-img">
+                    <img src="/assets/img/tag-heat-stable.webp" alt="" />
+                  </div>
+                  <span className="bowl-indicators__tag-text">Heat Stable</span>
+                </div>
+              </div>
+
+              <div className="bowl-indicators__right-inner" data-custom-slider-indicator="right">
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
                     <img src="/assets/img/tag-less-absorbed.webp" alt="" />

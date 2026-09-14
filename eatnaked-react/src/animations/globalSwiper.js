@@ -6,7 +6,7 @@ import { Navigation, Pagination, Controller, EffectFade } from "swiper/modules";
  *
  * Reads every `[data-swiper-class]` element and builds a Swiper whose wrapper,
  * slide, pagination and navigation class names are namespaced to that section
- * — styles.css targets those names directly, so no Swiper stylesheet is used.
+ * - styles.css targets those names directly, so no Swiper stylesheet is used.
  * Landscape is disabled for both homepage sliders; they exist only in portrait,
  * where the desktop accordion and flick deck are hidden.
  */

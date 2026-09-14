@@ -1,5 +1,5 @@
 /**
- * Port of the reference `CustomSlider` — the ingredient bowl.
+ * Port of the reference `CustomSlider` - the ingredient bowl.
  *
  * State lives entirely in class names so the 1s `var(--ease)` transitions in
  * styles.css do the animating: the product swings out the way the pressed
@@ -57,7 +57,7 @@ export class CustomSlider {
       });
 
       // Park the incoming slide off-stage with transitions off, flush the
-      // style, then let it animate in — otherwise it would jump straight to
+      // style, then let it animate in - otherwise it would jump straight to
       // its resting position with nothing to transition from.
       incoming.classList.add(park);
       void incoming.offsetWidth;

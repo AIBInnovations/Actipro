@@ -1,6 +1,6 @@
 /**
  * Preload screen. The Actipro logo fills with colour from the bottom as the partner
- * frame sequence decodes — see `animations/preloader.js`.
+ * frame sequence decodes - see `animations/preloader.js`.
  *
  * Markup mirrors the reference DOM so styles.css applies unchanged.
  */

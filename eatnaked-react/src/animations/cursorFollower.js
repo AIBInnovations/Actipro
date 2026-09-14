@@ -1,5 +1,5 @@
 /**
- * Port of the reference `CursorFollower` — the "Drag ⟷" label that tracks the
+ * Port of the reference `CursorFollower` - the "Drag ⟷" label that tracks the
  * pointer over the fact track and tilts with horizontal velocity.
  */
 export class CursorFollower {

@@ -22,7 +22,7 @@ import { initHomepage } from "./animations/homepage.js";
  *
  * Sections render as plain markup; every animation is imperative and runs
  * from the single mount effect below, which is this app's DOMContentLoaded.
- * Nothing here re-renders on scroll — GSAP writes to the DOM directly.
+ * Nothing here re-renders on scroll - GSAP writes to the DOM directly.
  *
  * The `overflow-container` / sticky-wrapper alternation is structural: the
  * Partners and Quality scenes need tall scroll ranges around a sticky child,

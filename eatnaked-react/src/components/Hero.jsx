@@ -127,7 +127,7 @@ export default function Hero() {
       </div>
 
       {/* Product loop on white, matching the page ground. It ping-pongs in the
-          file itself — forward then reversed — so `loop` alone is seamless. */}
+          file itself - forward then reversed - so `loop` alone is seamless. */}
       <div className="hero-video__bg">
         <video autoPlay muted loop fetchPriority="high" playsInline webkit-playsinline>
           <source

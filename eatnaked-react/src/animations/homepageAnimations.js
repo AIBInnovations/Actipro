@@ -1,7 +1,7 @@
 import { gsap, ScrollTrigger, Flip } from "./gsapSetup.js";
 
 /**
- * Port of the reference `HomepageAnimations` — every scroll-driven beat that
+ * Port of the reference `HomepageAnimations` - every scroll-driven beat that
  * isn't owned by a canvas sequence.
  *
  * Orientation-specific work goes through `gsap.matchMedia`, so rotating a
@@ -139,13 +139,13 @@ export class HomepageAnimations {
          * tweened: `.markers` carries `is--on-dark` while a dark section is
          * behind it (see adaptiveTheme.js), so the same token name resolves to
          * two different values depending on where the page is. Hence the
-         * function-based values below — GSAP calls them when the tween starts,
+         * function-based values below - GSAP calls them when the tween starts,
          * whereas a value read once at setup would be frozen in whichever
          * scope happened to be current then.
          */
         const token = (element, name, fallback) => getComputedStyle(element).getPropertyValue(name).trim() || fallback;
 
-        // `--fg-subtle` is rgba(255,255,255,.5) on dark — the original #FFFFFF80.
+        // `--fg-subtle` is rgba(255,255,255,.5) on dark - the original #FFFFFF80.
         const baseColor = (index, element) => token(element, "--fg-subtle", "#FFFFFF80");
         // `--orange-text` is the brand orange on dark and a darkened, readable
         // version of it on white; it falls back to the brand orange itself.

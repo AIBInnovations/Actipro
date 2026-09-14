@@ -3284,7 +3284,6 @@ html[data-loading] .loading-layer {
   text-align: center;
   font-weight: 500;
   line-height: 1;
-  text-transform: capitalize;
   grid-area: title;
   opacity: 0;
   transform: translateY(10px);
@@ -3306,8 +3305,10 @@ html[data-loading] .loading-layer {
   transform: translateY(0);
 }
 
-/* No bottom mask: it was fading a bowl into the page, but it cut the pack
-   shot in half. The stage is shorter too, so the product clears the fold. */
+/* Masked left and right only, so the pack fades out as it swings off stage
+   instead of being sliced by `overflow: hidden`. Deliberately NOT masked top or
+   bottom: the pack fills the stage's full height at rest, so a vertical fade
+   would clip the product itself - which is what the original bowl mask did. */
 .bowl .bowl-container .bowl-bounds .bowl-reference {
   overflow: hidden;
   height: min(46rem, 46vh);
@@ -3316,6 +3317,8 @@ html[data-loading] .loading-layer {
   grid-template-areas: "image";
   grid-area: reference;
   aspect-ratio: 1.7;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 17%, #000 83%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 17%, #000 83%, transparent 100%);
 }
 
 .bowl .bowl-container .bowl-bounds .bowl-reference-mock {
@@ -3337,7 +3340,13 @@ html[data-loading] .loading-layer {
   height: 100%;
   min-height: 0;
   visibility: hidden;
-  transform: translateX(-62%) rotate(-72deg);
+
+  /* The pivot sits well below the stage, so rotating the wrapper swings the
+     pack along an arc rather than spinning it in place: highest at centre,
+     dipping as it leaves frame. The image inside counter-rotates by the same
+     amount over the same duration, so the pack itself stays upright. */
+  transform-origin: 50% 300%;
+  transform: rotate(-30deg);
   transition:
     transform 1s var(--ease),
     visibility 0s linear 1s;
@@ -3345,46 +3354,78 @@ html[data-loading] .loading-layer {
 
 .bowl .bowl-reference__image.is--active {
   visibility: visible;
-  transform: translateX(0) rotate(0deg);
+  transform: rotate(0deg);
   transition:
     transform 1s var(--ease),
     visibility 0s linear 0s;
 }
 
+.bowl .bowl-reference__image.is--active img {
+  transform: rotate(0deg);
+}
+
 .bowl .bowl-reference__image.to--right {
-  transform: translateX(62%) rotate(72deg);
+  transform: rotate(30deg);
+}
+
+.bowl .bowl-reference__image.to--right img {
+  transform: rotate(-30deg);
 }
 
 .bowl .bowl-reference__image.to--left {
-  transform: translateX(-62%) rotate(-72deg);
+  transform: rotate(-30deg);
 }
 
-/* Parked off-stage by the slider just before it animates in — no transition,
+.bowl .bowl-reference__image.to--left img {
+  transform: rotate(30deg);
+}
+
+/* Parked off-stage by the slider just before it animates in - no transition,
    so the jump to the starting side is never seen. */
 .bowl .bowl-reference__image.park--left,
-.bowl .bowl-reference__image.park--right {
-  visibility: visible;
+.bowl .bowl-reference__image.park--right,
+.bowl .bowl-reference__image.park--left img,
+.bowl .bowl-reference__image.park--right img {
   transition: none;
 }
 
+.bowl .bowl-reference__image.park--left,
+.bowl .bowl-reference__image.park--right {
+  visibility: visible;
+}
+
 .bowl .bowl-reference__image.park--left {
-  transform: translateX(-62%) rotate(-72deg);
+  transform: rotate(-30deg);
+}
+
+.bowl .bowl-reference__image.park--left img {
+  transform: rotate(30deg);
 }
 
 .bowl .bowl-reference__image.park--right {
-  transform: translateX(62%) rotate(72deg);
+  transform: rotate(30deg);
+}
+
+.bowl .bowl-reference__image.park--right img {
+  transform: rotate(-30deg);
 }
 
 .bowl .bowl-reference__image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transform-origin: 50% 50%;
+  transform: rotate(30deg);
+  transition: transform 1s var(--ease);
 }
 
+/* Must match the wrapper's 1s exactly: the image counter-rotates against the
+   wrapper's arc, and any difference in duration or easing shows up as the pack
+   wobbling on its own axis instead of staying upright. */
 .bowl .bowl-container .bowl-bounds .bowl-reference img {
   transition:
-    transform 0.6s var(--ease),
-    opacity 0.6s var(--ease);
+    transform 1s var(--ease),
+    opacity 1s var(--ease);
 }
 
 .bowl .bowl-container .bowl-bounds .bowl-navigation {
@@ -3392,7 +3433,7 @@ html[data-loading] .loading-layer {
   justify-content: space-between;
   align-items: center;
   gap: min(2.5rem, 2.5vh);
-  width: 130rem;
+  width: 108rem;
   position: absolute;
   bottom: 0;
   left: 50%;

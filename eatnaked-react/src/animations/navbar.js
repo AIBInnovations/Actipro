@@ -1,6 +1,6 @@
 import { gsap } from "./gsapSetup.js";
 
-/** Port of the reference `Navbar` — full-screen overlay menu, GSAP sequenced. */
+/** Port of the reference `Navbar` - full-screen overlay menu, GSAP sequenced. */
 export class Navbar {
   constructor(lenis) {
     this.mm = gsap.matchMedia();

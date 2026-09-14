@@ -54,7 +54,7 @@ export default function Join() {
                       <p className="join-slider__p">
                         Sunflower oil naturally carries wax that clouds the oil and affects its stability. Cryo filtration
                         chills the oil to solidify and remove that wax, then multi-stage purification filters out what
-                        remains — so the oil stays clear and carries no unwanted residue into your body.
+                        remains, so the oil stays clear and carries no unwanted residue into your body.
                       </p>
                     </div>
                   </div>
@@ -84,7 +84,7 @@ export default function Join() {
                       <p className="join-slider__p">
                         Corn oil's biggest real-world impact is how much of it your food actually soaks up. Multi-stage
                         refining strips out impurities and excess moisture while engineering the oil to be absorbed
-                        less during cooking — so fried food comes out lighter, not greasier.
+                        less during cooking, so fried food comes out lighter, not greasier.
                       </p>
                     </div>
                   </div>
@@ -116,7 +116,7 @@ export default function Join() {
                       <p className="join-slider__p">
                         Inspired by Japanese research into how oil behaves at high heat, cryo filtration is combined with
                         controlled-temperature refinement to keep the oil naturally stable. Smart Fry Technology then
-                        engineers it for faster heat transfer, so less oil is absorbed into food during frying —
+                        engineers it for faster heat transfer, so less oil is absorbed into food during frying,
                         without compromising the oil's natural balance of good fats.
                       </p>
                     </div>
@@ -146,7 +146,7 @@ export default function Join() {
                       </h4>
                       <p className="join-slider__p">
                         Every bottle carries a Lot Number you can look up on its product page to see that specific batch's
-                        manufacturing and packing details. We're not asking you to trust a label — we're giving you a
+                        manufacturing and packing details. We're not asking you to trust a label. We're giving you a
                         way to verify it.
                       </p>
                     </div>
@@ -178,7 +178,7 @@ export default function Join() {
                       </h4>
                       <p className="join-slider__p">
                         Every variant passes through in-house quality testing before packaging. A generic "refined for
-                        purity" claim tells you nothing — knowing which problem your oil's refining actually solves
+                        purity" claim tells you nothing. Knowing which problem your oil's refining actually solves
                         tells you everything.
                       </p>
                     </div>
@@ -235,7 +235,7 @@ export default function Join() {
                       <p className="join-slider__p">
                         Actipro began in 2013 with one idea: an active life starts with what's in your pan, not just what's
                         on your plate. It is made by Madhuri Refiners Pvt. Ltd., built as its own brand with its own
-                        promise — upgrade everyday cooking into conscious living.
+                        promise: upgrade everyday cooking into conscious living.
                       </p>
                     </div>
                   </div>

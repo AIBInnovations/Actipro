@@ -1,4 +1,4 @@
-/** Port of the reference `ActiveLinks` — marks nav entries for the current path. */
+/** Port of the reference `ActiveLinks` - marks nav entries for the current path. */
 export class ActiveLinks {
   constructor() {
     this.init();

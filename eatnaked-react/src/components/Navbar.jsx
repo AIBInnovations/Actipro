@@ -291,7 +291,7 @@ export default function Navbar() {
           </ul>
 
           <div className="navbar-menu__contact">
-            <h3 className="navbar-menu__contact-h3">Mon – Sat · 9am to 7pm</h3>
+            <h3 className="navbar-menu__contact-h3">Mon to Sat · 9am to 7pm</h3>
             <a href="tel:+917224870701" className="navbar-menu__contact-link">
               +91 72248 70701
             </a>

@@ -1,6 +1,6 @@
 import { ScrollTrigger } from "./gsapSetup.js";
 
-/** Port of the reference `Accordion` — the desktop Goals accordion. */
+/** Port of the reference `Accordion` - the desktop Goals accordion. */
 export class Accordion {
   constructor() {
     this.cleanups = [];

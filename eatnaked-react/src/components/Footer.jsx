@@ -46,7 +46,7 @@ export default function Footer() {
             <ul className="footer-top__ul">
               <li className="footer-top__li">
                 <a className="footer-top__link">
-                  Mon – Sat · 9am to 7pm
+                  Mon to Sat · 9am to 7pm
                 </a>
               </li>
 

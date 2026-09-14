@@ -1,6 +1,6 @@
 /**
  * Use-case deck. Landscape gets the draggable flick-card stack, portrait a
- * Swiper — the desktop interaction is not a carousel.
+ * Swiper - the desktop interaction is not a carousel.
  *
  * Markup mirrors the reference DOM so styles.css applies unchanged.
  */

@@ -1,6 +1,6 @@
 /**
  * Process section. Landscape uses the custom accordion, portrait swaps to a
- * Swiper carousel — both are in the markup, CSS decides which shows.
+ * Swiper carousel - both are in the markup, CSS decides which shows.
  *
  * The accordion's behaviour lives in `animations/accordion.js`, which keys off
  * `[data-accordion-css-init]`, `[data-accordion-toggle]`, `[data-accordion-status]`
@@ -82,7 +82,7 @@ const FEATURES = [
 ];
 
 /**
- * `ring` is a placeholder figure carried over from the original build — it has
+ * `ring` is a placeholder figure carried over from the original build - it has
  * no sourced meaning yet. See the README before treating it as a claim.
  */
 const VARIANTS = [
@@ -165,7 +165,7 @@ export default function Goals() {
 
           <h2 className="goals-header__h2">One Promise, Three Ways Of Keeping It</h2>
           <p className="goals-header__p">
-            Each oil refined the way it actually needs to be — for lighter, healthier and better food.
+            Each oil refined the way it actually needs to be, for lighter, healthier and better food.
           </p>
 
           <ul className="goals-features">
