@@ -10,7 +10,7 @@ export default function Navbar() {
       <div className="navbar-container">
         <div className="navbar-left">
           <a href="/" className="navbar-logo" aria-label="Home">
-            <img src="/assets/img/a001-6a35cc627c.png" alt="EATnaked logo" />
+            <img src="/logo.png" alt="Actipro logo" />
           </a>
 
           <div className="navbar-menu__button" data-menu-toggle="">
@@ -51,25 +51,25 @@ export default function Navbar() {
           </li>
 
           <li>
-            <a href="/faqs" className="navbar-center__li" data-active="faqs">
+            <a href="/products" className="navbar-center__li" data-active="products">
               <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
                 <circle cx="1.5" cy="1.5" r="1.5" fill="currentColor"></circle>
               </svg>
-              <span className="navbar-center__link">FAQs</span>
+              <span className="navbar-center__link">Products</span>
             </a>
           </li>
 
           <li>
-            <a href="/community" className="navbar-center__li" data-active="community">
+            <a href="/the-process" className="navbar-center__li" data-active="the-process">
               <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
                 <circle cx="1.5" cy="1.5" r="1.5" fill="currentColor"></circle>
               </svg>
-              <span className="navbar-center__link">Community</span>
+              <span className="navbar-center__link">Process</span>
             </a>
           </li>
 
           <li>
-            <a href="/customer-support" className="navbar-center__li" data-active="customer-support">
+            <a href="/contact-us" className="navbar-center__li" data-active="contact-us">
               <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
                 <circle cx="1.5" cy="1.5" r="1.5" fill="currentColor"></circle>
               </svg>
@@ -79,11 +79,11 @@ export default function Navbar() {
         </ul>
 
         <div className="navbar-right">
-          <a href="/login" className="navbar-right__link is--customer" data-is-customer="">
-            Current Customer?
+          <a href="/products#verify" className="navbar-right__link is--customer" data-is-customer="">
+            Verify Your Batch
           </a>
 
-          <a href="/bowl-builder/meals" className="cta-button is--clear">
+          <a href="/products" className="cta-button is--clear">
             <div className="cta-button__background"></div>
             <div className="cta-button__blur"></div>
 
@@ -98,7 +98,7 @@ export default function Navbar() {
                 </svg>
               </div>
               <div className="cta-button__text">
-                <span className="cta-button__text--span">Order Now</span>
+                <span className="cta-button__text--span">Explore Our Range</span>
               </div>
             </div>
           </a>
@@ -138,8 +138,8 @@ export default function Navbar() {
               </a>
             </li>
 
-            <li className="navbar-menu__block-li" data-active="community">
-              <a href="/community" className="navbar-menu__block-link">
+            <li className="navbar-menu__block-li" data-active="the-process">
+              <a href="/the-process" className="navbar-menu__block-link">
                 <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
@@ -148,12 +148,12 @@ export default function Navbar() {
                   ></path>
                 </svg>
 
-                <span className="navbar-menu__block-span">Our Community</span>
+                <span className="navbar-menu__block-span">Our Process</span>
               </a>
             </li>
 
-            <li className="navbar-menu__block-li" data-active="our-menu">
-              <a href="/our-menu" className="navbar-menu__block-link">
+            <li className="navbar-menu__block-li" data-active="products">
+              <a href="/products" className="navbar-menu__block-link">
                 <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
@@ -162,12 +162,12 @@ export default function Navbar() {
                   ></path>
                 </svg>
 
-                <span className="navbar-menu__block-span">Menu</span>
+                <span className="navbar-menu__block-span">Products</span>
               </a>
             </li>
 
-            <li className="navbar-menu__block-li" data-active="juice-naked">
-              <a href="/juice-naked" className="navbar-menu__block-link">
+            <li className="navbar-menu__block-li" data-active="find-your-oil">
+              <a href="/find-your-oil" className="navbar-menu__block-link">
                 <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
@@ -176,12 +176,12 @@ export default function Navbar() {
                   ></path>
                 </svg>
 
-                <span className="navbar-menu__block-span">JUICEnaked</span>
+                <span className="navbar-menu__block-span">Find Your Oil</span>
               </a>
             </li>
 
-            <li className="navbar-menu__block-li" data-active="customer-support">
-              <a href="/customer-support" className="navbar-menu__block-link">
+            <li className="navbar-menu__block-li" data-active="contact-us">
+              <a href="/contact-us" className="navbar-menu__block-link">
                 <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
@@ -196,8 +196,8 @@ export default function Navbar() {
           </ul>
 
           <ul className="navbar-menu__block">
-            <li className="navbar-menu__block-li" data-active="login">
-              <a href="/login" className="navbar-menu__block-link">
+            <li className="navbar-menu__block-li" data-active="media">
+              <a href="/media" className="navbar-menu__block-link">
                 <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
@@ -206,12 +206,12 @@ export default function Navbar() {
                   ></path>
                 </svg>
 
-                <span className="navbar-menu__block-span">Login</span>
+                <span className="navbar-menu__block-span">Media</span>
               </a>
             </li>
 
-            <li className="navbar-menu__block-li" data-active="register">
-              <a href="/register" className="navbar-menu__block-link">
+            <li className="navbar-menu__block-li" data-active="gifting">
+              <a href="/gifting" className="navbar-menu__block-link">
                 <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
@@ -220,7 +220,7 @@ export default function Navbar() {
                   ></path>
                 </svg>
 
-                <span className="navbar-menu__block-span">Register</span>
+                <span className="navbar-menu__block-span">Gifting</span>
               </a>
             </li>
 
@@ -238,8 +238,8 @@ export default function Navbar() {
               </a>
             </li>
 
-            <li className="navbar-menu__block-li" data-active="bowl-builder">
-              <a href="/bowl-builder/meals" className="navbar-menu__block-link">
+            <li className="navbar-menu__block-li" data-active="oil-bot">
+              <a href="/oil-bot" className="navbar-menu__block-link">
                 <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
@@ -249,7 +249,7 @@ export default function Navbar() {
                 </svg>
 
                 <span className="navbar-menu__block-span is--crown">
-                  Bowl Builder
+                  Oil Bot
                   <svg
                     className="navbar-menu__block-crown"
                     xmlns="http://www.w3.org/2000/svg"
@@ -272,32 +272,32 @@ export default function Navbar() {
 
           <ul className="navbar-menu__socials">
             <li className="navbar-menu__socials-li">
-              <a href="https://www.facebook.com/MealPrep" target="_blank" className="navbar-menu__socials-link">
+              <a href="#" target="_blank" className="navbar-menu__socials-link">
                 Facebook
               </a>
             </li>
 
             <li className="navbar-menu__socials-li">
-              <a href="https://www.instagram.com/eatnakedco" target="_blank" className="navbar-menu__socials-link">
+              <a href="#" target="_blank" className="navbar-menu__socials-link">
                 Instagram
               </a>
             </li>
 
             <li className="navbar-menu__socials-li">
-              <a href="https://www.tiktok.com/@eatnakedla" target="_blank" className="navbar-menu__socials-link">
+              <a href="#" target="_blank" className="navbar-menu__socials-link">
                 Tiktok
               </a>
             </li>
           </ul>
 
           <div className="navbar-menu__contact">
-            <h3 className="navbar-menu__contact-h3">We are always here</h3>
-            <a href="tel:+19092765351" className="navbar-menu__contact-link">
-              +1 909-276-5351
+            <h3 className="navbar-menu__contact-h3">We're here 9am – 11pm</h3>
+            <a href="tel:+917224870701" className="navbar-menu__contact-link">
+              +91 72248 70701
             </a>
 
-            <a href="https://maps.app.goo.gl/YzK3Njmb3cBLay2w5" target="_blank" className="navbar-menu__contact-link">
-              2032 Lincoln Ave., Pasadena, CA 91001
+            <a href="https://www.google.com/maps/search/?api=1&query=Madhuri+Refiners+Pvt+Ltd+Indore" target="_blank" className="navbar-menu__contact-link">
+              Madhuri Refiners Pvt. Ltd., Indore (M.P.)
             </a>
           </div>
 
@@ -341,8 +341,8 @@ export default function Navbar() {
               </a>
             </li>
 
-            <li className="navbar-menu__block-li" data-active="community">
-              <a href="/community" className="navbar-menu__block-link">
+            <li className="navbar-menu__block-li" data-active="the-process">
+              <a href="/the-process" className="navbar-menu__block-link">
                 <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
@@ -351,12 +351,12 @@ export default function Navbar() {
                   ></path>
                 </svg>
 
-                <span className="navbar-menu__block-span">Our Community</span>
+                <span className="navbar-menu__block-span">Our Process</span>
               </a>
             </li>
 
-            <li className="navbar-menu__block-li" data-active="our-menu">
-              <a href="/our-menu" className="navbar-menu__block-link">
+            <li className="navbar-menu__block-li" data-active="products">
+              <a href="/products" className="navbar-menu__block-link">
                 <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
@@ -365,12 +365,12 @@ export default function Navbar() {
                   ></path>
                 </svg>
 
-                <span className="navbar-menu__block-span">Menu</span>
+                <span className="navbar-menu__block-span">Products</span>
               </a>
             </li>
 
-            <li className="navbar-menu__block-li" data-active="juice-naked">
-              <a href="/juice-naked" className="navbar-menu__block-link">
+            <li className="navbar-menu__block-li" data-active="find-your-oil">
+              <a href="/find-your-oil" className="navbar-menu__block-link">
                 <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
@@ -379,12 +379,12 @@ export default function Navbar() {
                   ></path>
                 </svg>
 
-                <span className="navbar-menu__block-span">JUICEnaked</span>
+                <span className="navbar-menu__block-span">Find Your Oil</span>
               </a>
             </li>
 
-            <li className="navbar-menu__block-li" data-active="customer-support">
-              <a href="/customer-support" className="navbar-menu__block-link">
+            <li className="navbar-menu__block-li" data-active="contact-us">
+              <a href="/contact-us" className="navbar-menu__block-link">
                 <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
@@ -397,8 +397,8 @@ export default function Navbar() {
               </a>
             </li>
 
-            <li className="navbar-menu__block-li" data-active="login">
-              <a href="/login" className="navbar-menu__block-link" data-is-customer-mobile="">
+            <li className="navbar-menu__block-li" data-active="media">
+              <a href="/media" className="navbar-menu__block-link" data-is-customer-mobile="">
                 <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
@@ -407,12 +407,12 @@ export default function Navbar() {
                   ></path>
                 </svg>
 
-                <span className="navbar-menu__block-span">Login</span>
+                <span className="navbar-menu__block-span">Media</span>
               </a>
             </li>
 
-            <li className="navbar-menu__block-li" data-active="register">
-              <a href="/register" className="navbar-menu__block-link">
+            <li className="navbar-menu__block-li" data-active="gifting">
+              <a href="/gifting" className="navbar-menu__block-link">
                 <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
@@ -421,7 +421,7 @@ export default function Navbar() {
                   ></path>
                 </svg>
 
-                <span className="navbar-menu__block-span">Register</span>
+                <span className="navbar-menu__block-span">Gifting</span>
               </a>
             </li>
 
@@ -439,8 +439,8 @@ export default function Navbar() {
               </a>
             </li>
 
-            <li className="navbar-menu__block-li" data-active="bowl-builder">
-              <a href="/bowl-builder/meals" className="navbar-menu__block-link">
+            <li className="navbar-menu__block-li" data-active="oil-bot">
+              <a href="/oil-bot" className="navbar-menu__block-link">
                 <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
@@ -450,7 +450,7 @@ export default function Navbar() {
                 </svg>
 
                 <span className="navbar-menu__block-span is--crown">
-                  Bowl Builder
+                  Oil Bot
                   <svg
                     className="navbar-menu__block-crown"
                     xmlns="http://www.w3.org/2000/svg"
@@ -471,7 +471,7 @@ export default function Navbar() {
             </li>
           </ul>
 
-          <a href="/login" className="cta-button is--clear">
+          <a href="/products" className="cta-button is--clear">
             <div className="cta-button__background"></div>
             <div className="cta-button__blur"></div>
 
@@ -486,7 +486,7 @@ export default function Navbar() {
                 </svg>
               </div>
               <div className="cta-button__text">
-                <span className="cta-button__text--span">Order Now</span>
+                <span className="cta-button__text--span">Explore Our Range</span>
               </div>
             </div>
           </a>

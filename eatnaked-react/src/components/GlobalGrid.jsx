@@ -11,7 +11,7 @@ export default function GlobalGrid() {
         <img
           src="/assets/img/a048-647b3afa09.png"
           type="image/avif"
-          alt="EATnaked Join section Background"
+          alt="Actipro background"
           className="join-background"
           loading="lazy"
         />

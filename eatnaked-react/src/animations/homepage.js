@@ -103,7 +103,7 @@ export function initHomepage() {
     });
     if (heroVideoKey.destroyed) heroBg?.removeAttribute("data-keyed");
 
-    // Draggable testimonial track, each with its own "Drag ⟷" cursor.
+    // Draggable fact track, each with its own "Drag ⟷" cursor.
     const cursorFollowers = [];
     const draggables = [];
 

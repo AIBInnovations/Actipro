@@ -1,6 +1,6 @@
 /**
- * 200vh scroll range around a sticky scene: the bag travels from kitchen to
- * table while the two heading blocks cross-fade.
+ * 200vh scroll range around a sticky scene: the bottle travels from refinery to
+ * kitchen while the two heading blocks cross-fade.
  *
  * Markup mirrors the reference DOM so styles.css applies unchanged.
  */
@@ -11,13 +11,13 @@ export default function QualityJourney() {
         <div className="quality-container">
           <div className="quality-header">
             <div className="quality-block">
-              <div className="quality-block__tag">Fresh &amp; High Quality Ingredients</div>
-              <h2 className="quality-block__h2">From our kitchen</h2>
+              <div className="quality-block__tag">In-House Quality Testing</div>
+              <h2 className="quality-block__h2">From our refinery</h2>
             </div>
 
             <div className="quality-block">
-              <div className="quality-block__tag">For An Incredible Healthy Life</div>
-              <h2 className="quality-block__h2">To your table</h2>
+              <div className="quality-block__tag">For An Active Everyday Life</div>
+              <h2 className="quality-block__h2">To your kitchen</h2>
             </div>
           </div>
         </div>

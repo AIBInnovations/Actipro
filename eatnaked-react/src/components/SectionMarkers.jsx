@@ -10,7 +10,7 @@ export default function SectionMarkers() {
       <div className="markers-container">
         <div className="markers-inner">
           <div className="markers-block is--active" data-scrollto=".hero">
-            <span className="markers-block__text">Fresh</span>
+            <span className="markers-block__text">Lifestyle</span>
             <span className="markers-block__line">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="8" viewBox="0 0 32 8" fill="none">
                 <path
@@ -23,7 +23,7 @@ export default function SectionMarkers() {
             </span>
           </div>
           <div className="markers-block" data-scrollto=".delivered">
-            <span className="markers-block__text">Source</span>
+            <span className="markers-block__text">Traceable</span>
             <span className="markers-block__line">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
                 <path
@@ -37,7 +37,7 @@ export default function SectionMarkers() {
             </span>
           </div>
           <div className="markers-block" data-scrollto=".goals">
-            <span className="markers-block__text">Goals</span>
+            <span className="markers-block__text">Process</span>
             <span className="markers-block__line">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
                 <path
@@ -51,7 +51,7 @@ export default function SectionMarkers() {
             </span>
           </div>
           <div className="markers-block" data-scrollto=".partners">
-            <span className="markers-block__text">Trusted</span>
+            <span className="markers-block__text">Our Range</span>
             <span className="markers-block__line">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
                 <path
@@ -65,7 +65,7 @@ export default function SectionMarkers() {
             </span>
           </div>
           <div className="markers-block" data-scrollto=".design">
-            <span className="markers-block__text">Lifestyle</span>
+            <span className="markers-block__text">Find Yours</span>
             <span className="markers-block__line">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
                 <path
@@ -79,7 +79,7 @@ export default function SectionMarkers() {
             </span>
           </div>
           <div className="markers-block" data-scrollto=".bowl">
-            <span className="markers-block__text">Ingredients</span>
+            <span className="markers-block__text">Inside</span>
             <span className="markers-block__line">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
                 <path
@@ -94,7 +94,7 @@ export default function SectionMarkers() {
           </div>
 
           <div className="markers-block" data-scrollto=".action">
-            <span className="markers-block__text">Our Family</span>
+            <span className="markers-block__text">Made By</span>
             <span className="markers-block__line">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
                 <path
@@ -109,7 +109,7 @@ export default function SectionMarkers() {
           </div>
 
           <div className="markers-block" data-scrollto=".quality">
-            <span className="markers-block__text">Table</span>
+            <span className="markers-block__text">Kitchen</span>
             <span className="markers-block__line">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
                 <path

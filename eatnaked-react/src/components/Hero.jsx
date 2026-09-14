@@ -1,6 +1,6 @@
 /**
  * Full-viewport hero: showreel background, floating ingredient pills, and
- * the "From Our Kitchen to Your Door" block. Pinned on landscape.
+ * the "From Our Refinery to Your Kitchen" block. Pinned on landscape.
  *
  * Markup mirrors the reference DOM so styles.css applies unchanged.
  */
@@ -18,12 +18,12 @@ export default function Hero() {
           </svg>
         </div>
 
-        <h1 className="hero-h1">EAT local, EAT healthy, EATnaked.</h1>
+        <h1 className="hero-h1">COOK light, LIVE active, ACTIPRO.</h1>
         <p className="hero-p is--portrait">
-          Meal prepping has become popular with health/fitness enthusiasts and busy professionals alike.
+          Cooking oil, reconsidered for how you actually want to live.
         </p>
 
-        <a href="/register" className="cta-button is--portrait">
+        <a href="/products" className="cta-button is--portrait">
           <div className="cta-button__background"></div>
           <div className="cta-button__blur"></div>
 
@@ -38,7 +38,7 @@ export default function Hero() {
               </svg>
             </div>
             <div className="cta-button__text">
-              <span className="cta-button__text--span">Order Now</span>
+              <span className="cta-button__text--span">Explore Our Range</span>
             </div>
           </div>
         </a>
@@ -46,42 +46,42 @@ export default function Hero() {
         <div className="hero-video">
           <div className="hero-video__tag">
             <div className="hero-video__tag-img">
-              <img loading="lazy" src="/assets/img/a002-673a07abab.png" alt="Vegetables" />
+              <img loading="lazy" src="/assets/img/a002-673a07abab.png" alt="Refined Sunflower Oil" />
             </div>
-            <span className="hero-video__tag-text">Vegetables</span>
+            <span className="hero-video__tag-text">Sunflower</span>
           </div>
 
           <div className="hero-video__tag">
             <div className="hero-video__tag-img">
-              <img loading="lazy" src="/assets/img/a003-c89aea1fd3.png" alt="Grains" />
+              <img loading="lazy" src="/assets/img/a003-c89aea1fd3.png" alt="Refined Corn Oil" />
             </div>
-            <span className="hero-video__tag-text">Grains</span>
+            <span className="hero-video__tag-text">Corn</span>
           </div>
 
           <div className="hero-video__tag">
             <div className="hero-video__tag-img">
-              <img loading="lazy" src="/assets/img/a004-3ee660c9ce.png" alt="Proteins" />
+              <img loading="lazy" src="/assets/img/a004-3ee660c9ce.png" alt="Refined Rice Bran Oil" />
             </div>
-            <span className="hero-video__tag-text">Proteins</span>
+            <span className="hero-video__tag-text">Rice Bran</span>
           </div>
         </div>
 
         <div className="hero-bottom">
           <div className="hero-tags">
-            <div className="hero-tag">Bold</div>
+            <div className="hero-tag">Traceable</div>
 
-            <div className="hero-tag">Fresh</div>
+            <div className="hero-tag">Certified</div>
 
-            <div className="hero-tag">Tailored</div>
+            <div className="hero-tag">Small-Batch</div>
           </div>
 
-          <h2 className="hero-h2">From Our Kitchen to Your Door</h2>
+          <h2 className="hero-h2">From Our Refinery to Your Kitchen</h2>
 
-          <p className="hero-text">Healthy eating made effortless. Fuel your body and free your time.</p>
+          <p className="hero-text">An active life starts with what's in your pan, not just what's on your plate.</p>
         </div>
 
         <div className="hero-contact">
-          <a href="/customer-support" className="hero-contact__link">
+          <a href="/contact-us" className="hero-contact__link">
             <span className="hero-contact__icon">
               <svg width="100%" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path

@@ -9,7 +9,7 @@ export default function Delivered() {
     <section className="delivered" data-marker="">
       <div className="delivered-container">
         <div className="delivered-header">
-          <h2>Homemade Meals, Delivered Daily</h2>
+          <h2>Every Batch, Checked Before It Reaches You</h2>
         </div>
 
         <div className="delivered-card">
@@ -29,8 +29,8 @@ export default function Delivered() {
               </defs>
             </svg>
 
-            <h3 className="delivered-card__h3">Fresh, Never Frozen</h3>
-            <p className="delivered-card__p">Streamlined deliveries that accommodate YOUR lifestyle.</p>
+            <h3 className="delivered-card__h3">No Argemone Oil. Ever.</h3>
+            <p className="delivered-card__p">Every bottle carries a Lot Number you can look up.</p>
           </div>
         </div>
       </div>

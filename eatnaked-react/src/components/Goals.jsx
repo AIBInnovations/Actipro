@@ -1,5 +1,5 @@
 /**
- * Calorie-goal picker. Landscape uses the custom accordion, portrait swaps
+ * Refining-process picker. Landscape uses the custom accordion, portrait swaps
  * to a Swiper carousel — both are in the markup, CSS decides which shows.
  *
  * Markup mirrors the reference DOM so styles.css applies unchanged.
@@ -9,8 +9,8 @@ export default function Goals() {
     <section className="goals" data-marker="">
       <div className="goals-container">
         <div className="goals-header">
-          <h2 className="goals-header__h2">Whatever Your Goal</h2>
-          <p className="goals-header__p">High quality meals for ANY lifestyle</p>
+          <h2 className="goals-header__h2">One Promise, Three Ways of Keeping It</h2>
+          <p className="goals-header__p">Each oil refined the way it actually needs to be</p>
         </div>
 
         <div data-accordion-close-siblings="true" data-accordion-css-init="" className="accordion-css">
@@ -93,7 +93,7 @@ export default function Goals() {
                         ></path>
                       </svg>
 
-                      <span>Gain Muscle</span>
+                      <span>Refined Sunflower Oil</span>
                     </div>
 
                     <div className="accordion-css__top-loader">
@@ -117,7 +117,7 @@ export default function Goals() {
                         <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
                       </svg>
 
-                      <span>Enhance Performance</span>
+                      <span>Advanced Dewaxing Technology</span>
                     </div>
                   </div>
 
@@ -125,13 +125,13 @@ export default function Goals() {
                     <div className="accordion-css__item-bottom-wrap">
                       <div className="accordion-css__item-bottom-content">
                         <div className="accordion-css__item-block">
-                          <span>Your Kcal now</span>
-                          <span>Your ideal Kcal</span>
+                          <span>Wax content, untreated</span>
+                          <span>After dewaxing</span>
                         </div>
 
                         <div className="accordion-css__item-block">
-                          <strong>2,400</strong>
-                          <strong>2,800</strong>
+                          <strong>High</strong>
+                          <strong>Low</strong>
                         </div>
 
                         <div className="accordion-css__item-bottom-loader">
@@ -167,24 +167,24 @@ export default function Goals() {
 
                           <div className="accordion-css__item-grid">
                             <div className="accordion-css__item-grid-group">
-                              <span>Breakfast</span>
-                              <strong>Quiche &amp; Protein Pancakes</strong>
+                              <span>Step 01</span>
+                              <strong>Cryo Filtration</strong>
                             </div>
 
                             <div className="accordion-css__item-grid-group">
-                              <span>Lunch</span>
-                              <strong>Grilled Mango-Lime Chicken</strong>
+                              <span>Step 02</span>
+                              <strong>Multi-Stage Purification</strong>
                             </div>
 
                             <div className="accordion-css__item-grid-group">
-                              <span>Dinner</span>
-                              <strong>Miso Glazed Salmon</strong>
+                              <span>Step 03</span>
+                              <strong>Low-Wax, Clear Oil</strong>
                             </div>
                           </div>
 
                           <div className="accordion-css__item-images">
-                            <img src="/assets/img/a006-10d77336be.avif" alt="Goals image" loading="lazy" />
-                            <img src="/assets/img/a007-eead608b1c.avif" alt="Goals image" loading="lazy" />
+                            <img src="/assets/img/a006-10d77336be.avif" alt="Actipro refining process" loading="lazy" />
+                            <img src="/assets/img/a007-eead608b1c.avif" alt="Actipro refining process" loading="lazy" />
                           </div>
                         </div>
                       </div>
@@ -237,7 +237,7 @@ export default function Goals() {
                         </g>
                       </svg>
 
-                      <span>Maintain</span>
+                      <span>Refined Corn Oil</span>
                     </div>
 
                     <div className="accordion-css__top-loader">
@@ -261,7 +261,7 @@ export default function Goals() {
                         <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
                       </svg>
 
-                      <span>Healthy Habits</span>
+                      <span>High Absorbent Refining</span>
                     </div>
                   </div>
 
@@ -269,13 +269,13 @@ export default function Goals() {
                     <div className="accordion-css__item-bottom-wrap">
                       <div className="accordion-css__item-bottom-content">
                         <div className="accordion-css__item-block">
-                          <span>Your Kcal now</span>
-                          <span>Your ideal Kcal</span>
+                          <span>Oil absorbed by food</span>
+                          <span>With Actipro</span>
                         </div>
 
                         <div className="accordion-css__item-block">
-                          <strong>2,150</strong>
-                          <strong>2,200</strong>
+                          <strong>More</strong>
+                          <strong>Less</strong>
                         </div>
 
                         <div className="accordion-css__item-bottom-loader">
@@ -311,24 +311,24 @@ export default function Goals() {
 
                           <div className="accordion-css__item-grid">
                             <div className="accordion-css__item-grid-group">
-                              <span>Breakfast</span>
-                              <strong>Egg Skillet &amp; Roasted Potatoes</strong>
+                              <span>Step 01</span>
+                              <strong>Advanced Refining</strong>
                             </div>
 
                             <div className="accordion-css__item-grid-group">
-                              <span>Lunch</span>
-                              <strong>Chimichurri Steak Salad</strong>
+                              <span>Step 02</span>
+                              <strong>Less Oil Absorption</strong>
                             </div>
 
                             <div className="accordion-css__item-grid-group">
-                              <span>Dinner</span>
-                              <strong>Peruvian Chicken</strong>
+                              <span>Step 03</span>
+                              <strong>Nutrient Retention</strong>
                             </div>
                           </div>
 
                           <div className="accordion-css__item-images">
-                            <img src="/assets/img/a008-4640c2e6b8.avif" alt="Goals image" loading="lazy" />
-                            <img src="/assets/img/a009-d1db0b52c6.avif" alt="Goals image" loading="lazy" />
+                            <img src="/assets/img/a008-4640c2e6b8.avif" alt="Actipro refining process" loading="lazy" />
+                            <img src="/assets/img/a009-d1db0b52c6.avif" alt="Actipro refining process" loading="lazy" />
                           </div>
                         </div>
                       </div>
@@ -432,7 +432,7 @@ export default function Goals() {
                         </g>
                       </svg>
 
-                      <span>Lose Weight</span>
+                      <span>Refined Rice Bran Oil</span>
                     </div>
 
                     <div className="accordion-css__top-loader">
@@ -456,7 +456,7 @@ export default function Goals() {
                         <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
                       </svg>
 
-                      <span>Clean Eating</span>
+                      <span>Smart Fry Technology</span>
                     </div>
                   </div>
 
@@ -464,13 +464,13 @@ export default function Goals() {
                     <div className="accordion-css__item-bottom-wrap">
                       <div className="accordion-css__item-bottom-content">
                         <div className="accordion-css__item-block">
-                          <span>Your Kcal now</span>
-                          <span>Your ideal Kcal</span>
+                          <span>Heat stability, typical</span>
+                          <span>With Smart Fry</span>
                         </div>
 
                         <div className="accordion-css__item-block">
-                          <strong>2,200</strong>
-                          <strong>1,900</strong>
+                          <strong>Low</strong>
+                          <strong>High</strong>
                         </div>
 
                         <div className="accordion-css__item-bottom-loader">
@@ -506,24 +506,24 @@ export default function Goals() {
 
                           <div className="accordion-css__item-grid">
                             <div className="accordion-css__item-grid-group">
-                              <span>Breakfast</span>
-                              <strong>Overnight Oats</strong>
+                              <span>Step 01</span>
+                              <strong>Cryo Filtration</strong>
                             </div>
 
                             <div className="accordion-css__item-grid-group">
-                              <span>Lunch</span>
-                              <strong>Cranberry Walnut Spinach Salad</strong>
+                              <span>Step 02</span>
+                              <strong>Controlled Refinement</strong>
                             </div>
 
                             <div className="accordion-css__item-grid-group">
-                              <span>Dinner</span>
-                              <strong>Lemon &amp; Herb Garlic Chicken </strong>
+                              <span>Step 03</span>
+                              <strong>Faster Heat Transfer </strong>
                             </div>
                           </div>
 
                           <div className="accordion-css__item-images">
-                            <img src="/assets/img/a010-9568d1e8db.avif" alt="Goals image" loading="lazy" />
-                            <img src="/assets/img/a011-a34cab6b1c.avif" alt="Goals image" loading="lazy" />
+                            <img src="/assets/img/a010-9568d1e8db.avif" alt="Actipro refining process" loading="lazy" />
+                            <img src="/assets/img/a011-a34cab6b1c.avif" alt="Actipro refining process" loading="lazy" />
                           </div>
                         </div>
                       </div>
@@ -571,7 +571,7 @@ export default function Goals() {
                       ></path>
                     </svg>
 
-                    <span>Gain Muscle</span>
+                    <span>Refined Sunflower Oil</span>
                   </div>
 
                   <div className="goals-swiper-slide__top-loader">
@@ -595,19 +595,19 @@ export default function Goals() {
                       <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
                     </svg>
 
-                    <span>Enhance Performance</span>
+                    <span>Advanced Dewaxing Technology</span>
                   </div>
                 </div>
 
                 <div className="goals-swiper-slide__bottom">
                   <div className="goals-swiper-slide__block">
-                    <span>Your Kcal now</span>
-                    <span>Your ideal Kcal</span>
+                    <span>Wax content, untreated</span>
+                    <span>After dewaxing</span>
                   </div>
 
                   <div className="goals-swiper-slide__block">
-                    <strong>2,400</strong>
-                    <strong>2,800</strong>
+                    <strong>High</strong>
+                    <strong>Low</strong>
                   </div>
 
                   <div className="goals-swiper-slide__bottom-loader">
@@ -637,24 +637,24 @@ export default function Goals() {
 
                     <div className="goals-swiper-slide__grid">
                       <div className="goals-swiper-slide__grid-group">
-                        <span>Breakfast</span>
-                        <strong>Quiche &amp; Protein Pancakes</strong>
+                        <span>Step 01</span>
+                        <strong>Cryo Filtration</strong>
                       </div>
 
                       <div className="goals-swiper-slide__grid-group">
-                        <span>Lunch</span>
-                        <strong>Grilled Mango-Lime Chicken</strong>
+                        <span>Step 02</span>
+                        <strong>Multi-Stage Purification</strong>
                       </div>
 
                       <div className="goals-swiper-slide__grid-group">
-                        <span>Dinner</span>
-                        <strong>Miso Glazed Salmon</strong>
+                        <span>Step 03</span>
+                        <strong>Low-Wax, Clear Oil</strong>
                       </div>
                     </div>
 
                     <div className="goals-swiper-slide__images">
-                      <img src="/assets/img/a006-10d77336be.avif" alt="Goals image" loading="lazy" />
-                      <img src="/assets/img/a007-eead608b1c.avif" alt="Goals image" loading="lazy" />
+                      <img src="/assets/img/a006-10d77336be.avif" alt="Actipro refining process" loading="lazy" />
+                      <img src="/assets/img/a007-eead608b1c.avif" alt="Actipro refining process" loading="lazy" />
                     </div>
                   </div>
                 </div>
@@ -691,7 +691,7 @@ export default function Goals() {
                       </g>
                     </svg>
 
-                    <span>Maintain</span>
+                    <span>Refined Corn Oil</span>
                   </div>
 
                   <div className="goals-swiper-slide__top-loader">
@@ -715,19 +715,19 @@ export default function Goals() {
                       <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
                     </svg>
 
-                    <span>Healthy Habits</span>
+                    <span>High Absorbent Refining</span>
                   </div>
                 </div>
 
                 <div className="goals-swiper-slide__bottom">
                   <div className="goals-swiper-slide__block">
-                    <span>Your Kcal now</span>
-                    <span>Your ideal Kcal</span>
+                    <span>Oil absorbed by food</span>
+                    <span>With Actipro</span>
                   </div>
 
                   <div className="goals-swiper-slide__block">
-                    <strong>2,150</strong>
-                    <strong>2,200</strong>
+                    <strong>More</strong>
+                    <strong>Less</strong>
                   </div>
 
                   <div className="goals-swiper-slide__bottom-loader">
@@ -757,24 +757,24 @@ export default function Goals() {
 
                     <div className="goals-swiper-slide__grid">
                       <div className="goals-swiper-slide__grid-group">
-                        <span>Breakfast</span>
-                        <strong>Egg Skillet &amp; Roasted Potatoes</strong>
+                        <span>Step 01</span>
+                        <strong>Advanced Refining</strong>
                       </div>
 
                       <div className="goals-swiper-slide__grid-group">
-                        <span>Lunch</span>
-                        <strong>Chimichurri Steak Salad</strong>
+                        <span>Step 02</span>
+                        <strong>Less Oil Absorption</strong>
                       </div>
 
                       <div className="goals-swiper-slide__grid-group">
-                        <span>Dinner</span>
-                        <strong>Peruvian Chicken</strong>
+                        <span>Step 03</span>
+                        <strong>Nutrient Retention</strong>
                       </div>
                     </div>
 
                     <div className="goals-swiper-slide__images">
-                      <img src="/assets/img/a008-4640c2e6b8.avif" alt="Goals image" loading="lazy" />
-                      <img src="/assets/img/a009-d1db0b52c6.avif" alt="Goals image" loading="lazy" />
+                      <img src="/assets/img/a008-4640c2e6b8.avif" alt="Actipro refining process" loading="lazy" />
+                      <img src="/assets/img/a009-d1db0b52c6.avif" alt="Actipro refining process" loading="lazy" />
                     </div>
                   </div>
                 </div>
@@ -820,7 +820,7 @@ export default function Goals() {
                       </g>
                     </svg>
 
-                    <span>Lose Weight</span>
+                    <span>Refined Rice Bran Oil</span>
                   </div>
 
                   <div className="goals-swiper-slide__top-loader">
@@ -844,19 +844,19 @@ export default function Goals() {
                       <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
                     </svg>
 
-                    <span>Clean Eating</span>
+                    <span>Smart Fry Technology</span>
                   </div>
                 </div>
 
                 <div className="goals-swiper-slide__bottom">
                   <div className="goals-swiper-slide__block">
-                    <span>Your Kcal now</span>
-                    <span>Your ideal Kcal</span>
+                    <span>Heat stability, typical</span>
+                    <span>With Smart Fry</span>
                   </div>
 
                   <div className="goals-swiper-slide__block">
-                    <strong>2,200</strong>
-                    <strong>1,900</strong>
+                    <strong>Low</strong>
+                    <strong>High</strong>
                   </div>
 
                   <div className="goals-swiper-slide__bottom-loader">
@@ -886,24 +886,24 @@ export default function Goals() {
 
                     <div className="goals-swiper-slide__grid">
                       <div className="goals-swiper-slide__grid-group">
-                        <span>Breakfast</span>
-                        <strong>Overnight Oats</strong>
+                        <span>Step 01</span>
+                        <strong>Cryo Filtration</strong>
                       </div>
 
                       <div className="goals-swiper-slide__grid-group">
-                        <span>Lunch</span>
-                        <strong>Cranberry Walnut Spinach Salad</strong>
+                        <span>Step 02</span>
+                        <strong>Controlled Refinement</strong>
                       </div>
 
                       <div className="goals-swiper-slide__grid-group">
-                        <span>Dinner</span>
-                        <strong>Lemon &amp; Herb Garlic Chicken</strong>
+                        <span>Step 03</span>
+                        <strong>Faster Heat Transfer</strong>
                       </div>
                     </div>
 
                     <div className="goals-swiper-slide__images">
-                      <img src="/assets/img/a010-9568d1e8db.avif" alt="Goals image" loading="lazy" />
-                      <img src="/assets/img/a011-a34cab6b1c.avif" alt="Goals image" loading="lazy" />
+                      <img src="/assets/img/a010-9568d1e8db.avif" alt="Actipro refining process" loading="lazy" />
+                      <img src="/assets/img/a011-a34cab6b1c.avif" alt="Actipro refining process" loading="lazy" />
                     </div>
                   </div>
                 </div>

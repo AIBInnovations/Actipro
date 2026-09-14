@@ -1,5 +1,5 @@
 /**
- * Closing CTA, draggable testimonial track, and the depth-blurred floating
+ * Closing CTA, draggable fact track, and the depth-blurred floating
  * ingredients behind them.
  *
  * Markup mirrors the reference DOM so styles.css applies unchanged.
@@ -10,10 +10,10 @@ export default function Join() {
       <div className="join-container">
         <div className="join-header">
           <h3 className="join-header__h3">It's a Lifestyle</h3>
-          <h2 className="join-header__h2">Are you ready to EATnaked?</h2>
-          <p className="join-header__p">Customize Your Plan, or Let Us Choose For You.</p>
+          <h2 className="join-header__h2">Ready to upgrade your everyday?</h2>
+          <p className="join-header__p">Tell the Oil Bot what you usually cook. It'll point you to the right variant.</p>
 
-          <a href="/register" className="cta-button">
+          <a href="/oil-bot" className="cta-button">
             <div className="cta-button__background"></div>
             <div className="cta-button__blur"></div>
 
@@ -28,7 +28,7 @@ export default function Join() {
                 </svg>
               </div>
               <div className="cta-button__text">
-                <span className="cta-button__text--span">Get Started</span>
+                <span className="cta-button__text--span">Ask the Oil Bot</span>
               </div>
             </div>
           </a>
@@ -43,19 +43,18 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/a030-47809cbab5.png"
-                        alt="Join Slider"
+                        src="/assets/img/actipro-mark.png"
+                        alt="Actipro"
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
-                        Jenn Flanders
-                        <span className="join-slider__span">UCLA Campus Life/Recreation </span>
+                        Advanced Dewaxing Technology
+                        <span className="join-slider__span">Refined Sunflower Oil</span>
                       </h4>
                       <p className="join-slider__p">
-                        “EATnaked provides a wide variety of healthy food options that are both delicious and
-                        nutritious. They offer catering services for meetings or events; the staff is friendly and
-                        professional. I recommend EATnaked to anyone looking for great healthy food option and a no
-                        hassle catering experience!”
+                        Sunflower oil naturally carries wax that clouds the oil and affects its stability. Cryo filtration
+                        chills the oil to solidify and remove that wax, then multi-stage purification filters out what
+                        remains — so the oil stays clear and carries no unwanted residue into your body.
                       </p>
                     </div>
                   </div>
@@ -74,19 +73,18 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/a031-20c71f45a1.png"
-                        alt="Join Slider"
+                        src="/assets/img/actipro-mark.png"
+                        alt="Actipro"
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
-                        Alexis Cantley
-                        <span className="join-slider__span">UCLA Men’s Volleyball Operations</span>
+                        High Absorbent Refining
+                        <span className="join-slider__span">Refined Corn Oil</span>
                       </h4>
                       <p className="join-slider__p">
-                        “As a D1 athletics program, finding a company that is flexible with our schedule and
-                        accommodating of our dietary needs is essential, and EATnaked has done just that. They help us
-                        to provide our players with good tasting meals that hit all of their protein and other macro
-                        needs.”
+                        Corn oil's biggest real-world impact is how much of it your food actually soaks up. Multi-stage
+                        refining strips out impurities and excess moisture while engineering the oil to be absorbed
+                        less during cooking — so fried food comes out lighter, not greasier.
                       </p>
                     </div>
                   </div>
@@ -105,23 +103,21 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/a032-948e52e070.png"
-                        alt="Join Slider"
+                        src="/assets/img/actipro-mark.png"
+                        alt="Actipro"
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
-                        Sharon Kwak
+                        Smart Fry Technology
                         <span className="join-slider__span">
-                          Equinox Group | Senior Recruiter, People Services - West Region
+                          Refined Rice Bran Oil
                         </span>
                       </h4>
                       <p className="join-slider__p">
-                        “EatNaked is an amazing and highly reputable business! From the high-quality food to the level
-                        of professionalism, they never disappoint. They have partnered with us for multiple employee
-                        events, as well as smaller team meetings. Personally, I am also a huge fan of the delicious and
-                        fresh foods. I have used them as a meal prep service myself, and consistently encourage
-                        friends/family looking for a healthy, fresh, and great meal prep that EatNaked is the best
-                        option.”
+                        Inspired by Japanese research into how oil behaves at high heat, cryo filtration is combined with
+                        controlled-temperature refinement to keep the oil naturally stable. Smart Fry Technology then
+                        engineers it for faster heat transfer, so less oil is absorbed into food during frying —
+                        without compromising the oil's natural balance of good fats.
                       </p>
                     </div>
                   </div>
@@ -140,18 +136,18 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/a033-97038f4339.png"
-                        alt="Join Slider"
+                        src="/assets/img/actipro-mark.png"
+                        alt="Actipro"
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
-                        Mauricio Ramos
-                        <span className="join-slider__span">Chapcare | Marketing and Outreach Director</span>
+                        Batch Traceability
+                        <span className="join-slider__span">Every Bottle, Every Variant</span>
                       </h4>
                       <p className="join-slider__p">
-                        “We love collaborating with EatNaked because of what they believe and stand for: fresh, organic
-                        and locally sourced food and businesses. Healthy nutrition is very important for us and
-                        supporting a place like EatNaked means a lot to us!”
+                        Every bottle carries a Lot Number you can look up on its product page to see that specific batch's
+                        manufacturing and packing details. We're not asking you to trust a label — we're giving you a
+                        way to verify it.
                       </p>
                     </div>
                   </div>
@@ -170,19 +166,20 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/a034-c56584a9f9.png"
-                        alt="Join Slider"
+                        src="/assets/img/actipro-mark.png"
+                        alt="Actipro"
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
-                        Dr. Luis Felipe Restrepo
+                        In-House Quality Testing
                         <span className="join-slider__span">
-                          California State University, Chico | Head Men’s Soccer Coach Founder, Vision Navigator
+                          Before Any Bottle Is Packed
                         </span>
                       </h4>
                       <p className="join-slider__p">
-                        “We have enjoyed our partnership with eatnaked. Our focus is always the health and well being of
-                        our student athletes as well as providing that winning edge on and off the field.”
+                        Every variant passes through in-house quality testing before packaging. A generic "refined for
+                        purity" claim tells you nothing — knowing which problem your oil's refining actually solves
+                        tells you everything.
                       </p>
                     </div>
                   </div>
@@ -201,15 +198,15 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/a035-15ee8fd50e.png"
-                        alt="Join Slider"
+                        src="/assets/img/actipro-mark.png"
+                        alt="Actipro"
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
-                        Corey Calliet
-                        <span className="join-slider__span">Celebrity Trainer | Actor | Motivational Speaker</span>
+                        Free From Argemone Oil
+                        <span className="join-slider__span">A Promise, Not A Claim</span>
                       </h4>
-                      <p className="join-slider__p">“EATnaked is my go to meal company for me and my clients.”</p>
+                      <p className="join-slider__p">Nothing added that we wouldn't want in our own kitchens.</p>
                     </div>
                   </div>
 
@@ -227,19 +224,18 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/a035-15ee8fd50e.png"
-                        alt="Join Slider"
+                        src="/assets/img/actipro-mark.png"
+                        alt="Actipro"
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
-                        Andres Ochoa Baeza
-                        <span className="join-slider__span">Men’s Soccer Coach </span>
+                        Three Decades of Manufacturing
+                        <span className="join-slider__span">Madhuri Refiners Pvt. Ltd.</span>
                       </h4>
                       <p className="join-slider__p">
-                        “Eat Naked provides a great product through and through. Great meals, great variety, great
-                        service, great juices, and great leadership. Simply put, EAT Naked is great! In addition to the
-                        product, every interaction with the EAT Naked folks is always positive. You know it is a great
-                        product when everyone involved is bought into the process.”
+                        Actipro began in 2013 with one idea: an active life starts with what's in your pan, not just what's
+                        on your plate. It is made by Madhuri Refiners Pvt. Ltd., built as its own brand with its own
+                        promise — upgrade everyday cooking into conscious living.
                       </p>
                     </div>
                   </div>
@@ -258,20 +254,18 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/a035-15ee8fd50e.png"
-                        alt="Join Slider"
+                        src="/assets/img/actipro-mark.png"
+                        alt="Actipro"
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
-                        Casey Thomas
-                        <span className="join-slider__span">Registered Dietician </span>
+                        FSSAI Licensed
+                        <span className="join-slider__span">Lic. No. 11424999000132</span>
                       </h4>
                       <p className="join-slider__p">
-                        “I've been leaning on EatNaked for years for both meal preps and catering events with the
-                        athletes I work with. They understand the flexibility and reliability required in athletics and
-                        have never given me a reason to switch away. My headaches are removed, the players love the
-                        food, and I can adjust the meals to hit my athletes' nutritional needs. I frequently find myself
-                        recommending them to other colleagues and clients.”
+                        Additives are disclosed on every pack: permitted antifoaming agent (DMPS, INS 900a) and antioxidant
+                        (TBHQ, INS 319). Marketed by Madhuri Refiners Pvt. Ltd., Indore (M.P.). Any information given
+                        here does not claim diagnosis, treatment, cure, or prevention of any disease.
                       </p>
                     </div>
                   </div>

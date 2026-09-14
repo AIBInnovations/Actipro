@@ -1,5 +1,5 @@
 /**
- * Kitchen showreel. The Vimeo player starts inline inside the headline and
+ * Refinery showreel. The Vimeo player starts inline inside the headline and
  * Flips out to the full-bleed `.showreel` slot on scroll.
  *
  * Markup mirrors the reference DOM so styles.css applies unchanged.
@@ -10,19 +10,19 @@ export default function KitchenAction() {
       <section className="action" data-marker="">
         <div className="action-container">
           <div className="action-content">
-            <div className="action-tag">Where The Magic Begins</div>
+            <div className="action-tag">Where It's Actually Made</div>
 
             <div className="action-header">
               <div className="action-h2-inline is--portrait">
-                Our kitchen In <span className="highlight">Action</span>
+                Our refinery In <span className="highlight">Action</span>
               </div>
 
               <p className="action-p is--portrait">
-                Passionate culinary chefs and skilled dietitians—blending expertise with heart. We bring together
-                decades of experience, a shared love for nourishing others, and a deep commitment to our community.
+                Three decades of edible oil manufacturing behind every bottle. Actipro is made by Madhuri Refiners Pvt.
+                Ltd. — built as its own brand, with its own promise: upgrade everyday cooking into conscious living.
               </p>
 
-              <h2 className="action-h2">Our kitchen</h2>
+              <h2 className="action-h2">Our refinery</h2>
               <div className="action-h2-inline">
                 <span>In</span>
 
@@ -58,7 +58,7 @@ export default function KitchenAction() {
                         <img
                           src="/assets/img/a028-43dd414d72.avif"
                           loading="lazy"
-                          alt="EATnaked Showreel"
+                          alt="Actipro showreel"
                           className="vimeo-player__placeholder"
                         />
 
@@ -257,8 +257,8 @@ export default function KitchenAction() {
             </div>
 
             <p className="action-p is--landscape">
-              Passionate culinary chefs and skilled dietitians—blending expertise with heart. We bring together decades
-              of experience, a shared love for nourishing others, and a deep commitment to our community.
+              Actipro is made by Madhuri Refiners Pvt. Ltd., with over three decades in edible oil manufacturing — built as its own
+              brand, with its own promise: upgrade everyday cooking into conscious living.
             </p>
           </div>
 

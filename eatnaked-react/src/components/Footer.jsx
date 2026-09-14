@@ -1,5 +1,5 @@
 /**
- * Footer columns, the oversized EATnaked wordmark, and back-to-top.
+ * Footer columns, the oversized Actipro wordmark, and back-to-top.
  *
  * Markup mirrors the reference DOM so styles.css applies unchanged.
  */
@@ -23,19 +23,19 @@ export default function Footer() {
               </li>
 
               <li className="footer-top__li">
-                <a href="/community" data-active="community" className="footer-top__link">
-                  Community
+                <a href="/products" data-active="products" className="footer-top__link">
+                  Products
                 </a>
               </li>
 
               <li className="footer-top__li">
-                <a href="/our-menu" data-active="our-menu" className="footer-top__link">
-                  Menu
+                <a href="/the-process" data-active="the-process" className="footer-top__link">
+                  The Process
                 </a>
               </li>
 
               <li className="footer-top__li">
-                <a href="/customer-support" data-active="customer-support" className="footer-top__link">
+                <a href="/contact-us" data-active="contact-us" className="footer-top__link">
                   Contact Us
                 </a>
               </li>
@@ -45,14 +45,14 @@ export default function Footer() {
           <div className="footer-top__col is--login">
             <ul className="footer-top__ul">
               <li className="footer-top__li">
-                <a href="/login" className="footer-top__link">
-                  Login
+                <a href="#" className="footer-top__link">
+                  Mon – Sat · 9am to 7pm
                 </a>
               </li>
 
               <li className="footer-top__li">
-                <a href="/register" className="footer-top__link">
-                  Register
+                <a href="#" className="footer-top__link">
+                  Oil Bot · 9am to 11pm
                 </a>
               </li>
             </ul>
@@ -61,20 +61,20 @@ export default function Footer() {
           <div className="footer-top__col is--contact">
             <ul className="footer-top__ul">
               <li className="footer-top__li">
-                <a href="mailto:connect@eatnaked.co" className="footer-top__link">
-                  connect@eatnaked.co
+                <a href="mailto:contact@madhurioils.com" className="footer-top__link">
+                  contact@madhurioils.com
                 </a>
               </li>
 
               <li className="footer-top__li">
-                <a href="tel:+19092765351" className="footer-top__link">
-                  +1 909-276-5351
+                <a href="tel:+917224870701" className="footer-top__link">
+                  +91 72248 70701
                 </a>
               </li>
 
               <li className="footer-top__li">
-                <a href="https://maps.app.goo.gl/YzK3Njmb3cBLay2w5" target="_blank" className="footer-top__link">
-                  2032 Lincoln Ave., Pasadena, CA 91001
+                <a href="https://www.google.com/maps/search/?api=1&query=Madhuri+Refiners+Pvt+Ltd+Indore" target="_blank" className="footer-top__link">
+                  Madhuri Refiners Pvt. Ltd., Indore (M.P.)
                 </a>
               </li>
             </ul>
@@ -83,19 +83,19 @@ export default function Footer() {
           <div className="footer-top__col is--social">
             <ul className="footer-top__ul">
               <li className="footer-top__li">
-                <a href="https://www.facebook.com/MealPrep" target="_blank" className="footer-top__link">
+                <a href="#" target="_blank" className="footer-top__link">
                   Facebook
                 </a>
               </li>
 
               <li className="footer-top__li">
-                <a href="https://www.instagram.com/eatnakedco" target="_blank" className="footer-top__link">
+                <a href="#" target="_blank" className="footer-top__link">
                   Instagram
                 </a>
               </li>
 
               <li className="footer-top__li">
-                <a href="https://www.tiktok.com/@eatnakedla" target="_blank" className="footer-top__link">
+                <a href="#" target="_blank" className="footer-top__link">
                   Tiktok
                 </a>
               </li>
@@ -104,7 +104,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <div className="footer-brand">EATnaked</div>
+          <div className="footer-brand">Actipro</div>
 
           <div className="footer-bottom__back-to-top" data-scrollto="top">
             <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 166 167" fill="none">
@@ -135,7 +135,7 @@ export default function Footer() {
         <img
           src="/assets/img/a047-c2dac2172d.avif"
           type="image/avif"
-          alt="EATnaked footer Background"
+          alt="Actipro footer background"
           className="footer-background"
           loading="lazy"
         />

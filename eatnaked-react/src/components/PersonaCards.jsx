@@ -1,5 +1,5 @@
 /**
- * Persona deck. Landscape gets the draggable flick-card stack, portrait a
+ * Use-case deck. Landscape gets the draggable flick-card stack, portrait a
  * Swiper — the desktop interaction is not a carousel.
  *
  * Markup mirrors the reference DOM so styles.css applies unchanged.
@@ -42,10 +42,10 @@ export default function PersonaCards() {
                 </div>
 
                 <div className="flick-card__info">
-                  <h3 className="flick-card__info__h3">Professional</h3>
-                  <h4 className="flick-card__info__h4">Fuel Your Hustle.</h4>
+                  <h3 className="flick-card__info__h3">Everyday Meals</h3>
+                  <h4 className="flick-card__info__h4">Refined Sunflower Oil.</h4>
 
-                  <a href="/our-menu" className="cta-button">
+                  <a href="/find-your-oil" className="cta-button">
                     <div className="cta-button__background"></div>
                     <div className="cta-button__blur"></div>
 
@@ -60,7 +60,7 @@ export default function PersonaCards() {
                         </svg>
                       </div>
                       <div className="cta-button__text">
-                        <span className="cta-button__text--span">View Meals</span>
+                        <span className="cta-button__text--span">Find Your Oil</span>
                       </div>
                     </div>
                   </a>
@@ -95,10 +95,10 @@ export default function PersonaCards() {
                 </div>
 
                 <div className="flick-card__info">
-                  <h3 className="flick-card__info__h3">Athlete</h3>
-                  <h4 className="flick-card__info__h4">Enhance Your Performance.</h4>
+                  <h3 className="flick-card__info__h3">Deep Frying</h3>
+                  <h4 className="flick-card__info__h4">Refined Corn Oil.</h4>
 
-                  <a href="/our-menu" className="cta-button">
+                  <a href="/find-your-oil" className="cta-button">
                     <div className="cta-button__background"></div>
                     <div className="cta-button__blur"></div>
 
@@ -113,7 +113,7 @@ export default function PersonaCards() {
                         </svg>
                       </div>
                       <div className="cta-button__text">
-                        <span className="cta-button__text--span">View Meals</span>
+                        <span className="cta-button__text--span">Find Your Oil</span>
                       </div>
                     </div>
                   </a>
@@ -129,7 +129,7 @@ export default function PersonaCards() {
                     <img
                       width="256"
                       loading="lazy"
-                      alt="eatnaked family"
+                      alt="Heart-conscious cooking"
                       src="/assets/img/a017-b0c8afdaf0.avif"
                       className="cover-image"
                     />
@@ -148,10 +148,10 @@ export default function PersonaCards() {
                 </div>
 
                 <div className="flick-card__info">
-                  <h3 className="flick-card__info__h3">Family</h3>
-                  <h4 className="flick-card__info__h4">Nourish Who Matters Most.</h4>
+                  <h3 className="flick-card__info__h3">Heart-Conscious</h3>
+                  <h4 className="flick-card__info__h4">Refined Rice Bran Oil.</h4>
 
-                  <a href="/our-menu" className="cta-button">
+                  <a href="/find-your-oil" className="cta-button">
                     <div className="cta-button__background"></div>
                     <div className="cta-button__blur"></div>
 
@@ -166,7 +166,7 @@ export default function PersonaCards() {
                         </svg>
                       </div>
                       <div className="cta-button__text">
-                        <span className="cta-button__text--span">View Meals</span>
+                        <span className="cta-button__text--span">Find Your Oil</span>
                       </div>
                     </div>
                   </a>
@@ -178,7 +178,7 @@ export default function PersonaCards() {
         </div>
 
         <div className="design-header">
-          <h2 className="design-header__h2">Designed for Your Taste, Built for Your Day.</h2>
+          <h2 className="design-header__h2">Not all cooking calls for the same oil. Let's find yours.</h2>
         </div>
 
         <div
@@ -197,10 +197,10 @@ export default function PersonaCards() {
             <div className="design-swiper__slide design-swiper-slide">
               <div className="design-swiper__inner">
                 <div className="design-swiper__content">
-                  <h3 className="design-swiper__content__h3">Professional</h3>
-                  <h4 className="design-swiper__content__h4">Fuel Your Hustle.</h4>
+                  <h3 className="design-swiper__content__h3">Everyday Meals</h3>
+                  <h4 className="design-swiper__content__h4">Refined Sunflower Oil.</h4>
 
-                  <a href="/our-menu" className="cta-button">
+                  <a href="/find-your-oil" className="cta-button">
                     <div className="cta-button__background"></div>
                     <div className="cta-button__blur"></div>
 
@@ -215,12 +215,12 @@ export default function PersonaCards() {
                         </svg>
                       </div>
                       <div className="cta-button__text">
-                        <span className="cta-button__text--span">View Meals</span>
+                        <span className="cta-button__text--span">Find Your Oil</span>
                       </div>
                     </div>
                   </a>
 
-                  <img src="/assets/img/a015-2ed3e394a1.avif" alt="EATnaked design" className="design-swiper__image" />
+                  <img src="/assets/img/a015-2ed3e394a1.avif" alt="Actipro" className="design-swiper__image" />
                 </div>
               </div>
 
@@ -239,10 +239,10 @@ export default function PersonaCards() {
             <div className="design-swiper__slide design-swiper-slide">
               <div className="design-swiper__inner">
                 <div className="design-swiper__content">
-                  <h3 className="design-swiper__content__h3">Athlete</h3>
-                  <h4 className="design-swiper__content__h4">Enhance Your Performance.</h4>
+                  <h3 className="design-swiper__content__h3">Deep Frying</h3>
+                  <h4 className="design-swiper__content__h4">Refined Corn Oil.</h4>
 
-                  <a href="/our-menu" className="cta-button">
+                  <a href="/find-your-oil" className="cta-button">
                     <div className="cta-button__background"></div>
                     <div className="cta-button__blur"></div>
 
@@ -257,12 +257,12 @@ export default function PersonaCards() {
                         </svg>
                       </div>
                       <div className="cta-button__text">
-                        <span className="cta-button__text--span">View Meals</span>
+                        <span className="cta-button__text--span">Find Your Oil</span>
                       </div>
                     </div>
                   </a>
 
-                  <img src="/assets/img/a016-2a1cd3929b.avif" alt="EATnaked design" className="design-swiper__image" />
+                  <img src="/assets/img/a016-2a1cd3929b.avif" alt="Actipro" className="design-swiper__image" />
                 </div>
               </div>
 
@@ -281,10 +281,10 @@ export default function PersonaCards() {
             <div className="design-swiper__slide design-swiper-slide">
               <div className="design-swiper__inner">
                 <div className="design-swiper__content">
-                  <h3 className="design-swiper__content__h3">Family</h3>
-                  <h4 className="design-swiper__content__h4">Nourish Who Matters Most.</h4>
+                  <h3 className="design-swiper__content__h3">Heart-Conscious</h3>
+                  <h4 className="design-swiper__content__h4">Refined Rice Bran Oil.</h4>
 
-                  <a href="/our-menu" className="cta-button">
+                  <a href="/find-your-oil" className="cta-button">
                     <div className="cta-button__background"></div>
                     <div className="cta-button__blur"></div>
 
@@ -299,12 +299,12 @@ export default function PersonaCards() {
                         </svg>
                       </div>
                       <div className="cta-button__text">
-                        <span className="cta-button__text--span">View Meals</span>
+                        <span className="cta-button__text--span">Find Your Oil</span>
                       </div>
                     </div>
                   </a>
 
-                  <img src="/assets/img/a017-b0c8afdaf0.avif" alt="EATnaked design" className="design-swiper__image" />
+                  <img src="/assets/img/a017-b0c8afdaf0.avif" alt="Actipro" className="design-swiper__image" />
                 </div>
               </div>
 
