@@ -230,23 +230,25 @@ and HMR both replay cleanly.
 
 ### Media that still shows the previous brand
 
-None of these can be fixed in code — they need new artwork.
+The brand's own asset library now covers the still imagery — pack shots,
+ingredient cut-outs and dishes live in `public/assets/img` as `pack-*`, `ing-*`,
+`variant-*` and `dish-*`. What remains is rendered footage, which needs
+re-rendering rather than re-pointing.
 
-| Asset                              | Problem                                                                                  |
-| ---------------------------------- | ---------------------------------------------------------------------------------------- |
-| `assets/secuence-bag/**`           | 40 frames × 2 orientations of a tote bag carrying the **previous brand's logo and wordmark**, rotating 360°. Hero of the quality section. |
-| `assets/secuence-partners/**`      | 201 frames × 2 of a city flythrough with **Netflix, UCLA and Equinox logos** as buildings — third-party trademarks. |
-| Vimeo `1129496694`                 | The previous brand's promo video, on a third party's personal account, with a **burned-in watermark** and a competing domain on screen. Plays under "Our refinery In Action". |
-| `assets/videos/delivered-*.mp4`    | Both orientations render the **previous brand's wordmark**.                               |
-| `assets/img/a028-*.avif`           | Vimeo poster frame: a meal-prep commissary kitchen.                                       |
-| `assets/img/variant-*.png`         | **Hero variant pill icons — drop replacements straight onto these three filenames** (`variant-sunflower.png`, `variant-corn.png`, `variant-rice-bran.png`). They currently hold the old placeholder cut-outs: a tomato and pepper, almonds, and raw chicken. Roughly square, transparent PNG, rendered at 50×40. |
-| `assets/img/a006`–`a011`           | Process-card photography. **At least one frame contains beef**, which is a serious problem for a brand marketed from Madhya Pradesh. Treat as urgent. |
-| `assets/img/a015`–`a019`           | Use-case and bowl photography: prepared meals, not oil or cooking.                        |
-| `assets/img/a020`–`a027`           | Benefit-tag icons — vegetables and proteins sitting beside nutrient labels.               |
-| `assets/img/a036`–`a046`           | Floating salad-ingredient cut-outs around the closing CTA.                                |
+| Asset | Problem |
+| --- | --- |
+| `assets/secuence-bag/**` | 40 frames × 2 orientations of a tote bag carrying the **previous brand's logo and wordmark**, rotating 360°. Hero of the quality section. |
+| `assets/secuence-partners/**` | 201 frames × 2 of a city flythrough with **Netflix, UCLA and Equinox logos** as buildings — third-party trademarks. It plays behind "The Actipro Range". |
+| Vimeo `1129496694` | The previous brand's promo video, on a third party's personal account, with a **burned-in watermark** and a competing domain on screen. Plays under "Our refinery In Action". Its poster now shows the Actipro range mock-up, but the video itself is unchanged. |
+| `assets/videos/delivered-*.mp4` | Both orientations render the **previous brand's wordmark**. |
 
-The four range cards currently show the Actipro wordmark four times because the
-slot was designed for a logo. They want pack shots.
+Four abstract backdrops from the original build are still in place and are
+brand-neutral: `a005` (a gradient), `a029` (the quality backdrop), `a047` (the
+footer) and `a048` (the page vignette).
+
+The brand's source library is kept out of `public/` at `brand/assets-source/`,
+so the originals stay in the repo without shipping. The web copies are resized
+and re-encoded — WebP for anything large, PNG for the three pill icons.
 
 ### Content to confirm with the brand owner
 

@@ -24,7 +24,7 @@ export default function PersonaCards() {
                       width="256"
                       loading="lazy"
                       alt=""
-                      src="/assets/img/a015-2ed3e394a1.avif"
+                      src="/assets/img/dish-pulao.webp"
                       className="cover-image"
                     />
                   </div>
@@ -77,7 +77,7 @@ export default function PersonaCards() {
                       width="256"
                       loading="lazy"
                       alt=""
-                      src="/assets/img/a016-2a1cd3929b.avif"
+                      src="/assets/img/dish-chaat.webp"
                       className="cover-image"
                     />
                   </div>
@@ -130,7 +130,7 @@ export default function PersonaCards() {
                       width="256"
                       loading="lazy"
                       alt=""
-                      src="/assets/img/a017-b0c8afdaf0.avif"
+                      src="/assets/img/dish-curry.webp"
                       className="cover-image"
                     />
                   </div>
@@ -220,7 +220,7 @@ export default function PersonaCards() {
                     </div>
                   </a>
 
-                  <img src="/assets/img/a015-2ed3e394a1.avif" alt="" className="design-swiper__image" />
+                  <img src="/assets/img/dish-pulao.webp" alt="" className="design-swiper__image" />
                 </div>
               </div>
 
@@ -262,7 +262,7 @@ export default function PersonaCards() {
                     </div>
                   </a>
 
-                  <img src="/assets/img/a016-2a1cd3929b.avif" alt="" className="design-swiper__image" />
+                  <img src="/assets/img/dish-chaat.webp" alt="" className="design-swiper__image" />
                 </div>
               </div>
 
@@ -304,7 +304,7 @@ export default function PersonaCards() {
                     </div>
                   </a>
 
-                  <img src="/assets/img/a017-b0c8afdaf0.avif" alt="" className="design-swiper__image" />
+                  <img src="/assets/img/dish-curry.webp" alt="" className="design-swiper__image" />
                 </div>
               </div>
 

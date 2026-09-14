@@ -88,8 +88,7 @@
 .flick-group__item,   /* NOT .flick-card — .flick-card__info is its SIBLING,
                          not its child, so scoping the card misses the text */
 .design-swiper__slide,
-.goals-swiper-slide,
-.goals [data-accordion-status="active"] {
+.goals-swiper-slide {
   --bg: #0b0b0b;
   --bg-elevated: #131313;
   --fg: #ffffff;

@@ -56,7 +56,7 @@ export default function KitchenAction() {
                         ></iframe>
 
                         <img
-                          src="/assets/img/a028-43dd414d72.avif"
+                          src="/assets/img/pack-range.webp"
                           loading="lazy"
                           alt=""
                           className="vimeo-player__placeholder"

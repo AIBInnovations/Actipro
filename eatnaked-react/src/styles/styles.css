@@ -1734,217 +1734,353 @@ html[data-loading] .loading-layer {
 /* GOALS SECTION */
 .goals {
   position: relative;
+  isolation: isolate;
+
+  --peach-card: #fdf2ec;
+  --peach-card-2: #fbe7db;
+  --peach-flat: #fdf5f0;
+  --peach-flat-2: #fbece2;
+  --peach-panel: #fef8f4;
+  --peach-chip: #fdeee3;
+  --line-soft: rgba(17, 17, 17, 0.07);
+  --orange-soft: rgba(244, 120, 62, 0.14);
+}
+
+/* The grid sits behind everything and is masked to a soft ellipse so it reads
+   as texture rather than graph paper. */
+.goals .goals-grid-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(17, 17, 17, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.055) 1px, transparent 1px);
+  background-size: 7.2rem 7.2rem;
+  -webkit-mask-image: radial-gradient(ellipse 78% 68% at 50% 46%, #000 22%, transparent 76%);
+  mask-image: radial-gradient(ellipse 78% 68% at 50% 46%, #000 22%, transparent 76%);
 }
 
 .goals .goals-container {
-  padding: min(18rem, 18vh) 6rem;
+  padding: min(15rem, 15vh) 6rem;
   height: 100%;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.6fr);
   align-items: center;
+  gap: 7rem;
 }
 
-.goals .goals-container .goals-header {
-  position: absolute;
-  left: 6rem;
-  bottom: min(9rem, 9vh);
-  max-width: 30rem;
+/* --- left column ------------------------------------------------------- */
+
+.goals .goals-header {
+  display: grid;
+  gap: 2.2rem;
+  justify-items: start;
+}
+
+.goals .goals-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.goals .goals-eyebrow__rule {
+  width: 4.4rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--orange);
+}
+
+.goals .goals-eyebrow__text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.goals .goals-header__h2 {
+  font-size: min(7rem, 7.4vh);
+  font-weight: 500;
+  line-height: 0.99;
+  letter-spacing: -0.02em;
+  max-width: 11ch;
+}
+
+.goals .goals-header__p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+  max-width: 33ch;
+}
+
+.goals .goals-features {
+  display: grid;
+  gap: 2.4rem;
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.goals .goals-feature {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.goals .goals-feature__icon {
+  width: 5.6rem;
+  height: 5.6rem;
+  flex-shrink: 0;
+  border-radius: 1.8rem;
+  display: grid;
+  place-items: center;
+  background: var(--peach-chip);
+  color: var(--orange-text);
+}
+
+.goals .goals-feature__icon svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.goals .goals-feature__body {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.goals .goals-feature__body strong {
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.goals .goals-feature__body span {
+  font-size: 1.5rem;
+  line-height: 1.35;
+  color: var(--fg-muted);
+}
+
+/* --- accordion --------------------------------------------------------- */
+
+.goals .accordion-css {
+  width: 100%;
+}
+
+.goals .accordion-css__list {
   display: grid;
   gap: 1.8rem;
 }
 
-.goals .goals-container .goals-header .goals-header__h2 {
-  font-size: 6rem;
-  font-weight: 500;
-  line-height: 1;
-  text-transform: capitalize;
-}
-
-.goals .goals-container .goals-header .goals-header__p {
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1;
-  opacity: 0.5;
-}
-
-.goals .goals-swiper-container {
-  display: none;
-}
-
-.goals .accordion-css {
-  max-width: 83rem;
-  position: relative;
-}
-
-.goals .accordion-css__list {
-  grid-row-gap: 3rem;
-  flex-flow: column;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  display: flex;
-  position: static;
-}
-
 .goals .accordion-css__main-wrappper {
-  position: relative;
-  border-radius: 5rem;
+  border-radius: 3.2rem;
+  border: 1px solid var(--orange-soft);
+  background: linear-gradient(135deg, var(--peach-flat) 0%, var(--peach-flat-2) 100%);
   overflow: hidden;
+  transition: box-shadow 0.6s var(--ease), background 0.6s var(--ease);
 }
 
-.goals .accordion-css__blur-wrappper {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  transition: opacity 0.8s ease-out;
-}
-
-.goals .accordion-css__main-wrappper:nth-last-child(2) .accordion-css__blur-wrappper {
-  transform: rotate(180deg);
-}
-
-.goals .accordion-css__main-wrappper:nth-last-child(1) .accordion-css__blur-wrappper {
-  transform: rotate(180deg);
-}
-
-.goals .accordion-css__inner {
-  padding: 0.8rem;
-  background: var(--surface-soft);
-  backdrop-filter: blur(23px);
-  -webkit-backdrop-filter: blur(23px);
-}
-
-.goals .accordion-css__item {
-  list-style: none;
-  border-radius: 4.5rem;
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-}
-
-.goals .accordion-css__item-blur {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.8s ease-out;
-}
-
-.goals .accordion-css__item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
+.goals .accordion-css__main-wrappper[data-parent-status="active"] {
+  background: linear-gradient(135deg, var(--peach-card) 0%, var(--peach-card-2) 100%);
+  box-shadow: 0 3rem 6rem -2.6rem rgba(196, 88, 40, 0.3);
 }
 
 .goals .accordion-css__item-top {
-  cursor: pointer;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7rem 1.2rem 0.7rem 3.2rem;
   display: flex;
-  position: relative;
+  align-items: center;
+  gap: 2.2rem;
+  padding: 2.2rem 2.4rem;
+  cursor: pointer;
 }
 
 .goals .accordion-css__top-flex {
   display: flex;
   align-items: center;
-  gap: 1.3rem;
-}
-.goals .accordion-css__top-flex svg {
-  width: 2.5rem;
-  height: 2.5rem;
+  gap: 1.6rem;
+  min-width: 0;
+  flex: 1;
 }
 
-.goals .accordion-css__top-flex span {
-  font-size: 1.8rem;
+.goals .accordion-css__top-icon {
+  width: 5.4rem;
+  height: 5.4rem;
+  flex-shrink: 0;
+  border-radius: 1.6rem;
+  display: grid;
+  place-items: center;
+  background: var(--peach-chip);
+  color: var(--orange-text);
+  transition: background 0.6s var(--ease), color 0.6s var(--ease);
+}
+
+.goals [data-accordion-status="active"] .accordion-css__top-icon {
+  background: var(--orange);
+  color: #fff;
+  box-shadow: 0 1.2rem 2.4rem -1rem rgba(196, 88, 40, 0.55);
+}
+
+.goals .accordion-css__top-icon svg {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.goals .accordion-css__top-titles {
+  display: grid;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.goals .accordion-css__top-titles strong {
+  font-size: 2.4rem;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.15;
+}
+
+.goals .accordion-css__top-titles span {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: var(--fg-muted);
 }
 
 .goals .accordion-css__top-loader {
-  width: 8rem;
-  height: 8rem;
+  position: relative;
+  width: 6.2rem;
+  height: 6.2rem;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: var(--orange);
+}
+
+.goals .accordion-css__top-loader svg {
+  width: 100%;
+  height: 100%;
+}
+
+.goals .accordion-css__ring-track {
+  stroke: rgba(244, 120, 62, 0.22);
+}
+
+.goals .accordion-css__ring-arc {
+  stroke: var(--orange);
+}
+
+.goals .accordion-css__top-tag-dot circle {
+  fill: var(--orange);
+}
+
+.goals .accordion-css__top-loader-text {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, 0%) scale(0);
-  opacity: 0;
-  transition:
-    opacity 0.6s ease-out,
-    transform 0.6s cubic-bezier(0.625, 0.05, 0, 1);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--orange-text);
+}
+
+/* The ring only means anything on the open card. */
+.goals [data-accordion-status="not-active"] .accordion-css__top-loader {
+  display: none;
 }
 
 .goals .accordion-css__top-tag {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 0.8rem;
-  min-height: 4rem;
-  padding: 1.5rem 2rem;
+  gap: 0.9rem;
+  flex-shrink: 0;
+  padding: 1.1rem 2rem;
   border-radius: 10rem;
-  border: 0.5px solid var(--hairline);
-  will-change: transform;
-  transition: transform 0.6s cubic-bezier(0.625, 0.05, 0, 1);
-}
-
-.goals .accordion-css__top-tag svg {
-  width: 4px;
-  height: 4px;
-}
-
-.goals .accordion-css__top-tag span {
-  font-size: 1.8rem;
+  border: 1px solid var(--line-soft);
+  background: #fff;
+  font-size: 1.5rem;
   font-weight: 500;
-  line-height: 1;
+  white-space: nowrap;
+}
+
+.goals .accordion-css__top-tag-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  flex-shrink: 0;
+  color: var(--orange);
+}
+
+.goals .accordion-css__top-chevron {
+  width: 4.4rem;
+  height: 4.4rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-soft);
+  background: #fff;
+  transition: transform 0.6s var(--ease);
+}
+
+.goals .accordion-css__top-chevron svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.goals [data-accordion-status="not-active"] .accordion-css__top-chevron {
+  transform: rotate(180deg);
 }
 
 .goals .accordion-css__item-bottom {
-  transition: grid-template-rows 0.6s cubic-bezier(0.625, 0.05, 0, 1);
-  grid-template-rows: 0fr;
   display: grid;
-  position: relative;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.6s var(--ease);
+}
+
+.goals [data-accordion-status="active"] .accordion-css__item-bottom {
+  grid-template-rows: 1fr;
+}
+
+.goals .accordion-css__item-bottom-wrap {
   overflow: hidden;
-  padding: 0rem 4rem;
+  min-height: 0;
+}
+
+.goals .accordion-css__item-bottom-content {
+  margin: 0 2.4rem 2.4rem;
+  padding: 2.8rem 3rem 3rem;
+  border-radius: 2.6rem;
+  background: var(--peach-panel);
 }
 
 .goals .accordion-css__item-block {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  opacity: 0;
-  transition: opacity 0.6s ease-out;
+  gap: 2rem;
 }
 
 .goals .accordion-css__item-block span {
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1;
-  opacity: 0.5;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: var(--fg-muted);
 }
 
 .goals .accordion-css__item-block strong {
-  font-size: 4rem;
-  font-weight: 500;
-  line-height: 1;
+  font-size: min(4.8rem, 5vh);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--orange-display);
+}
+
+.goals .accordion-css__item-block + .accordion-css__item-block {
+  margin-top: 0.4rem;
 }
 
 .goals .accordion-css__item-bottom-loader {
-  width: 100%;
-  height: 3.2rem;
-  margin-block: min(3.5rem, 3.5vh) min(5.5rem, 5.5vh);
-  border-radius: 1.8rem;
-  background: var(--track);
-  opacity: 0;
-  transition: opacity 0.6s ease-out 0.1s;
+  position: relative;
+  height: 1.1rem;
+  border-radius: 10rem;
+  background: var(--orange-soft);
+  margin-block: 2.4rem 2.8rem;
 }
 
 .goals .accordion-css__item-bottom-loader-bar {
   position: relative;
-  border-radius: 1.8rem;
-  background: linear-gradient(90deg, var(--orange) 0%, var(--orange-mid) 50%, var(--orange-light) 100%);
   height: 100%;
-  width: 43.2rem;
+  border-radius: 10rem;
+  background: linear-gradient(90deg, var(--orange) 0%, #f9a878 100%);
 }
 
 .goals .accordion-css__item-bottom-loader-circle {
@@ -1952,146 +2088,84 @@ html[data-loading] .loading-layer {
   top: 50%;
   right: 0;
   transform: translate(50%, -50%);
-  width: 4.8rem;
-  height: 4.8rem;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background: var(--orange-light);
-  border-radius: 100%;
-  filter: drop-shadow(0 4px 30px var(--shadow));
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--orange);
+  box-shadow: 0 0.6rem 1.6rem -0.4rem rgba(196, 88, 40, 0.5);
+}
+
+.goals .accordion-css__item-promise {
+  font-size: 1.6rem;
+  color: var(--fg-muted);
+  padding-top: 2.4rem;
+  margin-bottom: 2.4rem;
+  border-top: 1px solid var(--line-soft);
+}
+
+.goals .accordion-css__item-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 3rem;
+  align-items: start;
+}
+
+.goals .accordion-css__item-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.2rem;
+}
+
+.goals .accordion-css__item-grid-group {
+  display: grid;
+  gap: 0.8rem;
+  align-content: start;
+  justify-items: start;
+}
+
+.goals .accordion-css__step-num {
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 50%;
   display: grid;
   place-items: center;
+  background: var(--orange-soft);
+  color: var(--orange-text);
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
-.goals .accordion-css__item-bottom-loader svg {
-  width: 3rem;
-  height: 3rem;
+.goals .accordion-css__item-grid-group strong {
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
-.goals .accordion-css__item-info {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  column-gap: 2rem;
-  opacity: 0;
-  transition: opacity 0.6s ease-out 0.2s;
-}
-
-.goals .accordion-css__item-info .accordion-css__item-bar {
-  width: 4px;
-  border-radius: 4px;
-  height: 100%;
-  background: var(--orange);
-}
-
-.goals .accordion-css__item-info .accordion-css__item-grid {
-  display: grid;
-  gap: 1.5rem;
-  place-content: center start;
-}
-
-.goals .accordion-css__item-info .accordion-css__item-grid .accordion-css__item-grid-group {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  height: fit-content;
-}
-
-.goals .accordion-css__item-info .accordion-css__item-grid .accordion-css__item-grid-group span {
+.goals .accordion-css__step-body {
   font-size: 1.4rem;
-  line-height: 1;
-  opacity: 0.5;
-  width: 6rem;
+  line-height: 1.35;
+  color: var(--fg-muted);
 }
 
-.goals .accordion-css__item-info .accordion-css__item-grid .accordion-css__item-grid-group strong {
-  font-size: 1.8rem;
-  line-height: 1;
-  opacity: 0.8;
-}
-
-.goals .accordion-css__item-info .accordion-css__item-images {
+.goals .accordion-css__item-images {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
-.goals .accordion-css__item-info .accordion-css__item-images img {
-  width: 12.5rem;
-  height: 12.5rem;
+.goals .accordion-css__item-images img {
+  width: 14rem;
+  height: 14rem;
+  flex-shrink: 0;
   border-radius: 2rem;
+  background: #fff;
+  padding: 0.6rem;
+  box-shadow: 0 1.4rem 3rem -1.8rem rgba(120, 60, 25, 0.35);
+  object-fit: contain;
 }
 
-.goals .accordion-css__item-top-spacer {
-  display: grid;
-  width: 100%;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.6s cubic-bezier(0.625, 0.05, 0, 1);
-  overflow: hidden;
-  will-change: transform;
-}
-
-.goals .accordion-css__item-top-spacer-wrap {
-  flex-flow: column;
-  height: 100000%;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-}
-
-.goals .accordion-css__item-top-spacer-content {
-  height: min(3.5rem, 3.5vh);
-}
-
-.goals .accordion-css__item-bottom-wrap {
-  flex-flow: column;
-  height: 100000%;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-}
-
-.goals .accordion-css__item-bottom-content {
-  padding-block: min(4.5rem, 4.5vh);
-}
-
-/* ACTIVE STATUS  */
-.goals [data-accordion-status="active"] .accordion-css__item-bottom {
-  grid-template-rows: 1fr;
-}
-
-.goals [data-accordion-status="active"] .accordion-css__top-tag {
-  transform: translateX(-2rem);
-}
-
-.goals [data-accordion-status="active"] .accordion-css__top-loader {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.goals [data-accordion-status="active"] .accordion-css__item-top-spacer {
-  grid-template-rows: 1fr;
-}
-
-.goals [data-accordion-status="active"] :is(.goals .accordion-css__item-info, .goals .accordion-css__item-bottom-loader, .goals .accordion-css__item-block, .goals .accordion-css__item-blur) {
-  opacity: 1;
-}
-
-.goals [data-parent-status="active"] .accordion-css__blur-wrappper {
-  opacity: 0;
-}
-
-.goals .accordion-css__main-wrappper .accordion-css__top-flex svg path {
-  transition:
-    fill 0.6s ease-out,
-    stroke 0.6s ease-out;
-}
-
-.goals .accordion-css__main-wrappper:nth-of-type(1) [data-accordion-status="active"] .accordion-css__top-flex svg path {
-  fill: var(--orange);
-  stroke: var(--orange);
-}
-
-.goals .accordion-css__main-wrappper:not(:nth-of-type(1)) [data-accordion-status="active"] .accordion-css__top-flex svg g path {
-  fill: var(--orange);
+.goals .goals-swiper-container {
+  display: none;
 }
 
 @media screen and (orientation: portrait) {
@@ -2375,6 +2449,62 @@ html[data-loading] .loading-layer {
   }
 }
 
+/* Process section, portrait. Declared after the shared portrait block above so
+   these win: that block still lays the container out as a flex column. */
+@media screen and (orientation: portrait) {
+  .goals .goals-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 5rem;
+    padding: 13rem 0;
+  }
+
+  .goals .goals-header {
+    justify-items: center;
+    text-align: center;
+    max-width: 38rem;
+    margin-inline: auto;
+  }
+
+  .goals .goals-header__h2 {
+    max-width: none;
+  }
+
+  .goals .goals-features {
+    justify-items: start;
+    text-align: left;
+    margin-top: 1rem;
+    gap: 2rem;
+  }
+
+  .goals .goals-feature__icon {
+    width: 4.6rem;
+    height: 4.6rem;
+    border-radius: 1.4rem;
+  }
+
+  .goals .goals-feature__icon svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .goals .goals-feature__body strong {
+    font-size: 1.7rem;
+  }
+
+  .goals .goals-feature__body span {
+    font-size: 1.4rem;
+  }
+
+  .goals .goals-grid-bg {
+    background-size: 5rem 5rem;
+  }
+
+  .goals .goals-swiper-container {
+    display: block;
+  }
+}
+
 /* PARTNERS SECTION */
 
 .partners-sticky {
@@ -2473,11 +2603,13 @@ html[data-loading] .loading-layer {
   gap: 1rem;
 }
 
+/* This slot held a partner logo; it now holds a pack shot, which needs room. */
 .partners .partners-container .partners-card .partners-card__flex svg,
 .partners .partners-container .partners-card .partners-card__flex img {
   width: auto;
-  height: 5rem;
+  height: 11rem;
   border-radius: 8px;
+  object-fit: contain;
   overflow: hidden;
 }
 
@@ -2684,6 +2816,22 @@ html[data-loading] .loading-layer {
   overflow: hidden;
 }
 
+/* The card label is white; the dish cut-outs are bright, so the bottom of the
+   media needs its own scrim to keep the text legible. */
+.flick-card__media::after,
+.design .design-swiper__inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(28, 16, 9, 0.78) 0%,
+    rgba(28, 16, 9, 0.42) 30%,
+    rgba(28, 16, 9, 0) 58%
+  );
+}
+
 .flick-card__info {
   position: absolute;
   top: 0;
@@ -2694,6 +2842,15 @@ html[data-loading] .loading-layer {
   align-content: end;
   gap: 2rem;
   padding: 5rem;
+  /* The label is white and the dish cut-outs are bright, so the overlay
+     carries its own scrim rather than relying on the photography. */
+  border-radius: 3.5rem;
+  background: linear-gradient(
+    to top,
+    rgba(28, 16, 9, 0.82) 0%,
+    rgba(28, 16, 9, 0.4) 34%,
+    rgba(28, 16, 9, 0) 62%
+  );
 }
 
 .flick-card__info__h3 {
@@ -4368,7 +4525,9 @@ html[data-loading] .loading-layer {
 
 /* Placeholder */
 .vimeo-player__placeholder {
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--bg);
+  padding: 4rem;
   width: 100%;
   height: 100%;
   transition: opacity 0.3s linear;
