@@ -178,21 +178,21 @@ export default function BowlSlider() {
               <div className="bowl-indicators__left-inner is--active" data-custom-slider-indicator="left">
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/ing-sunflower.webp" alt="" />
+                    <img src="/assets/img/tag-vitamin-e.webp" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Vitamin E</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/ing-corn.webp" alt="" />
+                    <img src="/assets/img/tag-phytosterols.webp" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Phytosterols</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/ing-rice-bran.webp" alt="" />
+                    <img src="/assets/img/tag-omega-6.webp" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Omega-6</span>
                 </div>
@@ -201,21 +201,21 @@ export default function BowlSlider() {
               <div className="bowl-indicators__left-inner" data-custom-slider-indicator="left">
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/ing-sunflower.webp" alt="" />
+                    <img src="/assets/img/tag-cholesterol-free.webp" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Cholesterol Free</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/ing-corn.webp" alt="" />
+                    <img src="/assets/img/tag-plant-sterols.webp" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Plant Sterols</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/ing-sunflower.webp" alt="" />
+                    <img src="/assets/img/tag-balanced-mufa.webp" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Balanced MUFA</span>
                 </div>
@@ -246,21 +246,21 @@ export default function BowlSlider() {
               <div className="bowl-indicators__right-inner is--active" data-custom-slider-indicator="right">
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/ing-corn.webp" alt="" />
+                    <img src="/assets/img/tag-less-absorbed.webp" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Less Absorbed</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/ing-rice-bran.webp" alt="" />
+                    <img src="/assets/img/tag-mild-taste.webp" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Mild Taste</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/ing-sunflower.webp" alt="" />
+                    <img src="/assets/img/tag-versatile.webp" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Versatile</span>
                 </div>
@@ -269,21 +269,21 @@ export default function BowlSlider() {
               <div className="bowl-indicators__right-inner" data-custom-slider-indicator="right">
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/ing-rice-bran.webp" alt="" />
+                    <img src="/assets/img/tag-vitamin-a-d.webp" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Vitamin A &amp; D</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/ing-corn.webp" alt="" />
+                    <img src="/assets/img/tag-antioxidants.webp" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Antioxidants</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/ing-rice-bran.webp" alt="" />
+                    <img src="/assets/img/tag-heat-stable.webp" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Heat Stable</span>
                 </div>

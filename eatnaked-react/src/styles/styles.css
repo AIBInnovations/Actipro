@@ -1762,7 +1762,13 @@ html[data-loading] .loading-layer {
 }
 
 .goals .goals-container {
-  padding: min(15rem, 15vh) 6rem;
+  /* Equal left and right, at the width the markers rail forces: the rail is
+     18rem (3rem container padding + 3rem line + 2rem gap + 10rem label), so
+     anything less than that on the right runs underneath it. 19rem leaves
+     1rem of air and matches .bowl, which is the other section that has to
+     clear the rail. Rail and gutter are both rem, so this holds at every
+     viewport width. */
+  padding: min(15rem, 15vh) 19rem;
   height: 100%;
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.6fr);

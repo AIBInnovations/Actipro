@@ -258,9 +258,9 @@ and re-encoded — WebP for anything large, PNG for the three pill icons.
   pack and correct `Join.jsx`.
 - **FSSAI licence number** `11424999000132` does not decompose cleanly under the
   FSSAI numbering scheme. Verify against the licence.
-- **Vitamin A & D** is claimed on Refined Rice Bran Oil in `BowlSlider.jsx`. The
-  plan lists it among pack badges without saying which variant carries it —
-  confirm, since it implies fortification.
+- ~~**Vitamin A & D**~~ — resolved. The supplied pack shots carry the FSSAI
+  `+F` mark and read "Fortified with Vitamin A & D" on both the Corn and Rice
+  Bran pouches, so the claim on that chip is the pack's own.
 - **The percentage rings** in the process accordion (`Goals.jsx`) render 25% /
   25% / 78% as baked SVG outlines, inherited from the original build's progress
   indicator. They read as unsourced product claims and have no referent. Either
