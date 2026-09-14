@@ -46,21 +46,21 @@ export default function Hero() {
         <div className="hero-video">
           <div className="hero-video__tag">
             <div className="hero-video__tag-img">
-              <img loading="lazy" src="/assets/img/a002-673a07abab.png" alt="" />
+              <img loading="lazy" src="/assets/img/variant-sunflower.png" alt="" />
             </div>
             <span className="hero-video__tag-text">Sunflower</span>
           </div>
 
           <div className="hero-video__tag">
             <div className="hero-video__tag-img">
-              <img loading="lazy" src="/assets/img/a003-c89aea1fd3.png" alt="" />
+              <img loading="lazy" src="/assets/img/variant-corn.png" alt="" />
             </div>
             <span className="hero-video__tag-text">Corn</span>
           </div>
 
           <div className="hero-video__tag">
             <div className="hero-video__tag-img">
-              <img loading="lazy" src="/assets/img/a004-3ee660c9ce.png" alt="" />
+              <img loading="lazy" src="/assets/img/variant-rice-bran.png" alt="" />
             </div>
             <span className="hero-video__tag-text">Rice Bran</span>
           </div>

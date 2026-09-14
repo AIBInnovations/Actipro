@@ -239,7 +239,7 @@ None of these can be fixed in code — they need new artwork.
 | Vimeo `1129496694`                 | The previous brand's promo video, on a third party's personal account, with a **burned-in watermark** and a competing domain on screen. Plays under "Our refinery In Action". |
 | `assets/videos/delivered-*.mp4`    | Both orientations render the **previous brand's wordmark**.                               |
 | `assets/img/a028-*.avif`           | Vimeo poster frame: a meal-prep commissary kitchen.                                       |
-| `assets/img/a002/a003/a004`        | Hero variant pills — a tomato and pepper, almonds, and raw chicken, labelled Sunflower / Corn / Rice Bran. |
+| `assets/img/variant-*.png`         | **Hero variant pill icons — drop replacements straight onto these three filenames** (`variant-sunflower.png`, `variant-corn.png`, `variant-rice-bran.png`). They currently hold the old placeholder cut-outs: a tomato and pepper, almonds, and raw chicken. Roughly square, transparent PNG, rendered at 50×40. |
 | `assets/img/a006`–`a011`           | Process-card photography. **At least one frame contains beef**, which is a serious problem for a brand marketed from Madhya Pradesh. Treat as urgent. |
 | `assets/img/a015`–`a019`           | Use-case and bowl photography: prepared meals, not oil or cooking.                        |
 | `assets/img/a020`–`a027`           | Benefit-tag icons — vegetables and proteins sitting beside nutrient labels.               |

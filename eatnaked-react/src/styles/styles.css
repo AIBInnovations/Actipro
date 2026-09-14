@@ -1352,9 +1352,9 @@ html[data-loading] .loading-layer {
 }
 
 .hero .hero-container .hero-video .hero-video__tag:nth-of-type(1) {
-  bottom: 0%;
+  top: 45%;
   left: 0;
-  transform: translate(-50%, -10vh);
+  transform: translateX(-50%);
 }
 
 .hero .hero-container .hero-video .hero-video__tag:nth-of-type(2) {
@@ -1363,10 +1363,15 @@ html[data-loading] .loading-layer {
   transform: translateX(50%);
 }
 
+/* Rice Bran sits centred along the bottom. The offset is 0 deliberately: the
+   pills are positioned against this grid cell while the video is full-bleed
+   behind it, so the two only track each other at some aspect ratios. Flush with
+   the cell's bottom edge clears the product on every window at or below 16:9;
+   anything more negative lifts the pill into the container on short, wide ones. */
 .hero .hero-container .hero-video .hero-video__tag:nth-of-type(3) {
   bottom: 0;
-  right: 0;
-  transform: translate(0%, -6.5vh);
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .hero .hero-container .hero-video .hero-video__tag-img {
