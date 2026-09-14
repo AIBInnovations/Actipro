@@ -47,7 +47,7 @@ const OVERLAYS = [
 /**
  * The dark-media sections, in document order.
  *
- * `.partners` and `.quality` are `position: sticky` children - the trigger has
+ * The remaining dark slots are plain sections; the trigger has
  * to be the outer wrapper (400vh / 200vh), because that is what occupies the
  * scroll range. A top-stuck child's top and bottom coincide with its wrapper's
  * at both ends of that range, so the wrapper's geometry is exactly the span
@@ -65,7 +65,6 @@ const DARK_SECTIONS = [
    * the tray floats on white. The overlays must stay dark over it.
    */
   { selector: ".delivered" },
-  { selector: ".partners-sticky" },
   {
     selector: ".showreel",
     // `display: none` in portrait, where the Flip never runs.
@@ -80,7 +79,6 @@ const DARK_SECTIONS = [
      */
     startLine: { markers: () => window.innerHeight * 0.1 },
   },
-  { selector: ".quality-sticky" },
 ];
 
 export class AdaptiveTheme {
@@ -104,10 +102,9 @@ export class AdaptiveTheme {
           el: document.querySelector(overlay.selector),
           /**
            * How many dark sections are behind this overlay right now. Two dark
-           * sections hand over at the same scroll position (hero → delivered,
-           * showreel → quality), and nothing guarantees the order of the two
-           * callbacks, so a boolean would let the one leaving clear what the
-           * one arriving just set. A set of the sections currently spanning
+           * sections can hand over at the same scroll position, and nothing
+           * guarantees the order of the two callbacks, so a boolean would let
+           * the one leaving clear what the one arriving just set. A set of the sections currently spanning
            * the line cannot drift, and re-adding a section already in it is a
            * no-op.
            */

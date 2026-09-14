@@ -50,9 +50,6 @@ src/
     preloader.js             the logo-fill loader
     adaptiveTheme.js         is--on-dark hand-off for the fixed overlays
     homepageAnimations.js    per-section scroll triggers
-    imageSequenceLoader.js   batched frame decode with per-orientation caches
-    sequenceScrollHandler.js canvas + frame cursor + the scrubbed timeline
-    sequenceAnimations.js    range / quality choreography on those timelines
     flickCards.js            desktop use-case deck (Draggable)
     customSlider.js          the benefits bowl
     accordion.js             desktop process accordion
@@ -69,8 +66,6 @@ public/
   favicon.png                the red "o" and green runner, cropped from the logo
   assets/
     img/                     38 images
-    secuence-partners/       201 frames × landscape + portrait  (AVIF)
-    secuence-bag/            40 frames × landscape + portrait   (WebP)
     videos/, images/, fonts/
 brand/
   actipro-logo-source.png    supplied artwork, 2000×2000; kept out of public/
@@ -96,11 +91,9 @@ would break — so they sit outside the containers.
 | `Hero`                   | Positioning, the three variants, trust strip           |
 | `Delivered`              | Batch checking, no argemone oil                        |
 | `Goals`                  | The three refining processes, three steps each         |
-| `PartnersExperience`     | "The Actipro Range" — three variants + tasting trio    |
 | `PersonaCards`           | "Find Your Oil" use-case picker                        |
 | `BowlSlider`             | "What's actually inside" — benefit tags per variant    |
 | `KitchenAction`          | Madhuri Refiners, three decades of manufacturing       |
-| `QualityJourney`         | Refinery → kitchen                                     |
 | `Join`                   | Oil Bot CTA + eight brand-fact cards                   |
 
 The `Join` cards are deliberately **facts, not testimonials** — the brand has no
@@ -163,8 +156,11 @@ black-background footage ever comes back.
 `.loader-apple` holds two stacked `<image>` layers of the same wordmark:
 `logo-outline.png` (the logo's white keyline with the colour drained) as the
 resting state, and the full-colour `logo.png` revealed through `#clip-apple`.
-`preloader.js` drives that clipPath upward in steps at 20/50/80/100% of frame
-decode, so red and green wash up into the mark as the page loads.
+`preloader.js` drives that clipPath upward in steps at 20/50/80/100%, so red
+and green wash up into the mark as the page loads. Progress used to come from
+the partner frame sequence decoding; that sequence is gone, so `autoRun` climbs
+to 80% on its own and then waits for `window.load`, with a cap so a slow
+third-party asset can never strand the loader on screen.
 
 The `apple` in those names is inherited from the original build's logo shape and
 is now just an identifier; the element renders the Actipro wordmark.
@@ -198,16 +194,6 @@ The brand palette from the supplied logo is red `#d9232c` and green `#005932`.
 The orange above is the ported design's accent, not an Actipro brand colour —
 worth revisiting with the brand owner.
 
-### Canvas sequences
-
-`SequenceScrollHandler` owns a canvas and a frame cursor. `setTimeline()` builds
-one scrubbed 10-unit timeline per sequence; `updateFrame(index, duration)`
-returns tween vars that walk the cursor, and section choreography is added to
-the same timeline at matching positions — which is why the range cards swap on
-exact frames. Frames composite to an offscreen buffer at `devicePixelRatio`
-(capped at 2) with cover geometry, then blit, so no repaint shows a partial
-frame. Landscape and portrait have separate frame sets and separate caches.
-
 ### Responsive
 
 `html { font-size: clamp(...) }` drives a rem-based layout, with separate roots
@@ -230,25 +216,24 @@ and HMR both replay cleanly.
 
 ### Media that still shows the previous brand
 
-The brand's own asset library now covers the still imagery — pack shots,
-ingredient cut-outs and dishes live in `public/assets/img` as `pack-*`, `ing-*`,
-`variant-*` and `dish-*`. What remains is rendered footage, which needs
-re-rendering rather than re-pointing.
+Both canvas sequences are gone: the tote-bag scene and the city flythrough were
+removed with their sections, which also retired the last third-party logos
+(Netflix, UCLA, Equinox) and the last EATnaked-branded object on the page.
+
+What remains is video:
 
 | Asset | Problem |
 | --- | --- |
-| `assets/secuence-bag/**` | 40 frames × 2 orientations of a tote bag carrying the **previous brand's logo and wordmark**, rotating 360°. Hero of the quality section. |
-| `assets/secuence-partners/**` | 201 frames × 2 of a city flythrough with **Netflix, UCLA and Equinox logos** as buildings — third-party trademarks. It plays behind "The Actipro Range". |
-| Vimeo `1129496694` | The previous brand's promo video, on a third party's personal account, with a **burned-in watermark** and a competing domain on screen. Plays under "Our refinery In Action". Its poster now shows the Actipro range mock-up, but the video itself is unchanged. |
+| Vimeo `1129496694` | The previous brand's promo film, on a third party's personal account, with a burned-in watermark and a competing domain on screen. Plays under "Our refinery In Action". **It currently returns 401**, so it does not load at all. Needs replacing with Actipro footage, not just re-pointing. |
 | `assets/videos/delivered-*.mp4` | Both orientations render the **previous brand's wordmark**. |
 
-Four abstract backdrops from the original build are still in place and are
-brand-neutral: `a005` (a gradient), `a029` (the quality backdrop), `a047` (the
-footer) and `a048` (the page vignette).
+Three abstract backdrops from the original build are still in place and are
+brand-neutral: `a005` (a gradient), `a047` (the footer) and `a048` (the page
+vignette).
 
-The brand's source library is kept out of `public/` at `brand/assets-source/`,
-so the originals stay in the repo without shipping. The web copies are resized
-and re-encoded — WebP for anything large, PNG for the three pill icons.
+The brand's source libraries are kept out of `public/` under `brand/`, so the
+originals stay in the repo without shipping. The web copies are resized and
+re-encoded: WebP for anything large, PNG for the three pill icons.
 
 ### Content to confirm with the brand owner
 

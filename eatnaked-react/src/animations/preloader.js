@@ -3,9 +3,14 @@ import { gsap, ScrollTrigger } from "./gsapSetup.js";
 /**
  * Port of the reference `Preloader`.
  *
- * The logo fills with colour from the bottom as the partner frame sequence decodes: the
- * clip rect is driven in steps at 20/50/80/100%, then the black and orange
- * layers slide off and hand the hero its entrance.
+ * The logo fills with colour from the bottom as the page loads: the clip rect is
+ * driven in steps at 20/50/80/100%, then the black and orange layers slide off
+ * and hand the hero its entrance.
+ *
+ * Progress used to come from the partner frame sequence decoding. That sequence
+ * is gone, so `autoRun` drives the count itself: it climbs to 80% on its own,
+ * then waits for `window.load` before finishing, with a cap so a slow
+ * third-party asset can never strand the loader on screen.
  */
 export class Preloader {
   constructor(lenis) {
@@ -18,6 +23,8 @@ export class Preloader {
 
     this.destroyed = false;
     this.completeTimer = null;
+    this.timers = [];
+    this.finishing = false;
 
     // The loader's own tweens fire from async callbacks, after the outer
     // gsap.context() has closed, so it keeps a context of its own to revert.
@@ -90,9 +97,50 @@ export class Preloader {
       });
   }
 
+  /**
+   * Counts the loader up. Even steps only, so it lands exactly on the
+   * 20/50/80/100 readings `step` reacts to.
+   */
+  autoRun() {
+    let percent = 0;
+
+    const finish = () => {
+      if (this.finishing || this.destroyed) return;
+      this.finishing = true;
+
+      const run = () => {
+        if (this.destroyed) return;
+        percent = Math.min(100, percent + 2);
+        this.update(percent);
+        if (percent < 100) this.timers.push(setTimeout(run, 12));
+      };
+
+      run();
+    };
+
+    const climb = () => {
+      if (this.destroyed) return;
+      percent += 2;
+      this.update(percent);
+
+      if (percent < 80) {
+        this.timers.push(setTimeout(climb, 14));
+        return;
+      }
+
+      if (document.readyState === "complete") finish();
+      else window.addEventListener("load", finish, { once: true });
+
+      this.timers.push(setTimeout(finish, 2500));
+    };
+
+    climb();
+  }
+
   destroy() {
     this.destroyed = true;
     clearTimeout(this.completeTimer);
+    this.timers.forEach(clearTimeout);
     this.ctx.revert();
   }
 }

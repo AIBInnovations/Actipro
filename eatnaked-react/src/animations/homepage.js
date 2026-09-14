@@ -11,9 +11,6 @@ import { FlickCards } from "./flickCards.js";
 import { Accordion } from "./accordion.js";
 import { CustomSlider } from "./customSlider.js";
 import { CustomVimeoPlayer } from "./customVimeoPlayer.js";
-import { ImageSequenceLoader } from "./imageSequenceLoader.js";
-import { SequenceScrollHandler } from "./sequenceScrollHandler.js";
-import { SecuenceAnimations } from "./sequenceAnimations.js";
 
 /**
  * Port of the reference `/js/pages/homepage.js` bootstrap.
@@ -37,25 +34,7 @@ export function initHomepage() {
     const lenis = new LenisSmooth();
     const preloader = new Preloader(lenis);
 
-    const partnersImageSequenceLoader = new ImageSequenceLoader().setImagesConfig({
-      extension: "avif",
-      totalFrames: 201,
-      landscapeBasePath: "/assets/secuence-partners/landscape/sdl-",
-      portraitBasePath: "/assets/secuence-partners/portrait/sdp-",
-      batchCount: 8,
-    });
-
-    const partnersSequenceScrollHandler = new SequenceScrollHandler(
-      lenis,
-      partnersImageSequenceLoader,
-      preloader,
-      "partners",
-    )
-      .setCanvas("#partners-canvas")
-      .setAnimationTrigger(".partners-sticky")
-      .setInitialConfig({ totalFrames: 201 })
-      .setTimeline({ refreshPriority: 7 })
-      .init();
+    preloader.autoRun();
 
     const navbar = new Navbar(lenis);
     const activeLinks = new ActiveLinks();
@@ -63,27 +42,6 @@ export function initHomepage() {
     const flickCards = new FlickCards();
     const accordion = new Accordion();
     const customSlider = new CustomSlider();
-
-    const secuenceAnimations = new SecuenceAnimations();
-    secuenceAnimations.partnersAnimation(partnersSequenceScrollHandler);
-
-    const bagImageSequenceLoader = new ImageSequenceLoader().setImagesConfig({
-      extension: "webp",
-      totalFrames: 40,
-      landscapeBasePath: "/assets/secuence-bag/landscape/sdl-",
-      portraitBasePath: "/assets/secuence-bag/portrait/sdp-",
-      batchCount: 4,
-      concurrency: 10,
-    });
-
-    const bagSequenceScrollHandler = new SequenceScrollHandler(lenis, bagImageSequenceLoader, null, "bag")
-      .setCanvas("#bag-canvas")
-      .setAnimationTrigger(".quality-sticky")
-      .setInitialConfig({ totalFrames: 40 })
-      .setTimeline({ refreshPriority: 5 })
-      .init();
-
-    secuenceAnimations.bagAnimation(bagSequenceScrollHandler);
 
     const vimeoPlayer = new CustomVimeoPlayer();
     const homepageAnimations = new HomepageAnimations(lenis);
@@ -133,7 +91,6 @@ export function initHomepage() {
     teardown = () => {
       adaptiveTheme.destroy();
       homepageAnimations.destroy();
-      secuenceAnimations.destroy();
       vimeoPlayer.destroy();
       customSlider.destroy();
       accordion.destroy();
@@ -145,8 +102,6 @@ export function initHomepage() {
       draggables.forEach((d) => d.kill());
       cursorFollowers.forEach((c) => c.destroy());
 
-      bagSequenceScrollHandler.destroy();
-      partnersSequenceScrollHandler.destroy();
 
       if (reduced) gsap.globalTimeline.timeScale(1);
       if (import.meta.env.DEV) delete window.__lenis;

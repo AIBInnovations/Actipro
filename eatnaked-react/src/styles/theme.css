@@ -82,8 +82,6 @@
 .loader,
 .vimeo-player,
 .delivered,
-.partners-sticky,
-.quality-sticky,
 .showreel,
 .flick-group__item,   /* NOT .flick-card - .flick-card__info is its SIBLING,
                          not its child, so scoping the card misses the text */

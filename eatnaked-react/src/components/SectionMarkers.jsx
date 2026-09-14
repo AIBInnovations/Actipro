@@ -50,20 +50,6 @@ export default function SectionMarkers() {
               </svg>
             </span>
           </div>
-          <div className="markers-block" data-scrollto=".partners">
-            <span className="markers-block__text">Our Range</span>
-            <span className="markers-block__line">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
-                <path
-                  d="M0.5 1H31.5"
-                  stroke="currentColor"
-                  strokeOpacity="0.5"
-                  strokeWidth="0.5"
-                  data-original="M0.5 1H31.5"
-                ></path>
-              </svg>
-            </span>
-          </div>
           <div className="markers-block" data-scrollto=".design">
             <span className="markers-block__text">Find Yours</span>
             <span className="markers-block__line">
@@ -92,24 +78,8 @@ export default function SectionMarkers() {
               </svg>
             </span>
           </div>
-
           <div className="markers-block" data-scrollto=".action">
             <span className="markers-block__text">Made By</span>
-            <span className="markers-block__line">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
-                <path
-                  d="M0.5 1H31.5"
-                  stroke="currentColor"
-                  strokeOpacity="0.5"
-                  strokeWidth="0.5"
-                  data-original="M0.5 1H31.5"
-                ></path>
-              </svg>
-            </span>
-          </div>
-
-          <div className="markers-block" data-scrollto=".quality">
-            <span className="markers-block__text">Kitchen</span>
             <span className="markers-block__line">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
                 <path

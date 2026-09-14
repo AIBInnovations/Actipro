@@ -282,10 +282,13 @@ export default function Join() {
         </div>
       </div>
 
+      {/* Depth-blurred background objects. Deliberately mixed - dishes, raw
+          ingredients and the lot-tag droplets - so the layer never reads as
+          the same three cut-outs repeating. */}
       <div className="join-floating">
         <img
           loading="lazy"
-          src="/assets/img/ing-sunflower.webp"
+          src="/assets/img/dish-corn-veg.webp"
           alt=""
           className="join-floating__img is--1"
         />
@@ -297,7 +300,7 @@ export default function Join() {
         />
         <img
           loading="lazy"
-          src="/assets/img/ing-rice-bran.webp"
+          src="/assets/img/dish-chaat.webp"
           alt=""
           className="join-floating__img is--3"
         />
@@ -309,43 +312,43 @@ export default function Join() {
         />
         <img
           loading="lazy"
-          src="/assets/img/ing-corn.webp"
+          src="/assets/img/float-lot-leaves.webp"
           alt=""
           className="join-floating__img is--5"
         />
         <img
           loading="lazy"
-          src="/assets/img/ing-rice-bran.webp"
+          src="/assets/img/dish-curry.webp"
           alt=""
           className="join-floating__img is--6"
         />
         <img
           loading="lazy"
-          src="/assets/img/ing-sunflower.webp"
+          src="/assets/img/tag-lab-tested.webp"
           alt=""
           className="join-floating__img is--7"
         />
         <img
           loading="lazy"
-          src="/assets/img/ing-corn.webp"
+          src="/assets/img/ing-rice-bran.webp"
           alt=""
           className="join-floating__img is--8"
         />
         <img
           loading="lazy"
-          src="/assets/img/ing-rice-bran.webp"
+          src="/assets/img/dish-fried-rice.webp"
           alt=""
           className="join-floating__img is--9"
         />
         <img
           loading="lazy"
-          src="/assets/img/ing-sunflower.webp"
+          src="/assets/img/float-lot-sunflower.webp"
           alt=""
           className="join-floating__img is--10"
         />
         <img
           loading="lazy"
-          src="/assets/img/ing-corn.webp"
+          src="/assets/img/float-lot-tag.webp"
           alt=""
           className="join-floating__img is--11"
         />
