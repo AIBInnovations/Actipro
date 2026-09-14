@@ -44,7 +44,7 @@ export default function Join() {
                       <img
                         loading="lazy"
                         src="/logo.png"
-                        alt="Actipro"
+                        alt=""
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
@@ -74,7 +74,7 @@ export default function Join() {
                       <img
                         loading="lazy"
                         src="/logo.png"
-                        alt="Actipro"
+                        alt=""
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
@@ -104,7 +104,7 @@ export default function Join() {
                       <img
                         loading="lazy"
                         src="/logo.png"
-                        alt="Actipro"
+                        alt=""
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
@@ -137,7 +137,7 @@ export default function Join() {
                       <img
                         loading="lazy"
                         src="/logo.png"
-                        alt="Actipro"
+                        alt=""
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
@@ -167,7 +167,7 @@ export default function Join() {
                       <img
                         loading="lazy"
                         src="/logo.png"
-                        alt="Actipro"
+                        alt=""
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
@@ -199,7 +199,7 @@ export default function Join() {
                       <img
                         loading="lazy"
                         src="/logo.png"
-                        alt="Actipro"
+                        alt=""
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
@@ -225,7 +225,7 @@ export default function Join() {
                       <img
                         loading="lazy"
                         src="/logo.png"
-                        alt="Actipro"
+                        alt=""
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
@@ -255,7 +255,7 @@ export default function Join() {
                       <img
                         loading="lazy"
                         src="/logo.png"
-                        alt="Actipro"
+                        alt=""
                         className="join-slider__img"
                       />
                       <h4 className="join-slider__h4">
@@ -286,67 +286,67 @@ export default function Join() {
         <img
           loading="lazy"
           src="/assets/img/a036-0e77dbdf32.png"
-          alt="floating veggies"
+          alt=""
           className="join-floating__img is--1"
         />
         <img
           loading="lazy"
           src="/assets/img/a037-1b176f4e0e.png"
-          alt="floating veggies"
+          alt=""
           className="join-floating__img is--2"
         />
         <img
           loading="lazy"
           src="/assets/img/a038-9a358dc0e4.png"
-          alt="floating veggies"
+          alt=""
           className="join-floating__img is--3"
         />
         <img
           loading="lazy"
           src="/assets/img/a039-8277d32d4b.png"
-          alt="floating veggies"
+          alt=""
           className="join-floating__img is--4"
         />
         <img
           loading="lazy"
           src="/assets/img/a040-76719d8ffa.png"
-          alt="floating veggies"
+          alt=""
           className="join-floating__img is--5"
         />
         <img
           loading="lazy"
           src="/assets/img/a041-0e026464ab.png"
-          alt="floating veggies"
+          alt=""
           className="join-floating__img is--6"
         />
         <img
           loading="lazy"
           src="/assets/img/a042-444362e75d.png"
-          alt="floating veggies"
+          alt=""
           className="join-floating__img is--7"
         />
         <img
           loading="lazy"
           src="/assets/img/a043-a130d33a2c.png"
-          alt="floating veggies"
+          alt=""
           className="join-floating__img is--8"
         />
         <img
           loading="lazy"
           src="/assets/img/a044-23758f48e1.png"
-          alt="floating veggies"
+          alt=""
           className="join-floating__img is--9"
         />
         <img
           loading="lazy"
           src="/assets/img/a045-aa0b88e704.png"
-          alt="floating veggies"
+          alt=""
           className="join-floating__img is--10"
         />
         <img
           loading="lazy"
           src="/assets/img/a046-f4f819ba76.png"
-          alt="floating veggies"
+          alt=""
           className="join-floating__img is--11"
         />
       </div>

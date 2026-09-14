@@ -14,21 +14,21 @@ export default function BowlSlider() {
               <div className="bowl-header__tag">What's actually inside</div>
               <div className="bowl-header__titles">
                 <h2 className="bowl-header__title is--active" data-custom-slider-title="">
-                  Refined Corn Oil, with High Absorbent Refining Technology
+                  Refined Corn Oil — High Absorbent Refining Technology
                 </h2>
                 <h2 className="bowl-header__title" data-custom-slider-title="">
-                  Refined Rice Bran Oil, with Smart Fry Technology
+                  Refined Rice Bran Oil — Smart Fry Technology
                 </h2>
               </div>
             </div>
 
             <div className="bowl-reference">
               <div className="bowl-reference__image from--right is--active" data-custom-slider-image="">
-                <img src="/assets/img/a018-672efb4919.avif" alt="Actipro oil" loading="lazy" />
+                <img src="/assets/img/a018-672efb4919.avif" alt="" loading="lazy" />
               </div>
 
               <div className="bowl-reference__image to--right" data-custom-slider-image="">
-                <img src="/assets/img/a019-2c34156ce6.avif" alt="Actipro oil" loading="lazy" />
+                <img src="/assets/img/a019-2c34156ce6.avif" alt="" loading="lazy" />
               </div>
             </div>
 
@@ -158,19 +158,19 @@ export default function BowlSlider() {
               <div className="bowl-indicators__left-inner is--fixed">
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a020-0a0c273aa5.png" alt="Proteins" />
+                    <img src="/assets/img/a020-0a0c273aa5.png" alt="" />
                   </div>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a020-0a0c273aa5.png" alt="Proteins" />
+                    <img src="/assets/img/a020-0a0c273aa5.png" alt="" />
                   </div>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a020-0a0c273aa5.png" alt="Proteins" />
+                    <img src="/assets/img/a020-0a0c273aa5.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -178,21 +178,21 @@ export default function BowlSlider() {
               <div className="bowl-indicators__left-inner is--active" data-custom-slider-indicator="left">
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a002-673a07abab.png" alt="Vegetables" />
+                    <img src="/assets/img/a002-673a07abab.png" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Vitamin E</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a021-d1af071661.png" alt="Grains" />
+                    <img src="/assets/img/a021-d1af071661.png" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Phytosterols</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a020-0a0c273aa5.png" alt="Proteins" />
+                    <img src="/assets/img/a020-0a0c273aa5.png" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Omega-6</span>
                 </div>
@@ -201,21 +201,21 @@ export default function BowlSlider() {
               <div className="bowl-indicators__left-inner" data-custom-slider-indicator="left">
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a022-b2b7c2d1bf.png" alt="Vegetables" />
+                    <img src="/assets/img/a022-b2b7c2d1bf.png" alt="" />
                   </div>
-                  <span className="bowl-indicators__tag-text">Low Cholesterol</span>
+                  <span className="bowl-indicators__tag-text">Cholesterol Free</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a021-d1af071661.png" alt="Grains" />
+                    <img src="/assets/img/a021-d1af071661.png" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Plant Sterols</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a002-673a07abab.png" alt="Proteins" />
+                    <img src="/assets/img/a002-673a07abab.png" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Balanced MUFA</span>
                 </div>
@@ -226,19 +226,19 @@ export default function BowlSlider() {
               <div className="bowl-indicators__right-inner is--fixed">
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a020-0a0c273aa5.png" alt="Proteins" />
+                    <img src="/assets/img/a020-0a0c273aa5.png" alt="" />
                   </div>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a020-0a0c273aa5.png" alt="Proteins" />
+                    <img src="/assets/img/a020-0a0c273aa5.png" alt="" />
                   </div>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a020-0a0c273aa5.png" alt="Proteins" />
+                    <img src="/assets/img/a020-0a0c273aa5.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -246,21 +246,21 @@ export default function BowlSlider() {
               <div className="bowl-indicators__right-inner is--active" data-custom-slider-indicator="right">
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a023-78914d2047.png" alt="Vegetables" />
+                    <img src="/assets/img/a023-78914d2047.png" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Less Absorbed</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a024-3ff884010f.png" alt="Grains" />
+                    <img src="/assets/img/a024-3ff884010f.png" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Mild Taste</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a025-188d459464.png" alt="Proteins" />
+                    <img src="/assets/img/a025-188d459464.png" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Versatile</span>
                 </div>
@@ -269,21 +269,21 @@ export default function BowlSlider() {
               <div className="bowl-indicators__right-inner" data-custom-slider-indicator="right">
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a024-3ff884010f.png" alt="Vegetables" />
+                    <img src="/assets/img/a024-3ff884010f.png" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Vitamin A &amp; D</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a026-b42ffecdbf.png" alt="Grains" />
+                    <img src="/assets/img/a026-b42ffecdbf.png" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Antioxidants</span>
                 </div>
 
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/a027-7384fcd706.png" alt="Proteins" />
+                    <img src="/assets/img/a027-7384fcd706.png" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Heat Stable</span>
                 </div>

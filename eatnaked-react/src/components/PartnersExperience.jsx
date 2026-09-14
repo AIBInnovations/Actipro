@@ -44,7 +44,7 @@ export default function PartnersExperience() {
                 <span className="partners-card__span">Rice Bran</span>
               </div>
 
-              <p className="partners-card__p">Heat-stable and low in cholesterol. For heart-conscious kitchens.</p>
+              <p className="partners-card__p">Heat-stable and cholesterol-free. For heart-conscious kitchens.</p>
             </div>
 
             <div className="partners-card__inner">

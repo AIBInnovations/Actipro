@@ -183,8 +183,8 @@ export default function Goals() {
                           </div>
 
                           <div className="accordion-css__item-images">
-                            <img src="/assets/img/a006-10d77336be.avif" alt="Actipro refining process" loading="lazy" />
-                            <img src="/assets/img/a007-eead608b1c.avif" alt="Actipro refining process" loading="lazy" />
+                            <img src="/assets/img/a006-10d77336be.avif" alt="" loading="lazy" />
+                            <img src="/assets/img/a007-eead608b1c.avif" alt="" loading="lazy" />
                           </div>
                         </div>
                       </div>
@@ -327,8 +327,8 @@ export default function Goals() {
                           </div>
 
                           <div className="accordion-css__item-images">
-                            <img src="/assets/img/a008-4640c2e6b8.avif" alt="Actipro refining process" loading="lazy" />
-                            <img src="/assets/img/a009-d1db0b52c6.avif" alt="Actipro refining process" loading="lazy" />
+                            <img src="/assets/img/a008-4640c2e6b8.avif" alt="" loading="lazy" />
+                            <img src="/assets/img/a009-d1db0b52c6.avif" alt="" loading="lazy" />
                           </div>
                         </div>
                       </div>
@@ -522,8 +522,8 @@ export default function Goals() {
                           </div>
 
                           <div className="accordion-css__item-images">
-                            <img src="/assets/img/a010-9568d1e8db.avif" alt="Actipro refining process" loading="lazy" />
-                            <img src="/assets/img/a011-a34cab6b1c.avif" alt="Actipro refining process" loading="lazy" />
+                            <img src="/assets/img/a010-9568d1e8db.avif" alt="" loading="lazy" />
+                            <img src="/assets/img/a011-a34cab6b1c.avif" alt="" loading="lazy" />
                           </div>
                         </div>
                       </div>
@@ -653,8 +653,8 @@ export default function Goals() {
                     </div>
 
                     <div className="goals-swiper-slide__images">
-                      <img src="/assets/img/a006-10d77336be.avif" alt="Actipro refining process" loading="lazy" />
-                      <img src="/assets/img/a007-eead608b1c.avif" alt="Actipro refining process" loading="lazy" />
+                      <img src="/assets/img/a006-10d77336be.avif" alt="" loading="lazy" />
+                      <img src="/assets/img/a007-eead608b1c.avif" alt="" loading="lazy" />
                     </div>
                   </div>
                 </div>
@@ -773,8 +773,8 @@ export default function Goals() {
                     </div>
 
                     <div className="goals-swiper-slide__images">
-                      <img src="/assets/img/a008-4640c2e6b8.avif" alt="Actipro refining process" loading="lazy" />
-                      <img src="/assets/img/a009-d1db0b52c6.avif" alt="Actipro refining process" loading="lazy" />
+                      <img src="/assets/img/a008-4640c2e6b8.avif" alt="" loading="lazy" />
+                      <img src="/assets/img/a009-d1db0b52c6.avif" alt="" loading="lazy" />
                     </div>
                   </div>
                 </div>
@@ -902,8 +902,8 @@ export default function Goals() {
                     </div>
 
                     <div className="goals-swiper-slide__images">
-                      <img src="/assets/img/a010-9568d1e8db.avif" alt="Actipro refining process" loading="lazy" />
-                      <img src="/assets/img/a011-a34cab6b1c.avif" alt="Actipro refining process" loading="lazy" />
+                      <img src="/assets/img/a010-9568d1e8db.avif" alt="" loading="lazy" />
+                      <img src="/assets/img/a011-a34cab6b1c.avif" alt="" loading="lazy" />
                     </div>
                   </div>
                 </div>

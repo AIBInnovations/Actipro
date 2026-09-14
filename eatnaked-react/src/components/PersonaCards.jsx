@@ -129,7 +129,7 @@ export default function PersonaCards() {
                     <img
                       width="256"
                       loading="lazy"
-                      alt="Heart-conscious cooking"
+                      alt=""
                       src="/assets/img/a017-b0c8afdaf0.avif"
                       className="cover-image"
                     />
@@ -220,7 +220,7 @@ export default function PersonaCards() {
                     </div>
                   </a>
 
-                  <img src="/assets/img/a015-2ed3e394a1.avif" alt="Actipro" className="design-swiper__image" />
+                  <img src="/assets/img/a015-2ed3e394a1.avif" alt="" className="design-swiper__image" />
                 </div>
               </div>
 
@@ -262,7 +262,7 @@ export default function PersonaCards() {
                     </div>
                   </a>
 
-                  <img src="/assets/img/a016-2a1cd3929b.avif" alt="Actipro" className="design-swiper__image" />
+                  <img src="/assets/img/a016-2a1cd3929b.avif" alt="" className="design-swiper__image" />
                 </div>
               </div>
 
@@ -304,7 +304,7 @@ export default function PersonaCards() {
                     </div>
                   </a>
 
-                  <img src="/assets/img/a017-b0c8afdaf0.avif" alt="Actipro" className="design-swiper__image" />
+                  <img src="/assets/img/a017-b0c8afdaf0.avif" alt="" className="design-swiper__image" />
                 </div>
               </div>
 

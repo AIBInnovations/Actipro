@@ -45,13 +45,13 @@ export default function Footer() {
           <div className="footer-top__col is--login">
             <ul className="footer-top__ul">
               <li className="footer-top__li">
-                <a href="#" className="footer-top__link">
+                <a className="footer-top__link">
                   Mon – Sat · 9am to 7pm
                 </a>
               </li>
 
               <li className="footer-top__li">
-                <a href="#" className="footer-top__link">
+                <a className="footer-top__link">
                   Oil Bot · 9am to 11pm
                 </a>
               </li>
@@ -83,20 +83,20 @@ export default function Footer() {
           <div className="footer-top__col is--social">
             <ul className="footer-top__ul">
               <li className="footer-top__li">
-                <a href="#" target="_blank" className="footer-top__link">
+                <a href="#" className="footer-top__link">
                   Facebook
                 </a>
               </li>
 
               <li className="footer-top__li">
-                <a href="#" target="_blank" className="footer-top__link">
+                <a href="#" className="footer-top__link">
                   Instagram
                 </a>
               </li>
 
               <li className="footer-top__li">
-                <a href="#" target="_blank" className="footer-top__link">
-                  Tiktok
+                <a href="#" className="footer-top__link">
+                  YouTube
                 </a>
               </li>
             </ul>

@@ -272,26 +272,26 @@ export default function Navbar() {
 
           <ul className="navbar-menu__socials">
             <li className="navbar-menu__socials-li">
-              <a href="#" target="_blank" className="navbar-menu__socials-link">
+              <a href="#" className="navbar-menu__socials-link">
                 Facebook
               </a>
             </li>
 
             <li className="navbar-menu__socials-li">
-              <a href="#" target="_blank" className="navbar-menu__socials-link">
+              <a href="#" className="navbar-menu__socials-link">
                 Instagram
               </a>
             </li>
 
             <li className="navbar-menu__socials-li">
-              <a href="#" target="_blank" className="navbar-menu__socials-link">
-                Tiktok
+              <a href="#" className="navbar-menu__socials-link">
+                YouTube
               </a>
             </li>
           </ul>
 
           <div className="navbar-menu__contact">
-            <h3 className="navbar-menu__contact-h3">We're here 9am – 11pm</h3>
+            <h3 className="navbar-menu__contact-h3">Mon – Sat · 9am to 7pm</h3>
             <a href="tel:+917224870701" className="navbar-menu__contact-link">
               +91 72248 70701
             </a>

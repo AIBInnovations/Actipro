@@ -24,7 +24,7 @@ export default function QualityJourney() {
 
         <picture>
           <source srcSet="/assets/images/quality-portrait.avif" type="image/avif" media="(orientation: portrait)" />
-          <img src="/assets/img/a029-32c28f2543.avif" alt="Quality" />
+          <img src="/assets/img/a029-32c28f2543.avif" alt="" />
         </picture>
 
         <canvas id="bag-canvas" width="2168" height="1452"></canvas>
