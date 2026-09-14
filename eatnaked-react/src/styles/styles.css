@@ -3098,7 +3098,7 @@ html[data-loading] .loading-layer {
 }
 
 .bowl .bowl-container {
-  padding: min(17rem, 17vh) 19rem 0;
+  padding: min(13rem, 13vh) 19rem min(9rem, 9vh);
   width: 100%;
   height: 100%;
   margin-top: auto;
@@ -3306,11 +3306,12 @@ html[data-loading] .loading-layer {
   transform: translateY(0);
 }
 
+/* No bottom mask: it was fading a bowl into the page, but it cut the pack
+   shot in half. The stage is shorter too, so the product clears the fold. */
 .bowl .bowl-container .bowl-bounds .bowl-reference {
   overflow: hidden;
-  height: min(62rem, 62vh);
+  height: min(46rem, 46vh);
   position: relative;
-  mask: linear-gradient(to top, transparent, #0b0b0b 40%);
   display: grid;
   grid-template-areas: "image";
   grid-area: reference;
@@ -3318,42 +3319,66 @@ html[data-loading] .loading-layer {
 }
 
 .bowl .bowl-container .bowl-bounds .bowl-reference-mock {
-  height: min(62rem, 62vh);
+  height: min(46rem, 46vh);
   position: relative;
   z-index: 1;
   width: 100%;
   grid-area: reference;
 }
 
+/* The arrow you press decides which way the product swings, and there is no
+   cross-fade: the outgoing slide stays fully opaque until it is out of frame,
+   then `visibility` flips with a 1s delay so it never ghosts over the new one. */
 .bowl .bowl-reference__image {
   position: relative;
   grid-area: image;
-
-  opacity: 0;
-  transform: rotate(-90deg);
+  /* The stage has a definite height; without this the grid row takes the
+     image's intrinsic height instead and the pack shot is clipped. */
+  height: 100%;
+  min-height: 0;
+  visibility: hidden;
+  transform: translateX(-62%) rotate(-72deg);
   transition:
-    opacity 1s var(--ease),
-    transform 1s var(--ease);
-}
-
-.bowl .bowl-reference__image.to--right {
-  transform: rotate(90deg);
-}
-
-.bowl .bowl-reference__image.to--left {
-  transform: rotate(-90deg);
-}
-
-.bowl .bowl-reference__image.from--right {
-  transform: rotate(0deg);
-}
-
-.bowl .bowl-reference__image img {
-  object-fit: contain;
+    transform 1s var(--ease),
+    visibility 0s linear 1s;
 }
 
 .bowl .bowl-reference__image.is--active {
-  opacity: 1;
+  visibility: visible;
+  transform: translateX(0) rotate(0deg);
+  transition:
+    transform 1s var(--ease),
+    visibility 0s linear 0s;
+}
+
+.bowl .bowl-reference__image.to--right {
+  transform: translateX(62%) rotate(72deg);
+}
+
+.bowl .bowl-reference__image.to--left {
+  transform: translateX(-62%) rotate(-72deg);
+}
+
+/* Parked off-stage by the slider just before it animates in — no transition,
+   so the jump to the starting side is never seen. */
+.bowl .bowl-reference__image.park--left,
+.bowl .bowl-reference__image.park--right {
+  visibility: visible;
+  transition: none;
+}
+
+.bowl .bowl-reference__image.park--left {
+  transform: translateX(-62%) rotate(-72deg);
+}
+
+.bowl .bowl-reference__image.park--right {
+  transform: translateX(62%) rotate(72deg);
+}
+
+.bowl .bowl-reference__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .bowl .bowl-container .bowl-bounds .bowl-reference img {

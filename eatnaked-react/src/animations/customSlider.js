@@ -2,7 +2,8 @@
  * Port of the reference `CustomSlider` — the ingredient bowl.
  *
  * State lives entirely in class names so the 1s `var(--ease)` transitions in
- * styles.css do the animating: dishes rotate in from ±90°, the title
+ * styles.css do the animating: the product swings out the way the pressed
+ * arrow points and the next one swings in from the opposite side, the title
  * crossfades vertically, and each side's ingredient column swaps.
  */
 export class CustomSlider {
@@ -34,6 +35,7 @@ export class CustomSlider {
       if (this.isAnimating) return;
       this.isAnimating = true;
 
+      const previousIndex = this.current;
       this.current = (this.current + step + titles.length) % titles.length;
       this.next = (this.current + 1) % titles.length;
       this.previous = (this.current - 1 + titles.length) % titles.length;
@@ -42,17 +44,30 @@ export class CustomSlider {
       leftIndicators.forEach((indicator) => indicator.classList.remove("is--active"));
       rightIndicators.forEach((indicator) => indicator.classList.remove("is--active"));
 
+      // The arrow decides the direction: press right and the product swings out
+      // to the right while the next one swings in from the left.
+      const outgoing = images[previousIndex];
+      const incoming = images[this.current];
+      const exit = step > 0 ? "to--right" : "to--left";
+      const park = step > 0 ? "park--left" : "park--right";
+
       images.forEach((image) => {
-        image.classList.remove("from--right");
-        image.classList.remove("to--right");
-        image.classList.remove("is--active");
+        image.classList.remove("to--right", "to--left", "park--left", "park--right");
+        if (image !== outgoing) image.classList.remove("is--active");
       });
 
-      images[this.previous].classList.add("to--right");
-      images[this.current].classList.add("from--right");
+      // Park the incoming slide off-stage with transitions off, flush the
+      // style, then let it animate in — otherwise it would jump straight to
+      // its resting position with nothing to transition from.
+      incoming.classList.add(park);
+      void incoming.offsetWidth;
+      incoming.classList.remove(park);
+
+      outgoing.classList.remove("is--active");
+      outgoing.classList.add(exit);
 
       titles[this.current].classList.add("is--active");
-      images[this.current].classList.add("is--active");
+      incoming.classList.add("is--active");
       leftIndicators[this.current].classList.add("is--active");
       rightIndicators[this.current].classList.add("is--active");
 

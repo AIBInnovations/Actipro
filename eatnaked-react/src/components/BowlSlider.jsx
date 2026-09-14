@@ -23,7 +23,7 @@ export default function BowlSlider() {
             </div>
 
             <div className="bowl-reference">
-              <div className="bowl-reference__image from--right is--active" data-custom-slider-image="">
+              <div className="bowl-reference__image is--active" data-custom-slider-image="">
                 <img src="/assets/img/pack-corn-scene.webp" alt="" loading="lazy" />
               </div>
 
