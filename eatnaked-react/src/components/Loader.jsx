@@ -1,6 +1,6 @@
 /**
- * Preload screen. The oil droplet fills from the bottom as the partner frame
- * sequence decodes — see `animations/preloader.js`.
+ * Preload screen. The Actipro logo fills with colour from the bottom as the partner
+ * frame sequence decodes — see `animations/preloader.js`.
  *
  * Markup mirrors the reference DOM so styles.css applies unchanged.
  */
@@ -9,17 +9,21 @@ export default function Loader() {
     <div className="loader">
       <div className="loader-container">
         <div className="loader-apple">
-          <svg width="241" height="289" viewBox="0 0 241 289" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 1624 504" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
+              {/* preloader.js drives this clipPath upward in steps; the rect starts a
+                  full height below the mark, so the logo begins entirely unfilled. */}
               <clipPath id="clip-apple">
-                <rect className="clipper" id="rect-1" x="0" y="100%" width="242" height="100%"></rect>
+                <rect className="clipper" id="rect-1" x="0" y="100%" width="1624" height="100%"></rect>
               </clipPath>
             </defs>
 
-            <path d="M120.5 6C120.5 6 30 120 30 186A90.5 90.5 0 0 0 211 186C211 120 120.5 6 120.5 6Z" fill="var(--apple-base)"></path>
+            {/* Resting state: the logo's own white keyline layer, colour drained out. */}
+            <image href="/logo-outline.png" x="0" y="0" width="1624" height="504" opacity="0.85"></image>
 
+            {/* Red and green wash up into it as the frame sequence decodes. */}
             <g clipPath="url(#clip-apple)">
-              <path d="M120.5 6C120.5 6 30 120 30 186A90.5 90.5 0 0 0 211 186C211 120 120.5 6 120.5 6Z" fill="#D12D33"></path>
+              <image href="/logo.png" x="0" y="0" width="1624" height="504"></image>
             </g>
           </svg>
         </div>

@@ -17,7 +17,7 @@ export default function PartnersExperience() {
             <div className="partners-card__inner">
               <div className="partners-card__tag">Our Range</div>
               <div className="partners-card__flex">
-                <img src="/assets/img/actipro-mark.png" alt="Actipro" loading="lazy" />
+                <img src="/logo.png" alt="Actipro" loading="lazy" />
 
                 <span className="partners-card__span">Sunflower</span>
               </div>
@@ -28,7 +28,7 @@ export default function PartnersExperience() {
             <div className="partners-card__inner">
               <div className="partners-card__tag">Our Range</div>
               <div className="partners-card__flex">
-                <img src="/assets/img/actipro-mark.png" alt="Actipro" loading="lazy" />
+                <img src="/logo.png" alt="Actipro" loading="lazy" />
 
                 <span className="partners-card__span">Corn</span>
               </div>
@@ -39,7 +39,7 @@ export default function PartnersExperience() {
             <div className="partners-card__inner">
               <div className="partners-card__tag">Our Range</div>
               <div className="partners-card__flex">
-                <img src="/assets/img/actipro-mark.png" alt="Actipro" loading="lazy" />
+                <img src="/logo.png" alt="Actipro" loading="lazy" />
 
                 <span className="partners-card__span">Rice Bran</span>
               </div>
@@ -50,7 +50,7 @@ export default function PartnersExperience() {
             <div className="partners-card__inner">
               <div className="partners-card__tag">Our Range</div>
               <div className="partners-card__flex">
-                <img src="/assets/img/actipro-mark.png" alt="Actipro" loading="lazy" />
+                <img src="/logo.png" alt="Actipro" loading="lazy" />
 
                 <span className="partners-card__span">Tasting Trio</span>
               </div>

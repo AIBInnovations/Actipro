@@ -3,7 +3,7 @@ import { gsap, ScrollTrigger } from "./gsapSetup.js";
 /**
  * Port of the reference `Preloader`.
  *
- * The droplet fills from the bottom as the partner frame sequence decodes: the
+ * The logo fills with colour from the bottom as the partner frame sequence decodes: the
  * clip rect is driven in steps at 20/50/80/100%, then the black and orange
  * layers slide off and hand the hero its entrance.
  */

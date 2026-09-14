@@ -1311,8 +1311,8 @@ html[data-loading] .loading-layer {
 }
 
 .loader .loader-apple {
-  width: 24rem;
-  height: 28.5rem;
+  width: 42rem;
+  height: 13rem;
   flex-shrink: 0;
 }
 
@@ -1343,8 +1343,8 @@ html[data-loading] .loading-layer {
   }
 
   .loader .loader-apple {
-    width: 14rem;
-    height: 18.5rem;
+    width: 26rem;
+    height: 8.1rem;
   }
 
   .loader .loader-text span {

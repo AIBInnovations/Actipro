@@ -60,7 +60,7 @@
   --orange-display: #f36726;
 
   /* --- misc -------------------------------------------------------------- */
-  --apple-base: #d4cec8; /* unfilled body of the loader droplet */
+  --apple-base: #d4cec8; /* unfilled tone behind the loader logo */
 
   /* .global-grid is a fixed near-black radial vignette. It reads as depth on
      #0b0b0b and as a grey smudge on #ffffff, and there is no light equivalent

@@ -43,7 +43,7 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/actipro-mark.png"
+                        src="/logo.png"
                         alt="Actipro"
                         className="join-slider__img"
                       />
@@ -73,7 +73,7 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/actipro-mark.png"
+                        src="/logo.png"
                         alt="Actipro"
                         className="join-slider__img"
                       />
@@ -103,7 +103,7 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/actipro-mark.png"
+                        src="/logo.png"
                         alt="Actipro"
                         className="join-slider__img"
                       />
@@ -136,7 +136,7 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/actipro-mark.png"
+                        src="/logo.png"
                         alt="Actipro"
                         className="join-slider__img"
                       />
@@ -166,7 +166,7 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/actipro-mark.png"
+                        src="/logo.png"
                         alt="Actipro"
                         className="join-slider__img"
                       />
@@ -198,7 +198,7 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/actipro-mark.png"
+                        src="/logo.png"
                         alt="Actipro"
                         className="join-slider__img"
                       />
@@ -224,7 +224,7 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/actipro-mark.png"
+                        src="/logo.png"
                         alt="Actipro"
                         className="join-slider__img"
                       />
@@ -254,7 +254,7 @@ export default function Join() {
                     <div className="join-slider__content">
                       <img
                         loading="lazy"
-                        src="/assets/img/actipro-mark.png"
+                        src="/logo.png"
                         alt="Actipro"
                         className="join-slider__img"
                       />
