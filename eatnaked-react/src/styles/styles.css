@@ -1497,27 +1497,12 @@ html[data-loading] .loading-layer {
   z-index: -1;
 }
 
-.hero .hero-video__bg video,
-.hero .hero-video__bg .hero-video__canvas {
+.hero .hero-video__bg video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* The keyer owns the display once it has painted a frame; until then (and if
-   it never starts) the raw video is what you see. */
-.hero .hero-video__bg .hero-video__canvas {
-  display: none;
-}
-
-.hero .hero-video__bg[data-keyed] video {
-  visibility: hidden;
-}
-
-.hero .hero-video__bg[data-keyed] .hero-video__canvas {
-  display: block;
 }
 
 @media (hover: hover) and (pointer: fine) {

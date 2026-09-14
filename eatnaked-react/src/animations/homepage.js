@@ -4,7 +4,6 @@ import { Navbar } from "./navbar.js";
 import { Preloader } from "./preloader.js";
 import { HomepageAnimations } from "./homepageAnimations.js";
 import { AdaptiveTheme } from "./adaptiveTheme.js";
-import { HeroVideoKey } from "./heroVideoKey.js";
 import { ActiveLinks } from "./activeLinks.js";
 import { CursorFollower } from "./cursorFollower.js";
 import { CustomSwiper } from "./globalSwiper.js";
@@ -93,16 +92,6 @@ export function initHomepage() {
     // have just laid out (and pinned), so it wants the same settled layout.
     const adaptiveTheme = new AdaptiveTheme();
 
-    // Reveal the canvas before constructing: the keyer measures it on the way
-    // up, and a display:none canvas measures 0x0.
-    const heroBg = document.querySelector(".hero-video__bg");
-    heroBg?.setAttribute("data-keyed", "");
-    const heroVideoKey = new HeroVideoKey({
-      video: heroBg?.querySelector("video"),
-      canvas: heroBg?.querySelector(".hero-video__canvas"),
-    });
-    if (heroVideoKey.destroyed) heroBg?.removeAttribute("data-keyed");
-
     // Draggable fact track, each with its own "Drag ⟷" cursor.
     const cursorFollowers = [];
     const draggables = [];
@@ -142,8 +131,6 @@ export function initHomepage() {
     if (import.meta.env.DEV) window.__lenis = lenis.getLenisInstance();
 
     teardown = () => {
-      heroVideoKey.destroy();
-      heroBg?.removeAttribute("data-keyed");
       adaptiveTheme.destroy();
       homepageAnimations.destroy();
       secuenceAnimations.destroy();

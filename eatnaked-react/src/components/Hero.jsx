@@ -126,21 +126,17 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* The showreel is shot against pure black. animations/heroVideoKey.js
-          keys that out onto the canvas and sets data-keyed, at which point CSS
-          swaps which of the two is visible — so if the keyer never starts, the
-          raw video still plays. */}
+      {/* Product loop on white, matching the page ground. It ping-pongs in the
+          file itself — forward then reversed — so `loop` alone is seamless. */}
       <div className="hero-video__bg">
-        <video
-          src="/assets/videos/Hero-Showreel.mp4"
-          autoPlay
-          muted
-          loop
-          fetchPriority="high"
-          playsInline
-          webkit-playsinline
-        ></video>
-        <canvas className="hero-video__canvas" aria-hidden="true"></canvas>
+        <video autoPlay muted loop fetchPriority="high" playsInline webkit-playsinline>
+          <source
+            src="/assets/videos/actipro-hero-loop-portrait.mp4"
+            media="(orientation: portrait)"
+            type="video/mp4"
+          />
+          <source src="/assets/videos/actipro-hero-loop.mp4" media="(orientation: landscape)" type="video/mp4" />
+        </video>
       </div>
     </section>
   );

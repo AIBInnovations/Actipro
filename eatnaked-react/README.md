@@ -49,7 +49,6 @@ src/
     lenis.js                 smooth scroll, wired to ScrollTrigger + gsap.ticker
     preloader.js             the logo-fill loader
     adaptiveTheme.js         is--on-dark hand-off for the fixed overlays
-    heroVideoKey.js          chroma-keys the hero showreel onto a canvas
     homepageAnimations.js    per-section scroll triggers
     imageSequenceLoader.js   batched frame decode with per-orientation caches
     sequenceScrollHandler.js canvas + frame cursor + the scrubbed timeline
@@ -107,6 +106,33 @@ would break — so they sit outside the containers.
 The `Join` cards are deliberately **facts, not testimonials** — the brand has no
 collected customer quotes, and inventing attributed ones would be fabricating
 reviews. Swap them for real testimonials when they exist.
+
+### Hero loop
+
+`actipro-hero-loop.mp4` (landscape) and `-portrait.mp4` are built from the
+supplied 8s product animation. Three things were baked into the file rather
+than done at runtime:
+
+- **The background was keyed to white.** The source ships a transparency
+  checkerboard baked into the pixels (alternating #FDFDFD/#ECECEC), which would
+  have read as grey texture on the page. A levels lift to a 0.89 white point
+  clips both tones to pure white, including where they showed through the clear
+  container, so the product now sits on the page ground with no matte.
+- **A speed ramp**, not a flat rate: `setpts` remaps time along
+  `0.6t − (3.2/2π)·sin(2πt/8)`, giving 5× at the ends and 1× through the peak
+  where the food hangs in the air. Measured motion drops to about a third mid-clip.
+- **Ping-pong**: forward, then the reverse with its duplicate turn frames
+  dropped, so plain `loop` runs forward-and-back with no visible seam.
+
+The content is composed to sit clear of the headline (37.8%–91.9% of frame
+height in landscape, 53.8%–85.6% in portrait), because the video is full-bleed
+`object-fit: cover` behind the hero copy.
+
+There is **no chroma key any more.** The original hero footage was shot on black
+and `heroVideoKey.js` keyed it per frame onto a canvas; this product is on
+white on a white page, and a luminance key would have eaten the container's
+black lid. The keyer, its canvas and its CSS are gone — recoverable from git if
+black-background footage ever comes back.
 
 ### Preloader
 
@@ -187,7 +213,6 @@ None of these can be fixed in code — they need new artwork.
 | `assets/secuence-bag/**`           | 40 frames × 2 orientations of a tote bag carrying the **previous brand's logo and wordmark**, rotating 360°. Hero of the quality section. |
 | `assets/secuence-partners/**`      | 201 frames × 2 of a city flythrough with **Netflix, UCLA and Equinox logos** as buildings — third-party trademarks. |
 | Vimeo `1129496694`                 | The previous brand's promo video, on a third party's personal account, with a **burned-in watermark** and a competing domain on screen. Plays under "Our refinery In Action". |
-| `assets/videos/Hero-Showreel.mp4`  | A salad meal-prep box assembling itself. No oil in frame.                                 |
 | `assets/videos/delivered-*.mp4`    | Both orientations render the **previous brand's wordmark**.                               |
 | `assets/img/a028-*.avif`           | Vimeo poster frame: a meal-prep commissary kitchen.                                       |
 | `assets/img/a002/a003/a004`        | Hero variant pills — a tomato and pepper, almonds, and raw chicken, labelled Sunflower / Corn / Rice Bran. |
