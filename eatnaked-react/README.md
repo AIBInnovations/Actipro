@@ -133,13 +133,24 @@ than done at runtime:
 
 Output is **60fps, 6.4s** per loop.
 
-The content is composed to sit clear of the headline (36.3%–88.9% of frame
-height in landscape, 45.8%–79.6% in portrait), because the video is full-bleed
-`object-fit: cover` behind the hero copy. **36.3% is the ceiling in landscape**:
-the lid rests at the top of its arc for the whole slow section, and the headline's
-second line occupies 29.5%–36.3%, so anything higher draws the lid straight
-through the type as a strikethrough. To raise the product further the copy block
-would have to move, not the video.
+- **A white gradient over the top of the frame**, baked in. The lid is clipped
+  by the *source* file's own top edge — it flies up and out — so wherever the
+  product is placed, the lid ends in a razor-straight horizontal line. The
+  gradient is opaque to y=450 and clear by y=505 (landscape), which dissolves
+  the lid as it rises and feathers the top of the flying food, instead of
+  slicing them. The lid stays fully solid while it sits on the container, since
+  that is below the gradient.
+
+Content occupies 34%–80% of frame height in landscape and 43%–73% in portrait.
+
+Those numbers are chosen for `object-fit: cover`, which is what makes this
+fiddly: the hero video is full-bleed, so **the composition shifts with the
+window's aspect ratio.** Below 16:9 the video fits by height and the frame maps
+1:1; above it, the video fits by width and the top and bottom are cropped, which
+pushes everything *up* the screen. At a 2.2 aspect window the old 89% bottom
+landed at 98% — the container was visibly cut off along the bottom edge. The
+current placement stays inside the viewport from 1.6 through 2.2, which covers
+essentially every real desktop window.
 
 There is **no chroma key any more.** The original hero footage was shot on black
 and `heroVideoKey.js` keyed it per frame onto a canvas; this product is on
