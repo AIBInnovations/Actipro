@@ -4954,3 +4954,2367 @@ html[data-loading] .loading-layer {
       }
     
 
+
+/* ========== RANGE SECTION ========== */
+/* "Our Range" preview. Three cards, one route into each product page. */
+
+.range {
+  position: relative;
+  isolation: isolate;
+}
+
+.range .range-container {
+  /* Same 19rem gutter as .goals and .bowl: anything narrower runs underneath
+     the fixed markers rail on the right. */
+  padding: min(13rem, 13vh) 19rem;
+  display: grid;
+  gap: min(7rem, 7vh);
+  justify-items: center;
+}
+
+.range .range-header {
+  display: grid;
+  gap: 2.2rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.range .range-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.range .range-eyebrow__rule {
+  width: 4.4rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--orange);
+}
+
+.range .range-eyebrow__text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.range .range-header__h2 {
+  font-size: min(7rem, 7.4vh);
+  font-weight: 500;
+  line-height: 0.99;
+  letter-spacing: -0.02em;
+  max-width: 16ch;
+}
+
+.range .range-header__p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+  max-width: 52ch;
+}
+
+.range .range-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.4rem;
+  width: 100%;
+}
+
+.range .range-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: 2.4rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  overflow: hidden;
+  transition:
+    transform 0.5s var(--ease, cubic-bezier(0.16, 1, 0.3, 1)),
+    box-shadow 0.5s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .range .range-card:hover {
+    transform: translateY(-0.6rem);
+    box-shadow: 0 2.4rem 5rem -2rem var(--shadow);
+  }
+}
+
+/* The pack shots are photographed on white, so they need their own warm
+   ground or they read as a hole punched in the card. */
+.range .range-card__media {
+  position: relative;
+  height: 28rem;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, #fdf2ec 0%, #fbe7db 100%);
+  overflow: hidden;
+}
+
+.range .range-card__glow {
+  position: absolute;
+  width: 26rem;
+  height: 26rem;
+  border-radius: 100%;
+  background: var(--orange);
+  opacity: 0.18;
+  filter: blur(6rem);
+  pointer-events: none;
+}
+
+.range .range-card__pack {
+  position: relative;
+  height: 22rem;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 1.6rem 2.4rem rgba(38, 28, 20, 0.22));
+}
+
+/* Flex, not grid: the descriptions are different lengths, and `margin-top:
+   auto` on the process line is what keeps every card's Learn More on the same
+   baseline. */
+.range .range-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 3rem 2.8rem 3.2rem;
+}
+
+.range .range-card__use {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange-text);
+}
+
+.range .range-card__h3 {
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.range .range-card__p {
+  font-size: 1.6rem;
+  line-height: 1.45;
+  color: var(--fg-muted);
+}
+
+.range .range-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.6rem;
+}
+
+.range .range-badge {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10rem;
+  border: 0.5px solid var(--hairline-soft);
+  color: var(--fg-subtle);
+  white-space: nowrap;
+}
+
+.range .range-card__process {
+  font-size: 1.3rem;
+  color: var(--fg-faint);
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+.range .range-card .cta-button {
+  margin-top: 1.4rem;
+  align-self: start;
+}
+
+/* ========== PURPOSE SECTION ========== */
+/* Mission and vision, as two panels rather than one blurred block. */
+
+.purpose {
+  position: relative;
+  isolation: isolate;
+}
+
+.purpose .purpose-container {
+  padding: min(13rem, 13vh) 19rem;
+  display: grid;
+  gap: min(6.5rem, 6.5vh);
+}
+
+.purpose .purpose-header {
+  display: grid;
+  gap: 2.2rem;
+  justify-items: start;
+}
+
+.purpose .purpose-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.purpose .purpose-eyebrow__rule {
+  width: 4.4rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--orange);
+}
+
+.purpose .purpose-eyebrow__text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.purpose .purpose-header__h2 {
+  font-size: min(7rem, 7.4vh);
+  font-weight: 500;
+  line-height: 0.99;
+  letter-spacing: -0.02em;
+  max-width: 18ch;
+}
+
+.purpose .purpose-header__p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+  max-width: 50ch;
+}
+
+.purpose .purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.4rem;
+}
+
+.purpose .purpose-panel {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 1.8rem;
+  padding: 4rem 3.6rem;
+  border-radius: 2.4rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+/* The accent rule doubles as the thing that tells the two panels apart at a
+   glance, so it is the only decoration either of them gets. */
+.purpose .purpose-panel::before {
+  content: "";
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 3px;
+  height: 4.4rem;
+  border-radius: 0 3px 3px 0;
+  background: var(--orange);
+}
+
+.purpose .purpose-panel__label {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange-text);
+}
+
+.purpose .purpose-panel__statement {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  max-width: 22ch;
+}
+
+.purpose .purpose-panel__body {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+  max-width: 46ch;
+}
+
+/* ========== MILESTONES SECTION ========== */
+/* The connecting thread is the point - it draws itself as the row scrolls in. */
+
+.miles {
+  position: relative;
+  isolation: isolate;
+}
+
+.miles .miles-container {
+  padding: min(13rem, 13vh) 19rem;
+  display: grid;
+  gap: min(7rem, 7vh);
+}
+
+.miles .miles-header {
+  display: grid;
+  gap: 2.2rem;
+  justify-items: start;
+}
+
+.miles .miles-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.miles .miles-eyebrow__rule {
+  width: 4.4rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--orange);
+}
+
+.miles .miles-eyebrow__text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.miles .miles-header__h2 {
+  font-size: min(7rem, 7.4vh);
+  font-weight: 500;
+  line-height: 0.99;
+  letter-spacing: -0.02em;
+  max-width: 16ch;
+}
+
+.miles .miles-header__p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+  max-width: 46ch;
+}
+
+.miles .miles-track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 2.8rem;
+  list-style: none;
+}
+
+/* Sits on the dot row. The dots are 1.4rem tall and start 3.2rem down the
+   node, so the thread is centred at 3.9rem. */
+.miles .miles-thread {
+  position: absolute;
+  top: 3.9rem;
+  left: 0;
+  /* Ends on the last dot rather than the container edge. Five equal columns
+     with four 2.8rem gaps, so one column is (100% - 11.2rem) / 5. */
+  right: calc((100% - 11.2rem) / 5);
+  height: 2px;
+  border-radius: 2px;
+  background: var(--track);
+  overflow: hidden;
+}
+
+.miles .miles-thread__fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: left center;
+  background: linear-gradient(90deg, var(--orange) 0%, var(--orange-light) 100%);
+}
+
+.miles .miles-node {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+  padding-top: 3.2rem;
+}
+
+.miles .miles-node__dot {
+  position: absolute;
+  top: 3.2rem;
+  left: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 100%;
+  background: var(--bg);
+  border: 2px solid var(--orange);
+}
+
+.miles .miles-node__marker {
+  margin-top: 3.2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange-text);
+}
+
+.miles .miles-node__h3 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.miles .miles-node__p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+}
+
+/* ========== OIL BOT WIDGET ========== */
+/* Bottom-LEFT on purpose: the markers rail owns the right edge. */
+
+.oilbot {
+  position: fixed;
+  left: 3rem;
+  bottom: 3rem;
+  z-index: 6;
+  display: grid;
+  justify-items: start;
+  gap: 1.4rem;
+}
+
+.oilbot-launcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.4rem 2rem 1.4rem 1.6rem;
+  border: none;
+  border-radius: 10rem;
+  cursor: pointer;
+  background: var(--orange);
+  color: #fff;
+  box-shadow: 0 1.2rem 3rem -0.8rem rgba(244, 120, 62, 0.55);
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .oilbot-launcher:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1.8rem 3.6rem -0.8rem rgba(244, 120, 62, 0.65);
+  }
+}
+
+.oilbot-launcher__icon {
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+}
+
+.oilbot-launcher__text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.oilbot-dot {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 100%;
+  flex-shrink: 0;
+  background: var(--fg-faint);
+}
+
+.oilbot-dot[data-on-duty="true"] {
+  background: #6fdc8c;
+  box-shadow: 0 0 0 0.3rem rgba(111, 220, 140, 0.25);
+}
+
+.oilbot-panel {
+  width: 36rem;
+  max-width: calc(100vw - 6rem);
+  display: grid;
+  border-radius: 2rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  box-shadow: 0 3rem 6rem -2rem var(--shadow);
+  overflow: hidden;
+  transform-origin: left bottom;
+  transition:
+    opacity 0.35s ease,
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.35s;
+}
+
+.oilbot[data-oilbot-open="false"] .oilbot-panel {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1.2rem) scale(0.96);
+}
+
+.oilbot[data-oilbot-open="true"] .oilbot-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.oilbot-panel__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.4rem;
+  padding: 1.8rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.oilbot-panel__title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.oilbot-close {
+  display: grid;
+  place-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  background: var(--surface-soft);
+  color: var(--fg-muted);
+  transition: background 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .oilbot-close:hover {
+    background: var(--surface);
+  }
+}
+
+.oilbot-panel__body {
+  display: grid;
+  gap: 1.6rem;
+  padding: 2rem;
+}
+
+.oilbot-bubble {
+  font-size: 1.5rem;
+  line-height: 1.45;
+  color: var(--fg-muted);
+  padding: 1.4rem 1.6rem;
+  border-radius: 1.4rem 1.4rem 1.4rem 0.4rem;
+  background: var(--surface-soft);
+}
+
+.oilbot-bubble strong {
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.oilbot-choices {
+  display: grid;
+  gap: 0.8rem;
+  list-style: none;
+}
+
+.oilbot-choice {
+  width: 100%;
+  text-align: left;
+  font-size: 1.45rem;
+  font-weight: 500;
+  line-height: 1.3;
+  padding: 1.4rem 1.6rem;
+  border-radius: 1.2rem;
+  border: 0.5px solid var(--hairline-soft);
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .oilbot-choice:hover {
+    border-color: var(--orange);
+    background: var(--orange-soft);
+    color: var(--orange-text);
+  }
+}
+
+.oilbot-result {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1.6rem;
+  border-radius: 1.4rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.oilbot-result__process {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange-text);
+}
+
+.oilbot-result__body {
+  font-size: 1.45rem;
+  line-height: 1.45;
+  color: var(--fg-muted);
+}
+
+.oilbot-actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.oilbot-action {
+  flex: 1;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 1.3rem 1.4rem;
+  border-radius: 10rem;
+  border: 0.5px solid var(--hairline-soft);
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.oilbot-action.is--primary {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+}
+
+.oilbot-panel__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  padding: 1.4rem 2rem;
+  border-top: 1px solid var(--border);
+  font-size: 1.25rem;
+  color: var(--fg-subtle);
+}
+
+.oilbot-foot__link {
+  color: var(--orange-text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* ---------- PORTRAIT ---------- */
+
+@media screen and (orientation: portrait) {
+  .range .range-container,
+  .purpose .purpose-container,
+  .miles .miles-container {
+    padding: 9rem 3rem;
+    gap: 5rem;
+  }
+
+  .range .range-header__h2,
+  .purpose .purpose-header__h2,
+  .miles .miles-header__h2 {
+    font-size: 4rem;
+  }
+
+  .range .range-grid,
+  .purpose .purpose-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .range .range-card__media {
+    height: 24rem;
+  }
+
+  .purpose .purpose-panel {
+    padding: 3.2rem 2.8rem;
+  }
+
+  .purpose .purpose-panel::before {
+    top: 3.2rem;
+  }
+
+  .purpose .purpose-panel__statement {
+    font-size: 2.6rem;
+  }
+
+  /* The thread turns vertical: on a phone a five-column row would be five
+     unreadable slivers. */
+  .miles .miles-track {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding-left: 3rem;
+  }
+
+  .miles .miles-thread {
+    top: 1rem;
+    bottom: 1rem;
+    left: 0.6rem;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .miles .miles-thread__fill {
+    transform-origin: center top;
+  }
+
+  .miles .miles-node {
+    padding-top: 0;
+    padding-bottom: 3.6rem;
+  }
+
+  .miles .miles-node:last-child {
+    padding-bottom: 0;
+  }
+
+  .miles .miles-node__dot {
+    top: 0.4rem;
+    left: -3rem;
+  }
+
+  .miles .miles-node__marker {
+    margin-top: 0;
+  }
+
+  .oilbot {
+    left: 2rem;
+    bottom: 2rem;
+  }
+
+  .oilbot-panel {
+    width: calc(100vw - 4rem);
+  }
+}
+
+/* ========== INTERNAL PAGES ========== */
+/* Shared furniture for every route that isn't the homepage: the page head, the
+   section rhythm, and the handful of card shapes the pages compose from. */
+
+.page {
+  display: block;
+}
+
+/* Clears the fixed navbar. The homepage hides behind its hero instead; these
+   pages start with type, so they need the room declared. */
+.page-head {
+  padding: 18rem 19rem 6rem;
+}
+
+.page-head__inner {
+  display: grid;
+  gap: 2.2rem;
+  justify-items: start;
+  max-width: 92rem;
+}
+
+.page-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.page-eyebrow__rule {
+  width: 4.4rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--orange);
+}
+
+.page-eyebrow__text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.page-head__h1 {
+  font-size: min(8rem, 8.4vh);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  max-width: 18ch;
+}
+
+.page-head__p {
+  font-size: 1.9rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+  max-width: 58ch;
+}
+
+.page-section {
+  padding-block: min(9rem, 9vh);
+}
+
+/* The alternating band is what gives these pages a rhythm without needing a
+   different layout per section. */
+.page-section.is--tinted {
+  background: var(--bg-elevated);
+}
+
+.page-inner {
+  padding-inline: 19rem;
+  display: grid;
+  gap: 4.5rem;
+}
+
+.page-inner.is--narrow {
+  max-width: 106rem;
+}
+
+.section-head {
+  display: grid;
+  gap: 1.6rem;
+  justify-items: start;
+}
+
+.section-head__h2 {
+  font-size: min(5rem, 5.4vh);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  max-width: 20ch;
+}
+
+.section-head__p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+  max-width: 54ch;
+}
+
+.prose {
+  display: grid;
+  gap: 2.4rem;
+}
+
+.prose__p,
+.lead-p {
+  font-size: 1.9rem;
+  line-height: 1.6;
+  color: var(--fg-muted);
+  max-width: 68ch;
+}
+
+.lead-p {
+  font-size: 2.4rem;
+  line-height: 1.45;
+  color: var(--fg);
+  max-width: 40ch;
+}
+
+.page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.page-link {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--orange-text);
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.page-disclaimer {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--fg-faint);
+  max-width: 72ch;
+}
+
+/* --- card shapes ------------------------------------------------------- */
+
+.stack-grid,
+.mini-grid,
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.4rem;
+  list-style: none;
+}
+
+.stack-grid {
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+}
+
+.stack-card,
+.mini-card,
+.step-card {
+  display: grid;
+  align-content: start;
+  gap: 1.2rem;
+  padding: 3.2rem 2.8rem;
+  border-radius: 2rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.page-section.is--tinted .stack-card,
+.page-section.is--tinted .mini-card,
+.page-section.is--tinted .step-card {
+  background: var(--bg);
+}
+
+.stack-card__h3,
+.mini-card__h3,
+.step-card__h3 {
+  font-size: 2.1rem;
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: -0.01em;
+}
+
+.stack-card__p,
+.mini-card__p,
+.step-card__p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+}
+
+.mini-card__img {
+  width: 7rem;
+  height: 7rem;
+  object-fit: contain;
+}
+
+.mini-card__label {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange-text);
+}
+
+.step-card__n {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--orange-text);
+}
+
+/* --- products ---------------------------------------------------------- */
+
+.product-range {
+  border-radius: 3rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fdf2ec 0%, #fbe7db 100%);
+  display: grid;
+  place-items: center;
+  padding: 5rem;
+}
+
+.product-range__img {
+  width: 100%;
+  max-width: 96rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.product-list {
+  display: grid;
+  gap: 2.4rem;
+  list-style: none;
+}
+
+.product-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+  align-items: center;
+  gap: 4rem;
+  padding: 3rem;
+  border-radius: 2.4rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.product-row__media,
+.product-hero__media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: 1.8rem;
+  overflow: hidden;
+  padding: 3rem;
+  min-height: 30rem;
+  background: linear-gradient(180deg, #fdf2ec 0%, #fbe7db 100%);
+}
+
+.product-row__glow,
+.product-hero__glow {
+  position: absolute;
+  width: 26rem;
+  height: 26rem;
+  border-radius: 100%;
+  background: var(--orange);
+  opacity: 0.18;
+  filter: blur(6rem);
+  pointer-events: none;
+}
+
+.product-row__pack,
+.product-hero__pack {
+  position: relative;
+  max-height: 26rem;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 1.6rem 2.4rem rgba(38, 28, 20, 0.22));
+}
+
+.product-row__body,
+.product-hero__body {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 1.4rem;
+}
+
+.product-row__use {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange-text);
+}
+
+.product-row__h2 {
+  font-size: 3.4rem;
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+
+.product-row__p,
+.product-hero__p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+  max-width: 56ch;
+}
+
+.product-row__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  list-style: none;
+}
+
+.product-row__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+  margin-block: 0.4rem;
+}
+
+.product-row__meta dt {
+  font-size: 1.2rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  margin-bottom: 0.5rem;
+}
+
+.product-row__meta dd {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.product-hero {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 5rem;
+}
+
+/* --- process ----------------------------------------------------------- */
+
+.process-block__head {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.process-block__badge {
+  display: grid;
+  place-items: center;
+  width: 6.4rem;
+  height: 6.4rem;
+  flex-shrink: 0;
+  border-radius: 100%;
+  background: var(--orange);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.process-block__oil {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange-text);
+  margin-bottom: 0.6rem;
+}
+
+.process-block__h2 {
+  font-size: min(4.4rem, 4.8vh);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+}
+
+.process-block__lede {
+  font-size: 1.9rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+  max-width: 62ch;
+}
+
+/* --- spec lists and tables --------------------------------------------- */
+
+.spec-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+
+.spec-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.5fr) minmax(0, 1.5fr);
+  gap: 3rem;
+  padding-block: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.spec-row__dt {
+  font-size: 1.4rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.spec-row__dd {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+}
+
+/* Tables are the one thing allowed its own horizontal scroll on a phone. */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.spec-table th,
+.spec-table td {
+  text-align: left;
+  padding: 1.8rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.spec-table th {
+  color: var(--fg-muted);
+}
+
+.spec-table td {
+  font-weight: 500;
+  text-align: right;
+}
+
+.notice {
+  padding: 2.8rem 3rem;
+  border-radius: 1.8rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.notice__p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+}
+
+.notice__p a,
+.contact-success__p a {
+  color: var(--orange-text);
+}
+
+/* --- contact ----------------------------------------------------------- */
+
+.contact-layout {
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
+  gap: 5rem;
+  align-items: start;
+}
+
+.contact-form,
+.contact-success {
+  display: grid;
+  gap: 2.4rem;
+  padding: 4rem;
+  border-radius: 2.4rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.contact-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.field__label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--fg-muted);
+}
+
+.field__input {
+  font: inherit;
+  font-size: 1.6rem;
+  color: var(--fg);
+  padding: 1.4rem 1.6rem;
+  border-radius: 1.2rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  transition: border-color 0.3s ease;
+}
+
+.field__input:focus-visible {
+  outline: none;
+  border-color: var(--orange);
+}
+
+.field__input.is--area {
+  resize: vertical;
+  min-height: 14rem;
+  line-height: 1.5;
+}
+
+.field[data-invalid="true"] .field__input {
+  border-color: #c0391b;
+}
+
+.field__error {
+  font-size: 1.3rem;
+  color: #c0391b;
+}
+
+.contact-submit {
+  justify-self: start;
+  font: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  background: var(--orange);
+  border: none;
+  border-radius: 10rem;
+  padding: 1.6rem 3.2rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.contact-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.contact-success__h2 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.contact-success__p {
+  font-size: 1.7rem;
+  line-height: 1.55;
+  color: var(--fg-muted);
+}
+
+.contact-aside {
+  display: grid;
+  gap: 2rem;
+}
+
+.contact-block {
+  display: grid;
+  gap: 0.8rem;
+  justify-items: start;
+  padding: 2.8rem 3rem;
+  border-radius: 2rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.contact-block__h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  margin-bottom: 0.4rem;
+}
+
+.contact-block__link {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--orange-text);
+  text-decoration: none;
+}
+
+.contact-block__p {
+  font-size: 1.7rem;
+  line-height: 1.45;
+  color: var(--fg-muted);
+}
+
+/* ---------- PORTRAIT ---------- */
+
+@media screen and (orientation: portrait) {
+  .page-head {
+    padding: 14rem 3rem 3rem;
+  }
+
+  .page-head__h1 {
+    font-size: 4.4rem;
+  }
+
+  .page-head__p {
+    font-size: 1.7rem;
+  }
+
+  .page-inner {
+    padding-inline: 3rem;
+    gap: 3.2rem;
+  }
+
+  .page-section {
+    padding-block: 6rem;
+  }
+
+  .section-head__h2 {
+    font-size: 3.2rem;
+  }
+
+  .lead-p {
+    font-size: 2rem;
+  }
+
+  .stack-grid,
+  .mini-grid,
+  .step-grid,
+  .contact-form__grid,
+  .contact-layout,
+  .product-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .product-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.6rem;
+    padding: 2rem;
+  }
+
+  .product-row__h2 {
+    font-size: 2.8rem;
+  }
+
+  .product-range {
+    padding: 2.4rem;
+  }
+
+  .spec-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.8rem;
+  }
+
+  .process-block__h2 {
+    font-size: 3rem;
+  }
+
+  .contact-form,
+  .contact-success {
+    padding: 2.8rem 2.4rem;
+  }
+}
+
+/* ========== FIND YOUR OIL + BATCH VERIFY ========== */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.4rem;
+  list-style: none;
+}
+
+.choice-card {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: start;
+  align-content: start;
+  gap: 1.6rem;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  padding: 3.2rem 2.8rem;
+  border-radius: 2rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--fg);
+  transition:
+    border-color 0.35s ease,
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.35s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .choice-card:hover {
+    border-color: var(--orange);
+    transform: translateY(-0.4rem);
+  }
+}
+
+/* The picked card has to stay legible next to two unpicked ones, so it takes
+   the orange border and tint rather than inverting to a solid fill. */
+.choice-card[data-picked="true"] {
+  border-color: var(--orange);
+  background: var(--orange-soft);
+}
+
+.choice-card__img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+}
+
+.choice-card__use {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.choice-card__arrow {
+  font-size: 1.8rem;
+  color: var(--orange-text);
+}
+
+.answer {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.6fr);
+  align-items: center;
+  gap: 4rem;
+  padding: 3rem;
+  border-radius: 2.4rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.answer__media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: 1.8rem;
+  overflow: hidden;
+  padding: 2.6rem;
+  min-height: 26rem;
+  background: linear-gradient(180deg, #fdf2ec 0%, #fbe7db 100%);
+}
+
+.answer__glow {
+  position: absolute;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 100%;
+  background: var(--orange);
+  opacity: 0.18;
+  filter: blur(6rem);
+}
+
+.answer__pack {
+  position: relative;
+  max-height: 22rem;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 1.6rem 2.4rem rgba(38, 28, 20, 0.22));
+}
+
+.answer__body {
+  display: grid;
+  justify-items: start;
+  gap: 1.4rem;
+}
+
+.answer__label {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange-text);
+}
+
+.answer__h3 {
+  font-size: 3.4rem;
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+
+.answer__p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+  max-width: 60ch;
+}
+
+/* --- comparison table --------------------------------------------------- */
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 72rem;
+}
+
+.compare-table th,
+.compare-table td {
+  text-align: left;
+  padding: 1.8rem 2rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.6rem;
+  font-weight: 400;
+  vertical-align: top;
+}
+
+.compare-table thead th {
+  font-size: 1.8rem;
+  font-weight: 500;
+  border-bottom-width: 2px;
+}
+
+.compare-table tbody th {
+  color: var(--fg-faint);
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  width: 22%;
+}
+
+/* --- batch verify ------------------------------------------------------- */
+
+.verify {
+  display: grid;
+  gap: 2rem;
+  padding: 3.4rem;
+  border-radius: 2.4rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+
+/* Above the form, not below it: someone typing a real lot number should know
+   what they are about to get before they get it. */
+.verify__sample {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+  padding: 1.4rem 1.6rem;
+  border-radius: 1.2rem;
+  border: 0.5px dashed var(--hairline-soft);
+  background: var(--surface-faint);
+}
+
+.verify__sample a,
+.verify__p a {
+  color: var(--orange-text);
+}
+
+.verify__form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1.6rem;
+}
+
+.verify__form .field {
+  flex: 1 1 26rem;
+}
+
+.verify__hint {
+  font-size: 1.4rem;
+  color: var(--fg-faint);
+}
+
+.verify__result {
+  display: grid;
+  justify-items: start;
+  gap: 1.4rem;
+  padding: 2.8rem 3rem;
+  border-radius: 1.8rem;
+  border: 1px solid var(--orange);
+  background: var(--orange-soft);
+}
+
+.verify__result.is--missing {
+  border-color: var(--border);
+  background: var(--surface-faint);
+}
+
+.verify__found {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange-text);
+}
+
+.verify__h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.verify__p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--fg-muted);
+}
+
+.verify__meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.8rem 3rem;
+  width: 100%;
+}
+
+.verify__meta dt {
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  margin-bottom: 0.5rem;
+}
+
+.verify__meta dd {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+.table-notes {
+  display: grid;
+  gap: 1rem;
+}
+
+.table-notes__p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--fg-faint);
+  max-width: 78ch;
+}
+
+@media screen and (orientation: portrait) {
+  .choice-grid,
+  .answer,
+  .verify__meta {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .answer {
+    padding: 2rem;
+    gap: 2.4rem;
+  }
+
+  .answer__h3 {
+    font-size: 2.8rem;
+  }
+
+  .verify {
+    padding: 2.4rem 2rem;
+  }
+
+  .verify__form .field {
+    flex: 1 1 100%;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 1.4rem 1.2rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* ========== MEDIA, GIFTING, FAQ, LEGAL ========== */
+
+/* --- media gallery ------------------------------------------------------ */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.4rem;
+  list-style: none;
+}
+
+.gallery__item {
+  display: grid;
+}
+
+/* The kitchen scenes are 16:9; giving them two columns stops them being
+   letterboxed into a square next to the pack shots. */
+.gallery__item.is--wide {
+  grid-column: span 2;
+}
+
+.gallery__figure {
+  position: relative;
+  display: grid;
+  height: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #fdf2ec 0%, #fbe7db 100%);
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  min-height: 26rem;
+  object-fit: cover;
+  display: block;
+}
+
+/* The dish and pack cut-outs sit on transparent backgrounds, so they need
+   containing on the peach ground rather than cropping. */
+.gallery__item:not(.is--wide) .gallery__img {
+  object-fit: contain;
+  padding: 3rem;
+}
+
+.gallery__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 3.4rem 2.4rem 1.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(to top, rgba(28, 16, 9, 0.82) 0%, rgba(28, 16, 9, 0) 100%);
+}
+
+.media-video {
+  border-radius: 2.4rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #0b0b0b;
+}
+
+.media-video__el {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* --- gifting trio ------------------------------------------------------- */
+
+.trio {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 4rem;
+  padding: 3rem;
+  border-radius: 2.4rem;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.trio__media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 3rem;
+  border-radius: 1.8rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fdf2ec 0%, #fbe7db 100%);
+}
+
+.trio__glow {
+  position: absolute;
+  width: 32rem;
+  height: 32rem;
+  border-radius: 100%;
+  background: var(--orange);
+  opacity: 0.16;
+  filter: blur(7rem);
+}
+
+.trio__img {
+  position: relative;
+  width: 100%;
+  max-width: 52rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.trio__list {
+  display: grid;
+  gap: 1.8rem;
+  list-style: none;
+}
+
+.trio__item {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.trio__icon {
+  width: 6rem;
+  height: 6rem;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.trio__body {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.trio__body strong {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.trio__body span {
+  font-size: 1.5rem;
+  color: var(--fg-muted);
+}
+
+/* --- faq ---------------------------------------------------------------- */
+
+.faq {
+  display: grid;
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq__q {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.faq__toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  text-align: left;
+  font: inherit;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--fg);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2.6rem 0;
+  transition: color 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .faq__toggle:hover {
+    color: var(--orange-text);
+  }
+}
+
+/* A plus that becomes a minus, drawn in CSS so there is no icon to load. */
+.faq__sign {
+  position: relative;
+  width: 1.8rem;
+  height: 1.8rem;
+  flex-shrink: 0;
+}
+
+.faq__sign::before,
+.faq__sign::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--orange);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq__sign::after {
+  transform: rotate(90deg);
+}
+
+.faq__item[data-open="true"] .faq__sign::after {
+  transform: rotate(0deg);
+}
+
+.faq__panel {
+  padding-bottom: 2.8rem;
+}
+
+.faq__a {
+  font-size: 1.7rem;
+  line-height: 1.6;
+  color: var(--fg-muted);
+  max-width: 76ch;
+}
+
+.faq__a .page-link {
+  font-size: inherit;
+}
+
+/* --- legal -------------------------------------------------------------- */
+
+.legal {
+  grid-template-columns: minmax(0, 0.6fr) minmax(0, 1.6fr);
+  gap: 6rem;
+  align-items: start;
+}
+
+.legal__index {
+  position: sticky;
+  top: 14rem;
+  display: grid;
+  gap: 1.8rem;
+}
+
+.legal__updated {
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.legal__index-list {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  counter-reset: legal;
+}
+
+.legal__index-link {
+  font-size: 1.5rem;
+  line-height: 1.35;
+  color: var(--fg-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .legal__index-link:hover {
+    color: var(--orange-text);
+  }
+}
+
+.legal__body {
+  display: grid;
+  gap: 4.5rem;
+}
+
+/* Offsets the fixed navbar when an index link jumps to a section. */
+.legal__section {
+  scroll-margin-top: 14rem;
+}
+
+.legal__h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 1.6rem;
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.8rem;
+}
+
+.legal__n {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--orange-text);
+  flex-shrink: 0;
+}
+
+.legal__p {
+  font-size: 1.7rem;
+  line-height: 1.65;
+  color: var(--fg-muted);
+  max-width: 74ch;
+}
+
+.legal__p + .legal__p {
+  margin-top: 1.6rem;
+}
+
+@media screen and (orientation: portrait) {
+  .gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .gallery__item.is--wide {
+    grid-column: span 1;
+  }
+
+  .gallery__img {
+    min-height: 22rem;
+  }
+
+  .trio,
+  .legal {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.6rem;
+  }
+
+  .trio {
+    padding: 2rem;
+  }
+
+  /* The sticky index would eat half a phone screen; let it scroll away. */
+  .legal__index {
+    position: static;
+  }
+
+  .legal__body {
+    gap: 3.4rem;
+  }
+
+  .faq__toggle {
+    font-size: 1.8rem;
+    gap: 2rem;
+    padding: 2.2rem 0;
+  }
+}
+
+/* ========== MOBILE REFINEMENTS ========== */
+/* Tightens the internal-page rhythm on phones and stops the fixed Oil Bot
+   launcher sitting on top of content. Appended last so it wins over the
+   per-component portrait blocks above. */
+
+@media screen and (orientation: portrait) {
+  /* --- vertical rhythm: the content pages ran longer than they needed to --- */
+  .page-head {
+    padding: 13rem 3rem 1rem;
+  }
+
+  .page-section {
+    padding-block: 5rem;
+  }
+
+  .page-inner {
+    gap: 2.8rem;
+  }
+
+  .section-head {
+    gap: 1.2rem;
+  }
+
+  .stack-card,
+  .mini-card,
+  .step-card,
+  .choice-card {
+    padding: 2.6rem 2.2rem;
+    gap: 1rem;
+  }
+
+  .prose {
+    gap: 1.8rem;
+  }
+
+  .prose__p,
+  .legal__p,
+  .faq__a {
+    font-size: 1.6rem;
+  }
+
+  /* --- cards: keep every row of a card laid out the same way --------------
+     `product-row__meta` is a wrapping flex row, so whether Process and Solves
+     For sat side by side or stacked depended on how long the process name was:
+     three cards, three different layouts. A fixed two-column grid settles it. */
+  .product-row__meta,
+  .verify__meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.6rem 2rem;
+  }
+
+  .product-row__meta dd {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  /* 1.2rem lands near 11px once the root scales down - too small for a label
+     someone is meant to read. */
+  .range-badge {
+    font-size: 1.35rem;
+    padding: 0.9rem 1.3rem;
+  }
+
+  .product-row__badges,
+  .range-card__badges {
+    gap: 0.7rem;
+  }
+
+  /* Buttons in a row wrap to two cramped pills; full width reads better and
+     gives a bigger touch target. */
+  .page-actions {
+    gap: 1.2rem;
+    width: 100%;
+  }
+
+  .page-actions .cta-button {
+    width: 100%;
+  }
+
+  .page-actions .cta-button .cta-button__inner {
+    justify-content: flex-start;
+  }
+
+  .spec-table th,
+  .spec-table td {
+    padding: 1.4rem 0.8rem;
+    font-size: 1.5rem;
+  }
+
+  /* --- the Oil Bot launcher ---------------------------------------------
+     Full-width pill bottom-left covered whatever was behind it. On a phone it
+     becomes a plain circular button, the way every other chat widget does. */
+  .oilbot-launcher {
+    width: 5.6rem;
+    height: 5.6rem;
+    padding: 0;
+    justify-content: center;
+    border-radius: 100%;
+  }
+
+  .oilbot-launcher__text {
+    display: none;
+  }
+
+  .oilbot-launcher__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  /* The status dot rides the edge of the circle rather than sitting inside. */
+  .oilbot-launcher .oilbot-dot {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+  }
+
+  /* Nothing scrollable should end underneath the launcher. */
+  .page-section:last-of-type {
+    padding-bottom: 9rem;
+  }
+}
+
+/* Anchor targets sit under the fixed navbar without this. */
+section[id],
+.legal__section {
+  scroll-margin-top: 12rem;
+}
+
+/* Scroll affordance for the wide tables. Four background layers: two opaque
+   fades that scroll WITH the content (so they sit flush at each end and
+   disappear there), and two shadows fixed to the box that show only while
+   there is more to scroll. `--table-bg` tracks whichever ground the table is
+   sitting on. */
+.table-wrap {
+  --table-bg: var(--bg);
+  background-image:
+    linear-gradient(to right, var(--table-bg), rgba(255, 255, 255, 0)),
+    linear-gradient(to left, var(--table-bg), rgba(255, 255, 255, 0)),
+    radial-gradient(farthest-side at 0 50%, rgba(38, 24, 14, 0.16), rgba(38, 24, 14, 0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(38, 24, 14, 0.16), rgba(38, 24, 14, 0));
+  background-position:
+    left center,
+    right center,
+    left center,
+    right center;
+  background-repeat: no-repeat;
+  background-size:
+    4rem 100%,
+    4rem 100%,
+    1.4rem 100%,
+    1.4rem 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+.page-section.is--tinted .table-wrap {
+  --table-bg: var(--bg-elevated);
+}
+
+@media screen and (orientation: portrait) {
+  /* The markers rail is hidden in portrait, so the right edge is free - and
+     that is where a floating widget belongs. On the left it sat on top of the
+     comparison table's row labels. */
+  .oilbot {
+    left: auto;
+    right: 2rem;
+    bottom: 2rem;
+    justify-items: end;
+  }
+
+  .oilbot-panel {
+    transform-origin: right bottom;
+    justify-self: end;
+  }
+
+  .oilbot[data-oilbot-open="false"] .oilbot-panel {
+    transform: translateY(1.2rem) scale(0.96);
+  }
+
+  /* Badge outlines were rendering too faintly to read as badges at all. */
+  .range-badge {
+    border-width: 1px;
+  }
+}
+
+/* ---------- PORTRAIT CORRECTIONS ---------- */
+
+@media screen and (orientation: portrait) {
+  /* The bar is transparent and fixed, so every section heading scrolled up
+     underneath the logo and became unreadable. A scrim behind it, tinted to
+     whichever scope the bar is currently over. */
+  .navbar::before {
+    content: "";
+    position: absolute;
+    inset: -1px 0 -5rem 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(to bottom, var(--bg) 0%, var(--bg) 46%, transparent 100%);
+  }
+
+  .navbar.is--on-dark::before {
+    background: linear-gradient(to bottom, #0b0b0b 0%, #0b0b0b 46%, transparent 100%);
+  }
+
+  /* Our Range and Purpose were stacking into a 2000px column. Swipe instead:
+     native scroll-snap, so it needs no JS and keeps momentum on iOS. */
+  .range .range-grid,
+  .purpose .purpose-grid {
+    display: flex;
+    grid-template-columns: none;
+    gap: 1.6rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* bleed to the screen edges so a card can sit centred */
+    margin-inline: -3rem;
+    padding-inline: 3rem;
+    padding-block: 0.5rem;
+  }
+
+  .range .range-grid::-webkit-scrollbar,
+  .purpose .purpose-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .range .range-grid,
+  .purpose .purpose-grid {
+    /* single flex line: let the cards define the height rather than being
+       centred inside a taller one, which left dead space above them */
+    align-items: stretch;
+  }
+
+  .range .range-card,
+  .purpose .purpose-panel {
+    flex: 0 0 84%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    height: auto;
+  }
+
+  .range .range-card__media {
+    height: 20rem;
+  }
+
+  /* The header block had a large dead gap before the first card. */
+  .range .range-container,
+  .purpose .purpose-container,
+  .miles .miles-container {
+    padding: 7rem 3rem;
+    gap: 3.4rem;
+  }
+
+  /* These sit behind the closing headline and were landing on top of the
+     type at phone width, where there is no room either side of it. */
+  .join .join-floating {
+    display: none;
+  }
+
+  /* Keep the assistant clear of the copy it was covering. */
+  .oilbot {
+    transform: scale(0.85);
+    transform-origin: left bottom;
+  }
+
+  /* The assistant is viewport-fixed, so at full scroll it lands on whatever
+     is in the bottom corner - which was the last footer links. Give the
+     footer room so nothing important ends up underneath it. */
+  .footer .footer-container {
+    padding-bottom: 9rem;
+  }
+}

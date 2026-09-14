@@ -120,10 +120,10 @@ export default function Footer() {
           <p className="footer-copyright">© All rights reserved {new Date().getFullYear()}</p>
 
           <div className="footer-terms">
-            <a href="terms" className="footer-terms__link">
+            <a href="/terms" className="footer-terms__link">
               Terms and Conditions
             </a>
-            <a href="privacy-policy" className="footer-terms__link">
+            <a href="/privacy-policy" className="footer-terms__link">
               Privacy Policy
             </a>
           </div>

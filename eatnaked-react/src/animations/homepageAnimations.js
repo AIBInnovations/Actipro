@@ -24,9 +24,12 @@ export class HomepageAnimations {
     this.deliveredVideoScroll();
     this.scrollToNextSection();
     this.heroSectionAnimation();
+    this.rangeSectionAnimation();
     this.goalsSectionAnimation();
     this.bowlSectionAnimation();
     this.actionSectionAnimation();
+    this.purposeSectionAnimation();
+    this.milestonesSectionAnimation();
     this.markersAnimation();
     this.joinSectionAnimation();
   }
@@ -327,6 +330,99 @@ export class HomepageAnimations {
       refreshPriority: 8,
       animation: gsap.from(header, { autoAlpha: 0, x: -50, duration: 1.2, ease: "EA-ease" }),
     });
+  }
+
+  /**
+   * The three "plan gap" sections added after the original port. All three
+   * follow the same shape as goalsSectionAnimation: header slides in from the
+   * left, contents stagger up, both reversible.
+   */
+  revealSection(selector, headerSelector, itemsSelector, itemOptions = {}) {
+    const section = document.querySelector(selector);
+    if (!section) return;
+
+    const header = section.querySelector(headerSelector);
+    const items = section.querySelectorAll(itemsSelector);
+
+    /**
+     * `fromTo`, not `from`, and deliberately so. `gsap.from` records its END
+     * state by reading the element, and these tweens are built while the
+     * preloader still covers the page - so a later `ScrollTrigger.refresh()`
+     * could re-read an element that was already sitting at its offset start
+     * and record THAT as the end. The tween then played 80px -> 80px: opacity
+     * came up, the element never moved back, and every card sat 80px low with
+     * a dead gap above it. Pinning both ends makes that impossible.
+     */
+    if (header) {
+      this.st({
+        trigger: header,
+        start: "top 100%",
+        end: "bottom 100%",
+        toggleActions: "play none none reverse",
+        refreshPriority: 8,
+        animation: gsap.fromTo(
+          header,
+          { autoAlpha: 0, x: -50 },
+          { autoAlpha: 1, x: 0, duration: 1.2, ease: "EA-ease" },
+        ),
+      });
+    }
+
+    if (items.length) {
+      this.st({
+        trigger: section,
+        start: "top 85%",
+        end: "bottom 40%",
+        toggleActions: "play none none reverse",
+        refreshPriority: 8,
+        animation: gsap.fromTo(
+          items,
+          { autoAlpha: 0, y: 80, ...itemOptions },
+          { autoAlpha: 1, y: 0, stagger: 0.09, duration: 1.1, ease: "EA-ease" },
+        ),
+      });
+    }
+  }
+
+  rangeSectionAnimation() {
+    this.revealSection(".range", ".range-header", ".range-card");
+  }
+
+  purposeSectionAnimation() {
+    this.revealSection(".purpose", ".purpose-header", ".purpose-panel");
+  }
+
+  milestonesSectionAnimation() {
+    this.revealSection(".miles", ".miles-header", ".miles-node", { y: 60 });
+
+    // The thread is the point of the section, so it draws with the scroll
+    // rather than firing once. Scaled, not width-animated: transform stays off
+    // the layout thread.
+    const fill = document.querySelector("[data-miles-thread]");
+    const track = document.querySelector("[data-miles-track]");
+    if (!fill || !track) return;
+
+    this.mm.add(
+      {
+        isLandscape: "(orientation: landscape)",
+        isPortrait: "(orientation: portrait)",
+      },
+      (context) => {
+        const { isPortrait } = context.conditions;
+        const axis = isPortrait ? "scaleY" : "scaleX";
+
+        gsap.set(fill, { scaleX: 1, scaleY: 1, [axis]: 0 });
+
+        this.st({
+          trigger: track,
+          start: "top 78%",
+          end: "bottom 62%",
+          scrub: 0.6,
+          refreshPriority: 7,
+          animation: gsap.to(fill, { [axis]: 1, ease: "none" }),
+        });
+      },
+    );
   }
 
   bowlSectionAnimation() {

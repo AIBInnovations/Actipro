@@ -6,7 +6,7 @@
  */
 export default function Hero() {
   return (
-    <section className="hero" data-marker="" data-scroll-next=".delivered">
+    <section className="hero" data-marker="" data-scroll-next=".range">
       <div className="hero-container">
         <div className="hero-tagline">
           It's a Lifestyle
@@ -48,21 +48,21 @@ export default function Hero() {
             <div className="hero-video__tag-img">
               <img loading="lazy" src="/assets/img/variant-sunflower.png" alt="" />
             </div>
-            <span className="hero-video__tag-text">Sunflower</span>
+            <span className="hero-video__tag-text">Sunflower Oil</span>
           </div>
 
           <div className="hero-video__tag">
             <div className="hero-video__tag-img">
               <img loading="lazy" src="/assets/img/variant-corn.png" alt="" />
             </div>
-            <span className="hero-video__tag-text">Corn</span>
+            <span className="hero-video__tag-text">Corn Oil</span>
           </div>
 
           <div className="hero-video__tag">
             <div className="hero-video__tag-img">
               <img loading="lazy" src="/assets/img/variant-rice-bran.png" alt="" />
             </div>
-            <span className="hero-video__tag-text">Rice Bran</span>
+            <span className="hero-video__tag-text">Rice Bran Oil</span>
           </div>
         </div>
 
