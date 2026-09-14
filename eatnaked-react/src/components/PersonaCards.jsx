@@ -24,7 +24,7 @@ export default function PersonaCards() {
                       width="256"
                       loading="lazy"
                       alt=""
-                      src="/assets/img/dish-pulao.webp"
+                      src="/assets/img/scene-everyday-meals.webp"
                       className="cover-image"
                     />
                   </div>
@@ -77,7 +77,7 @@ export default function PersonaCards() {
                       width="256"
                       loading="lazy"
                       alt=""
-                      src="/assets/img/dish-chaat.webp"
+                      src="/assets/img/scene-deep-frying.webp"
                       className="cover-image"
                     />
                   </div>
@@ -130,7 +130,7 @@ export default function PersonaCards() {
                       width="256"
                       loading="lazy"
                       alt=""
-                      src="/assets/img/dish-curry.webp"
+                      src="/assets/img/scene-heart-conscious.webp"
                       className="cover-image"
                     />
                   </div>
@@ -220,7 +220,7 @@ export default function PersonaCards() {
                     </div>
                   </a>
 
-                  <img src="/assets/img/dish-pulao.webp" alt="" className="design-swiper__image" />
+                  <img src="/assets/img/scene-everyday-meals.webp" alt="" className="design-swiper__image" />
                 </div>
               </div>
 
@@ -262,7 +262,7 @@ export default function PersonaCards() {
                     </div>
                   </a>
 
-                  <img src="/assets/img/dish-chaat.webp" alt="" className="design-swiper__image" />
+                  <img src="/assets/img/scene-deep-frying.webp" alt="" className="design-swiper__image" />
                 </div>
               </div>
 
@@ -304,7 +304,7 @@ export default function PersonaCards() {
                     </div>
                   </a>
 
-                  <img src="/assets/img/dish-curry.webp" alt="" className="design-swiper__image" />
+                  <img src="/assets/img/scene-heart-conscious.webp" alt="" className="design-swiper__image" />
                 </div>
               </div>
 

@@ -185,13 +185,13 @@ export default function BowlSlider() {
               <div className="bowl-indicators__left-inner is--active" data-custom-slider-indicator="left">
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/ing-sunflower.webp" alt="" />
+                    <img src="/assets/img/tag-low-wax.webp" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Low Wax</span>
                 </div>
                 <div className="bowl-indicators__tag">
                   <div className="bowl-indicators__tag-img">
-                    <img src="/assets/img/ing-sunflower.webp" alt="" />
+                    <img src="/assets/img/tag-cryo-filtered.webp" alt="" />
                   </div>
                   <span className="bowl-indicators__tag-text">Cryo Filtered</span>
                 </div>

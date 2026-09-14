@@ -3042,10 +3042,15 @@ html[data-loading] .loading-layer {
     align-content: end;
   }
 
+  /* The scenes are 16:9 but the portrait slide is square, so the image has to
+     cover rather than stretch. Biased right of centre to keep the bottle in
+     frame once the sides are cropped away. */
   .design .design-swiper__content .design-swiper__image {
     position: absolute;
     inset: 0;
     z-index: -1;
+    object-fit: cover;
+    object-position: 65% center;
   }
 
   .design .design-swiper__inner .design-swiper__content__h3 {
