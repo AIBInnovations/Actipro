@@ -3079,8 +3079,9 @@ html[data-loading] .loading-layer {
 
 .bowl .bowl-header__title {
   text-align: center;
+  font-size: min(5.6rem, 5.6vh);
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.06;
   grid-area: title;
   opacity: 0;
   transform: translateY(10px);
@@ -3089,13 +3090,9 @@ html[data-loading] .loading-layer {
     transform 1s var(--ease);
 }
 
-.bowl .bowl-header__title:nth-of-type(1) {
-  font-size: min(5rem, 5vh);
-}
-
-.bowl .bowl-header__title:nth-of-type(2) {
-  font-size: min(6rem, 6vh);
-}
+/* One size for all three. These were per-index when the section held two
+   dish names of very different lengths; the titles are uniform now, and a
+   third slide had no rule at all and fell back to the inherited size. */
 
 .bowl .bowl-header__title.is--active {
   opacity: 1;
