@@ -118,15 +118,28 @@ than done at runtime:
   have read as grey texture on the page. A levels lift to a 0.89 white point
   clips both tones to pure white, including where they showed through the clear
   container, so the product now sits on the page ground with no matte.
-- **A speed ramp**, not a flat rate: `setpts` remaps time along
-  `0.6t − (3.2/2π)·sin(2πt/8)`, giving 5× at the ends and 1× through the peak
-  where the food hangs in the air. Measured motion drops to about a third mid-clip.
+- **Motion-interpolated to 120fps first.** The source is 24fps, so a 60fps
+  output would either duplicate frames (judder in the slow section) or drop them
+  unevenly (judder in the fast ones). `minterpolate=mi_mode=mci:mc_mode=aobmc`
+  synthesises intermediate frames, and the final sequence then hits **every
+  output frame with a distinct source frame — zero duplicates across the loop.**
+- **A speed ramp**, not a flat rate. The remap is built numerically rather than
+  as a `setpts` expression, so the slow section has an exact duration: 4× through
+  the open and close, easing to 1.5× for a ~2s plateau while the food hangs in
+  the air. In dense-frame terms the output advances 8 interpolated frames per
+  output frame at the ends and 3 through the middle.
 - **Ping-pong**: forward, then the reverse with its duplicate turn frames
   dropped, so plain `loop` runs forward-and-back with no visible seam.
 
-The content is composed to sit clear of the headline (37.8%–91.9% of frame
-height in landscape, 53.8%–85.6% in portrait), because the video is full-bleed
-`object-fit: cover` behind the hero copy.
+Output is **60fps, 6.4s** per loop.
+
+The content is composed to sit clear of the headline (36.3%–88.9% of frame
+height in landscape, 45.8%–79.6% in portrait), because the video is full-bleed
+`object-fit: cover` behind the hero copy. **36.3% is the ceiling in landscape**:
+the lid rests at the top of its arc for the whole slow section, and the headline's
+second line occupies 29.5%–36.3%, so anything higher draws the lid straight
+through the type as a strikethrough. To raise the product further the copy block
+would have to move, not the video.
 
 There is **no chroma key any more.** The original hero footage was shot on black
 and `heroVideoKey.js` keyed it per frame onto a canvas; this product is on
