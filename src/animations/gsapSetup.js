@@ -10,6 +10,17 @@ import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 // uses them, so they are left out rather than shipped.
 gsap.registerPlugin(CustomEase, ScrollTrigger, Draggable, InertiaPlugin, Flip, MorphSVGPlugin);
 
+/*
+ * On phones the browser's own chrome (the URL bar) slides away as you scroll
+ * down and back in as you scroll up. That changes the viewport height, which
+ * fires a resize, which makes ScrollTrigger re-measure every trigger on the
+ * page mid-scroll - so the layout visibly jumps. `ignoreMobileResize` tells
+ * ScrollTrigger to skip a refresh when only the viewport HEIGHT changed on a
+ * touch device, which is exactly the browser-bar case. A real orientation
+ * change alters the width too, so those still refresh properly.
+ */
+ScrollTrigger.config({ ignoreMobileResize: true });
+
 CustomEase.create("EA-ease", "0.6, 0.08, 0.02, 0.99");
 CustomEase.create("EA-loader", "0.65, 0.01, 0.05, 0.99");
 
