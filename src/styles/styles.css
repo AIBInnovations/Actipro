@@ -86,6 +86,11 @@ li {
 
 body {
   background: var(--bg);
+  /* Nothing should ever scroll the page sideways. `clip` is the safe one - it
+     does not create a scroll container, so Lenis and position: sticky still
+     work; `hidden` above it is the fallback for Safari before 16. */
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* RESPONSIVE */
@@ -2616,8 +2621,7 @@ html[data-loading] .loading-layer {
 
 /* The card label is white; the dish cut-outs are bright, so the bottom of the
    media needs its own scrim to keep the text legible. */
-.flick-card__media::after,
-.design .design-swiper__inner::after {
+.flick-card__media::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -7249,9 +7253,8 @@ section[id],
     background: linear-gradient(to bottom, #0b0b0b 0%, #0b0b0b 46%, transparent 100%);
   }
 
-  /* Our Range and Purpose were stacking into a 2000px column. Swipe instead:
-     native scroll-snap, so it needs no JS and keeps momentum on iOS. */
-  .range .range-grid,
+  /* Purpose was stacking into a tall column. Swipe instead: native scroll-snap,
+     so it needs no JS and keeps momentum on iOS. (Range is a bento below.) */
   .purpose .purpose-grid {
     display: flex;
     grid-template-columns: none;
@@ -7267,28 +7270,21 @@ section[id],
     padding-block: 0.5rem;
   }
 
-  .range .range-grid::-webkit-scrollbar,
   .purpose .purpose-grid::-webkit-scrollbar {
     display: none;
   }
 
-  .range .range-grid,
   .purpose .purpose-grid {
     /* single flex line: let the cards define the height rather than being
        centred inside a taller one, which left dead space above them */
     align-items: stretch;
   }
 
-  .range .range-card,
   .purpose .purpose-panel {
     flex: 0 0 84%;
     scroll-snap-align: center;
     scroll-snap-stop: always;
     height: auto;
-  }
-
-  .range .range-card__media {
-    height: 20rem;
   }
 
   /* The header block had a large dead gap before the first card. */
@@ -7309,6 +7305,126 @@ section[id],
   .oilbot {
     transform: scale(0.85);
     transform-origin: left bottom;
+  }
+
+  /* Our Range as a bento on phones: two compact cards up top, one wide one
+     under them. The two small cards are ~165px across, which is too narrow for
+     the blurb and the full badge row, so they drop to the essentials and the
+     wide card carries the detail. */
+  .range .range-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.4rem;
+    overflow: visible;
+    margin-inline: 0;
+    padding-inline: 0;
+    padding-block: 0;
+    scroll-snap-type: none;
+  }
+
+  .range .range-card {
+    flex: none;
+    scroll-snap-align: none;
+  }
+
+  .range .range-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .range .range-card__media {
+    height: 15rem;
+  }
+
+  .range .range-card:last-child .range-card__media {
+    height: 19rem;
+  }
+
+  .range .range-card__body {
+    padding: 1.8rem 1.6rem 2rem;
+    gap: 0.9rem;
+  }
+
+  .range .range-card__use {
+    font-size: 1.05rem;
+    letter-spacing: 0.1em;
+  }
+
+  .range .range-card__h3 {
+    font-size: 1.9rem;
+  }
+
+  /* No room for prose at half width; the wide card keeps it. */
+  .range .range-card:not(:last-child) .range-card__p,
+  .range .range-card:not(:last-child) .range-card__process {
+    display: none;
+  }
+
+  /* One badge only: at ~165px wide a second one wraps to its own line on some
+     cards and not others, which is what made the pair look ragged. */
+  .range .range-card:not(:last-child) .range-badge:nth-child(n + 2) {
+    display: none;
+  }
+
+  /* Reserve two title lines and push the button to the floor, so the two cards
+     line up even when one title wraps and the other does not. */
+  .range .range-card:not(:last-child) .range-card__body {
+    height: 100%;
+  }
+
+  .range .range-card:not(:last-child) .range-card__h3 {
+    min-height: 4.6rem;
+  }
+
+  .range .range-card:not(:last-child) .range-card__use {
+    min-height: 2.6rem;
+  }
+
+  .range .range-card:not(:last-child) .cta-button {
+    margin-top: auto;
+  }
+
+  .range .range-card:last-child .range-card__p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .range .range-badge {
+    font-size: 1.1rem;
+    padding: 0.5rem 0.9rem;
+  }
+
+  /* Find Your Oil, portrait. The scrim has to sit above the photo (which is
+     z-index -1 inside the same box) but below the label, so it is a pseudo on
+     the content rather than on the wrapper - on the wrapper it painted over
+     the text and washed it out. */
+  .design .design-swiper__content::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background: linear-gradient(
+      to top,
+      rgba(28, 16, 9, 0.86) 0%,
+      rgba(28, 16, 9, 0.5) 34%,
+      rgba(28, 16, 9, 0.06) 66%
+    );
+  }
+
+  .design .design-swiper__content > *:not(.design-swiper__image) {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Pack a little smaller on phones, 40rem -> 32rem. Nothing else in this
+     section is touched: the header gap is what positions the title above the
+     chips, and changing it collides the two. */
+  .bowl .bowl-container .bowl-bounds .bowl-reference,
+  .bowl .bowl-container .bowl-bounds .bowl-reference-mock {
+    height: 32rem;
   }
 
   /* The assistant is viewport-fixed, so at full scroll it lands on whatever
