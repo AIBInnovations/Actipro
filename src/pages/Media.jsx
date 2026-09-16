@@ -11,54 +11,112 @@ import CtaButton from "../components/CtaButton.jsx";
  * than shipping an empty grid or placeholder tiles. Add entries and it appears.
  */
 
+/**
+ * The gallery is a bento: every tile declares its own footprint so the mosaic
+ * is deliberate rather than whatever auto-placement happens to do.
+ *
+ *   hero  2 cols x 2 rows      wide  2 cols x 1 row
+ *   tall  1 col  x 2 rows      (default) 1 x 1
+ *
+ * The order is chosen so the spans tile without leaving holes in the 2-column
+ * phone layout: a hero, then tall+small+small, then a wide band, and repeat.
+ *
+ * `fit: "contain"` is for the pack and dish cut-outs, which sit on transparent
+ * backgrounds and have to sit ON the peach ground rather than be cropped by it.
+ */
 const GALLERY = [
   {
-    src: "/assets/img/scene-everyday-meals.webp",
-    alt: "A brass thali of dal, sabzi, rice and roti beside Actipro Refined Sunflower Oil",
-    caption: "Everyday meals · Refined Sunflower Oil",
-    span: "wide",
-  },
-  {
-    src: "/assets/img/scene-deep-frying.webp",
-    alt: "Pakoras lifted from a kadhai on a jhara, with Actipro Refined Corn Oil alongside",
-    caption: "Deep frying · Refined Corn Oil",
-    span: "wide",
+    src: "/assets/img/life-festive-kitchen.webp",
+    alt: "A festive kitchen with the three Actipro packs on the counter",
+    caption: "Festival cooking, unchanged",
+    tile: "hero",
   },
   {
     src: "/assets/img/pack-sunflower-scene.webp",
     alt: "Actipro Refined Sunflower Oil pack with sunflowers and seeds",
     caption: "Refined Sunflower Oil",
+    tile: "tall",
+    fit: "contain",
   },
+  { src: "/assets/img/dish-chaat.webp", alt: "A bowl of sweet corn chaat", caption: "Sweet corn chaat", fit: "contain" },
+  { src: "/assets/img/dish-pulao.webp", alt: "A bowl of vegetable pulao", caption: "Vegetable pulao", fit: "contain" },
   {
-    src: "/assets/img/scene-heart-conscious.webp",
-    alt: "A bowl of vegetable khichdi beside Actipro Refined Rice Bran Oil",
-    caption: "Heart-conscious cooking · Refined Rice Bran Oil",
-    span: "wide",
+    src: "/assets/img/scene-everyday-meals.webp",
+    alt: "A brass thali of dal, sabzi, rice and roti beside Actipro Refined Sunflower Oil",
+    caption: "Everyday meals \u00b7 Refined Sunflower Oil",
+    tile: "wide",
   },
   {
     src: "/assets/img/pack-corn-scene.webp",
     alt: "Actipro Refined Corn Oil pack with corn cobs and kernels",
     caption: "Refined Corn Oil",
-  },
-  {
-    src: "/assets/img/pack-rice-bran-scene.webp",
-    alt: "Actipro Refined Rice Bran Oil pack with rice and bran",
-    caption: "Refined Rice Bran Oil",
-  },
-  {
-    src: "/assets/img/dish-chaat.webp",
-    alt: "A bowl of sweet corn chaat",
-    caption: "Sweet corn chaat",
-  },
-  {
-    src: "/assets/img/dish-pulao.webp",
-    alt: "A bowl of vegetable pulao",
-    caption: "Vegetable pulao",
+    tile: "tall",
+    fit: "contain",
   },
   {
     src: "/assets/img/dish-curry.webp",
     alt: "A bowl of mixed vegetable curry",
     caption: "Mixed vegetable curry",
+    fit: "contain",
+  },
+  {
+    src: "/assets/img/dish-fried-rice.webp",
+    alt: "A bowl of vegetable fried rice",
+    caption: "Vegetable fried rice",
+    fit: "contain",
+  },
+  {
+    src: "/assets/img/scene-deep-frying.webp",
+    alt: "Pakoras lifted from a kadhai on a jhara, with Actipro Refined Corn Oil alongside",
+    caption: "Deep frying \u00b7 Refined Corn Oil",
+    tile: "wide",
+  },
+  {
+    src: "/assets/img/pack-rice-bran-scene.webp",
+    alt: "Actipro Refined Rice Bran Oil pack with rice and bran",
+    caption: "Refined Rice Bran Oil",
+    tile: "tall",
+    fit: "contain",
+  },
+  {
+    src: "/assets/img/dish-curry-alt.webp",
+    alt: "A bowl of home-style curry",
+    caption: "Home-style curry",
+    fit: "contain",
+  },
+  {
+    src: "/assets/img/dish-corn-veg.webp",
+    alt: "A bowl of corn and mixed vegetables",
+    caption: "Corn and mixed vegetables",
+    fit: "contain",
+  },
+  {
+    src: "/assets/img/life-family-table.webp",
+    alt: "A family sharing a meal cooked with Actipro",
+    caption: "The everyday family table",
+    tile: "hero",
+  },
+  {
+    src: "/assets/img/life-cooking.webp",
+    alt: "A home cook serving a dish made with Actipro",
+    caption: "Sunday, the long way round",
+    tile: "tall",
+  },
+  {
+    src: "/assets/img/life-holding-pack.webp",
+    alt: "A home cook holding a pack of Actipro Lifestyle Oil",
+    caption: "Lifestyle Oil",
+  },
+  {
+    src: "/assets/img/range-grains.webp",
+    alt: "The three Actipro packs with sunflower seeds, wheat and grains",
+    caption: "The range",
+  },
+  {
+    src: "/assets/img/scene-heart-conscious.webp",
+    alt: "A bowl of vegetable khichdi beside Actipro Refined Rice Bran Oil",
+    caption: "Heart-conscious cooking \u00b7 Refined Rice Bran Oil",
+    tile: "wide",
   },
 ];
 
@@ -78,7 +136,10 @@ export default function Media() {
         <div className="page-inner">
           <ul className="gallery" data-reveal-group="">
             {GALLERY.map((item) => (
-              <li className={`gallery__item${item.span === "wide" ? " is--wide" : ""}`} key={item.src}>
+              <li
+                className={`gallery__item is--${item.tile ?? "small"}${item.fit === "contain" ? " is--contain" : ""}`}
+                key={item.src}
+              >
                 <figure className="gallery__figure">
                   <img loading="lazy" src={item.src} alt={item.alt} className="gallery__img" />
                   <figcaption className="gallery__caption">{item.caption}</figcaption>

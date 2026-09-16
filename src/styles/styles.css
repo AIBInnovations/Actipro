@@ -6706,21 +6706,34 @@ html[data-loading] .loading-layer {
 
 /* --- media gallery ------------------------------------------------------ */
 
+/* A bento rather than a uniform grid: each tile declares its own footprint in
+   the markup, so the mosaic is composed instead of being whatever
+   auto-placement produces. Rows are a fixed height, which is what lets tiles
+   of different spans line up with each other. */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 17rem;
   gap: 2.4rem;
   list-style: none;
 }
 
 .gallery__item {
   display: grid;
+  min-width: 0;
 }
 
-/* The kitchen scenes are 16:9; giving them two columns stops them being
-   letterboxed into a square next to the pack shots. */
+.gallery__item.is--hero {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
 .gallery__item.is--wide {
   grid-column: span 2;
+}
+
+.gallery__item.is--tall {
+  grid-row: span 2;
 }
 
 .gallery__figure {
@@ -6736,16 +6749,17 @@ html[data-loading] .loading-layer {
 .gallery__img {
   width: 100%;
   height: 100%;
-  min-height: 26rem;
   object-fit: cover;
   display: block;
 }
 
 /* The dish and pack cut-outs sit on transparent backgrounds, so they need
-   containing on the peach ground rather than cropping. */
-.gallery__item:not(.is--wide) .gallery__img {
+   containing on the peach ground rather than cropping. Driven by the tile's
+   own `fit` now, not by its span - a wide photograph and a wide cut-out want
+   opposite treatment. */
+.gallery__item.is--contain .gallery__img {
   object-fit: contain;
-  padding: 3rem;
+  padding: 2.4rem;
 }
 
 .gallery__caption {
@@ -7021,16 +7035,47 @@ html[data-loading] .loading-layer {
 }
 
 @media screen and (orientation: portrait) {
+  /* Two columns and a shorter row unit. The spans are kept - collapsing them
+     to one column is what turned this page into seventeen images stacked in a
+     line. The tile order in Media.jsx is chosen so these spans tile without
+     leaving holes at two columns. */
   .gallery {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 11rem;
+    gap: 1rem;
+  }
+
+  .gallery__item.is--hero {
+    grid-column: span 2;
+    grid-row: span 2;
   }
 
   .gallery__item.is--wide {
-    grid-column: span 1;
+    grid-column: span 2;
+    grid-row: span 1;
   }
 
-  .gallery__img {
-    min-height: 22rem;
+  .gallery__item.is--tall {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .gallery__figure {
+    border-radius: 1.4rem;
+  }
+
+  .gallery__item.is--contain .gallery__img {
+    padding: 1.2rem;
+  }
+
+  .gallery__caption {
+    padding: 2.4rem 1.2rem 1rem;
+  }
+
+  /* A 1x1 tile is about 160x100 here - room for the picture or the caption,
+     not both, and the picture is the point. */
+  .gallery__item.is--small .gallery__caption {
+    display: none;
   }
 
   .trio,
