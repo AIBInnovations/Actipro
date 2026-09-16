@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Master video source: 130MB, over GitHub's 100MB file limit. Kept locally
+# only; the compressed web cut lives in public/assets/videos/.
+brand/video-source/

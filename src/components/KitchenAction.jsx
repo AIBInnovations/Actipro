@@ -32,7 +32,6 @@ export default function KitchenAction() {
                       <div
                         className="vimeo-player"
                         data-vimeo-player-init=""
-                        data-vimeo-video-id="1129496694"
                         data-vimeo-autoplay="false"
                         data-vimeo-update-size="cover"
                         data-vimeo-playing="false"
@@ -44,19 +43,17 @@ export default function KitchenAction() {
                         data-vimeo-muted="true"
                       >
                         <div className="vimeo-player__before"></div>
-
-                        <iframe
-                          src="https://player.vimeo.com/video/1129496694?api=1&amp;background=1&amp;autoplay=0&amp;loop=0&amp;muted=1"
-                          width="640"
-                          height="360"
-                          frameBorder="0"
-                          allowFullScreen
-                          allow="autoplay; encrypted-media"
+                        <video
                           className="vimeo-player__iframe"
-                        ></iframe>
+                          src="/assets/videos/actipro-film.mp4"
+                          poster="/assets/img/film-poster.webp"
+                          preload="none"
+                          playsInline
+                          webkit-playsinline=""
+                        ></video>
 
                         <img
-                          src="/assets/img/pack-range.webp"
+                          src="/assets/img/film-poster.webp"
                           loading="lazy"
                           alt=""
                           className="vimeo-player__placeholder"
@@ -144,21 +141,21 @@ export default function KitchenAction() {
                           <div className="vimeo-player__interface-bottom">
                             <div className="vimeo-player__duration">
                               <span className="vimeo-player__duration-span" data-vimeo-duration="">
-                                0:29
+                                0:00
                               </span>
                             </div>
                             <div className="vimeo-player__timeline">
                               <progress
                                 className="vimeo-player__timeline-progress"
                                 min="0"
-                                max="29"
+                                max="36"
                                 value="0"
                               ></progress>
                               <input
                                 className="vimeo-player__timeline-input"
                                 type="range"
                                 min="0"
-                                max="29"
+                                max="36"
                                 step="0.01"
                                 data-vimeo-control="timeline"
                                 defaultValue="0"

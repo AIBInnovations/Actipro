@@ -10,7 +10,7 @@ import { CustomSwiper } from "./globalSwiper.js";
 import { FlickCards } from "./flickCards.js";
 import { Accordion } from "./accordion.js";
 import { CustomSlider } from "./customSlider.js";
-import { CustomVimeoPlayer } from "./customVimeoPlayer.js";
+import { LocalVideoPlayer } from "./localVideoPlayer.js";
 
 /**
  * Port of the reference `/js/pages/homepage.js` bootstrap.
@@ -43,7 +43,7 @@ export function initHomepage() {
     const accordion = new Accordion();
     const customSlider = new CustomSlider();
 
-    const vimeoPlayer = new CustomVimeoPlayer();
+    const filmPlayer = new LocalVideoPlayer();
     const homepageAnimations = new HomepageAnimations(lenis);
 
     // After HomepageAnimations: it measures the sections the other modules
@@ -91,7 +91,7 @@ export function initHomepage() {
     teardown = () => {
       adaptiveTheme.destroy();
       homepageAnimations.destroy();
-      vimeoPlayer.destroy();
+      filmPlayer.destroy();
       customSlider.destroy();
       accordion.destroy();
       flickCards.destroy();
