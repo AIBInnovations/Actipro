@@ -3,7 +3,7 @@ import CtaButton from "../components/CtaButton.jsx";
 
 /**
  * 404. The nav still links to routes that haven't been built yet (Find Your
- * Oil, Media, Gifting, FAQs), so this page will be seen - it points somewhere
+ * Oil, Gifting, FAQs), so this page will be seen - it points somewhere
  * useful rather than apologising.
  */
 export default function NotFound() {

@@ -36,7 +36,6 @@ export const ROUTES = [
   { path: "/find-your-oil", priority: "0.8", changefreq: "yearly" },
   { path: "/about-us", priority: "0.7", changefreq: "yearly" },
   { path: "/gifting", priority: "0.6", changefreq: "yearly" },
-  { path: "/media", priority: "0.6", changefreq: "monthly" },
   { path: "/faqs", priority: "0.6", changefreq: "monthly" },
   { path: "/contact-us", priority: "0.6", changefreq: "yearly" },
   { path: "/terms", priority: "0.2", changefreq: "yearly" },

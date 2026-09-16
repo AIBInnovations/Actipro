@@ -196,19 +196,6 @@ export default function Navbar() {
           </ul>
 
           <ul className="navbar-menu__block">
-            <li className="navbar-menu__block-li" data-active="media">
-              <a href="/media" className="navbar-menu__block-link">
-                <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                  ></path>
-                </svg>
-
-                <span className="navbar-menu__block-span">Media</span>
-              </a>
-            </li>
 
             <li className="navbar-menu__block-li" data-active="gifting">
               <a href="/gifting" className="navbar-menu__block-link">
@@ -397,19 +384,6 @@ export default function Navbar() {
               </a>
             </li>
 
-            <li className="navbar-menu__block-li" data-active="media">
-              <a href="/media" className="navbar-menu__block-link" data-is-customer-mobile="">
-                <svg width="100%" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M31.7099 35.3664C30.1067 33.7631 29.3486 29.7331 28.9952 26.0677C28.5316 21.3457 28.8137 16.5391 30.0043 11.8957C30.8973 8.41424 32.3063 4.52041 34.44 2.38676M34.44 2.38676C32.3063 4.52041 28.4103 5.93169 24.931 6.82242C20.2855 8.01091 15.4789 8.29298 10.7612 7.83367C7.0936 7.47811 3.05929 6.7157 1.46039 5.1168M34.44 2.38676L2.87522 33.9515"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                  ></path>
-                </svg>
-
-                <span className="navbar-menu__block-span">Media</span>
-              </a>
-            </li>
 
             <li className="navbar-menu__block-li" data-active="gifting">
               <a href="/gifting" className="navbar-menu__block-link">

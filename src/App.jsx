@@ -8,7 +8,6 @@ import ProductDetail from "./pages/ProductDetail.jsx";
 import Process from "./pages/Process.jsx";
 import Contact from "./pages/Contact.jsx";
 import FindYourOil from "./pages/FindYourOil.jsx";
-import Media from "./pages/Media.jsx";
 import Gifting from "./pages/Gifting.jsx";
 import Faqs from "./pages/Faqs.jsx";
 import Terms from "./pages/Terms.jsx";
@@ -100,7 +99,6 @@ export default function App() {
         <Route path="/the-process" element={<Process />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/find-your-oil" element={<FindYourOil />} />
-        <Route path="/media" element={<Media />} />
         <Route path="/gifting" element={<Gifting />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/terms" element={<Terms />} />
