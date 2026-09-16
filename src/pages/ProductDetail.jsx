@@ -72,6 +72,15 @@ export default function ProductDetail() {
             <p className="section-head__p">{variant.process}, in three steps.</p>
           </div>
 
+          <figure className="figure is--wide" data-reveal="">
+            <img
+              loading="lazy"
+              src={variant.scene}
+              alt={`${variant.name} being used to cook`}
+              className="figure__img"
+            />
+          </figure>
+
           <ol className="step-grid" data-reveal-group="">
             {variant.steps.map((s) => (
               <li className="step-card" key={s.n}>
@@ -99,6 +108,22 @@ export default function ProductDetail() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section className="page-section is--flush-top">
+        <div className="page-inner">
+          <figure className="figure is--wide" data-reveal="">
+            <img
+              loading="lazy"
+              src="/assets/img/life-family-table.webp"
+              alt="A family sharing a meal cooked with Actipro"
+              width="1400"
+              height="788"
+              className="figure__img"
+            />
+            <figcaption className="figure__cap">The everyday table this is actually for.</figcaption>
+          </figure>
         </div>
       </section>
 

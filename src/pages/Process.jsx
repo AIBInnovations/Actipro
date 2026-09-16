@@ -22,6 +22,17 @@ export default function Process() {
             Sunflower, corn and rice bran are different oils with different natural properties, so each one gets
             refined the way it needs to be refined, not the way that's easiest for us.
           </p>
+
+          <figure className="figure is--wide" data-reveal="">
+            <img
+              src="/assets/img/range-ingredients-hero.webp"
+              alt="The three Actipro packs with the sunflower seeds, corn and rice bran they are refined from"
+              width="1400"
+              height="788"
+              className="figure__img"
+            />
+            <figcaption className="figure__cap">Three raw materials. Three different problems to solve.</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -39,6 +50,15 @@ export default function Process() {
             <p className="process-block__lede" data-reveal="">
               {v.processLede}
             </p>
+
+            <figure className="figure is--wide" data-reveal="">
+              <img
+                loading="lazy"
+                src={v.scene}
+                alt={`${v.name} in use`}
+                className="figure__img"
+              />
+            </figure>
 
             <ol className="step-grid" data-reveal-group="">
               {v.steps.map((s) => (
@@ -82,6 +102,17 @@ export default function Process() {
               details. We're not asking you to trust a label, we're giving you a way to verify it.
             </p>
           </div>
+
+          <figure className="figure is--wide" data-reveal="">
+            <img
+              loading="lazy"
+              src="/assets/img/life-kitchen-spread.webp"
+              alt="The three Actipro packs on a kitchen counter beside a finished meal"
+              width="1400"
+              height="788"
+              className="figure__img"
+            />
+          </figure>
 
           <div className="page-actions" data-reveal="">
             <CtaButton to="/products" label="See the range" />

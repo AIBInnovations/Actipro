@@ -184,6 +184,22 @@ export default function Faqs() {
           </div>
         </div>
       </section>
+      <section className="page-section is--tinted">
+        <div className="page-inner">
+          <figure className="figure is--wide" data-reveal="">
+            <img
+              loading="lazy"
+              src="/assets/img/range-grains.webp"
+              alt="The three Actipro packs with sunflower seeds, wheat and grains"
+              width="900"
+              height="1125"
+              className="figure__img"
+            />
+            <figcaption className="figure__cap">Still not sure which one? The Oil Bot will pick for you.</figcaption>
+          </figure>
+        </div>
+      </section>
+
     </PageShell>
   );
 }

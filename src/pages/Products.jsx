@@ -82,6 +82,22 @@ export default function Products() {
         </div>
       </section>
 
+      <section className="page-section is--flush-top">
+        <div className="page-inner">
+          <figure className="figure is--wide" data-reveal="">
+            <img
+              loading="lazy"
+              src="/assets/img/life-couple-cooking.webp"
+              alt="Two people cooking together with the Actipro range on the counter"
+              width="1400"
+              height="788"
+              className="figure__img"
+            />
+            <figcaption className="figure__cap">One range, whatever is on the stove.</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section className="page-section is--tinted">
         <div className="page-inner">
           <div className="section-head" data-reveal="">

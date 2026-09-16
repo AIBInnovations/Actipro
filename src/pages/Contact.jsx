@@ -189,6 +189,22 @@ export default function Contact() {
           </aside>
         </div>
       </section>
+      <section className="page-section is--tinted">
+        <div className="page-inner">
+          <figure className="figure is--wide" data-reveal="">
+            <img
+              loading="lazy"
+              src="/assets/img/life-festive-kitchen.webp"
+              alt="An Actipro kitchen during a festival"
+              width="1400"
+              height="788"
+              className="figure__img"
+            />
+            <figcaption className="figure__cap">Made in Indore, cooked with everywhere.</figcaption>
+          </figure>
+        </div>
+      </section>
+
     </PageShell>
   );
 }
