@@ -32,7 +32,7 @@ export default function KitchenAction() {
                       <div
                         className="vimeo-player"
                         data-vimeo-player-init=""
-                        data-vimeo-autoplay="false"
+                        data-vimeo-autoplay="true"
                         data-vimeo-update-size="cover"
                         data-vimeo-playing="false"
                         data-vimeo-activated="false"
@@ -47,7 +47,7 @@ export default function KitchenAction() {
                           className="vimeo-player__iframe"
                           src="/assets/videos/actipro-film.mp4"
                           poster="/assets/img/film-poster.webp"
-                          preload="none"
+                          preload="metadata"
                           playsInline
                           webkit-playsinline=""
                         ></video>

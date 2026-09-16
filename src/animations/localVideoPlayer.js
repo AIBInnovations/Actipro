@@ -107,6 +107,7 @@ export class LocalVideoPlayer {
       this.listen(playBtn, "click", () => {
         // Honour the mute button rather than always starting silent.
         video.muted = root.getAttribute("data-vimeo-muted") === "true";
+        root.setAttribute("data-vimeo-paused-by-user", "false");
         play();
       });
     }
@@ -201,15 +202,40 @@ export class LocalVideoPlayer {
     });
     this.cleanups.push(() => clearTimeout(hoverTimer));
 
-    if (autoplay && root.getAttribute("data-vimeo-paused-by-user") === "false") {
-      const checkVisibility = () => {
-        const rect = root.getBoundingClientRect();
-        const inView = rect.top < window.innerHeight && rect.bottom > 0;
-        if (inView) play();
-        else pause();
-      };
-      checkVisibility();
-      this.listen(window, "scroll", checkVisibility, { passive: true });
+    if (autoplay) {
+      /*
+       * Play while the player is in the middle of the screen, pause once it
+       * leaves. Two details worth keeping:
+       *
+       * IntersectionObserver rather than a scroll listener. The page runs
+       * Lenis smooth scroll and a Flip timeline moves this element between an
+       * inline slot and the full-bleed `.showreel` one, so a scroll handler
+       * both fires far more often than needed and misses the moves that are
+       * not scrolls.
+       *
+       * A negative rootMargin rather than a threshold. `threshold` is a
+       * fraction of the TARGET, and once this element goes full-bleed it is
+       * taller than the viewport - so a 0.6 threshold could never be met. The
+       * -25% inset instead asks "does it overlap the middle half of the
+       * screen", which behaves the same at either size.
+       */
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              pause();
+              return;
+            }
+            // Someone who pressed pause stays paused until they press play.
+            if (root.getAttribute("data-vimeo-paused-by-user") === "true") return;
+            play();
+          });
+        },
+        { root: null, rootMargin: "-25% 0px -25% 0px", threshold: 0 },
+      );
+
+      observer.observe(root);
+      this.cleanups.push(() => observer.disconnect());
     }
   }
 
