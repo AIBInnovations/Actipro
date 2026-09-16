@@ -7295,10 +7295,96 @@ section[id],
     gap: 3.4rem;
   }
 
-  /* These sit behind the closing headline and were landing on top of the
-     type at phone width, where there is no room either side of it. */
-  .join .join-floating {
-    display: none;
+  /* The floating ingredients were hidden here because they were painting over
+     the closing headline, which left the band they occupy as empty white.
+     Two fixes instead of hiding them:
+
+     1. Paint order. .join-floating carries z-index 1 and comes after the copy
+        in the DOM, so it sat on top. Lifting the copy above it puts them
+        behind the type, which is the desktop reading.
+     2. Spread. On desktop they run the full width of the section (x 3.7% to
+        94.1%) and range from 46px to 246px; the portrait rules had squashed
+        them into a narrow cluster. The positions below are those desktop
+        proportions re-projected onto the ~43rem phone canvas.
+
+     The lowest float ends at 16.4rem and the copy starts at the section's
+     existing 19.5rem top inset, so nothing is touched and the spacing of this
+     section is exactly as it was - the band is just no longer blank. */
+  .join .join-container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .join .join-floating__img {
+    right: auto;
+  }
+
+  .join .join-floating__img.is--1 {
+    width: 5.5rem;
+    height: 5.5rem;
+    top: 6.3rem;
+    left: 1.6rem;
+  }
+  .join .join-floating__img.is--2 {
+    width: 5.3rem;
+    height: 5.3rem;
+    top: 3.2rem;
+    left: 5.4rem;
+  }
+  .join .join-floating__img.is--3 {
+    width: 8rem;
+    height: 8rem;
+    top: 8.4rem;
+    left: 4.6rem;
+  }
+  .join .join-floating__img.is--4 {
+    width: 2.2rem;
+    height: 2.2rem;
+    top: 8.4rem;
+    left: 10.1rem;
+  }
+  .join .join-floating__img.is--5 {
+    width: 4rem;
+    height: 4rem;
+    top: 3.8rem;
+    left: 14rem;
+  }
+  .join .join-floating__img.is--6 {
+    width: 10.4rem;
+    height: 4.75rem;
+    top: 0;
+    left: 17.3rem;
+  }
+  .join .join-floating__img.is--7 {
+    width: 3.4rem;
+    height: 3.4rem;
+    top: 2.1rem;
+    left: 23.4rem;
+  }
+  .join .join-floating__img.is--8 {
+    width: 2.6rem;
+    height: 2.6rem;
+    top: 4rem;
+    left: 28.1rem;
+  }
+  .join .join-floating__img.is--9 {
+    width: 8.3rem;
+    height: 11.8rem;
+    top: 1.5rem;
+    left: 33.9rem;
+  }
+  .join .join-floating__img.is--10 {
+    width: 9.6rem;
+    height: 5.9rem;
+    top: 9.5rem;
+    left: 32.5rem;
+  }
+  .join .join-floating__img.is--11 {
+    display: block;
+    width: 2.2rem;
+    height: 2.2rem;
+    top: 8.4rem;
+    left: 39.1rem;
   }
 
   /* Keep the assistant clear of the copy it was covering. */
