@@ -7557,3 +7557,156 @@ section[id],
     padding-bottom: 9rem;
   }
 }
+
+/* ===========================================================================
+   FIGURES, STAT STRIP AND PHOTO RAIL
+
+   Added for the internal pages, which were columns of text with nothing to
+   look at - four screens of scrolling on a phone. These are the three blocks
+   that break that up: a framed image, a compact run of facts, and a rail that
+   is swiped sideways instead of scrolled past.
+   =========================================================================== */
+.figure {
+  margin: 0;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.figure__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2rem;
+  object-fit: cover;
+  /* Holds the space before the file arrives, so nothing below it jumps. */
+  background: var(--bg-elevated);
+}
+
+.figure.is--portrait .figure__img {
+  aspect-ratio: 4 / 5;
+}
+
+.figure.is--wide .figure__img {
+  aspect-ratio: 16 / 9;
+}
+
+.figure__cap {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: var(--fg-subtle);
+}
+
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stat {
+  display: grid;
+  align-content: start;
+  gap: 0.6rem;
+  padding: 2.4rem;
+  border-radius: 1.6rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.stat__n {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat__l {
+  font-size: 1.4rem;
+  line-height: 1.35;
+  color: var(--fg-muted);
+}
+
+.photo-rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding-inline: 19rem;
+}
+
+.photo-rail__item {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.photo-rail__img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 1.6rem;
+  background: var(--bg-elevated);
+}
+
+.photo-rail__cap {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: var(--fg-subtle);
+}
+
+/* The opening figure sits directly under the page head, which already carries
+   its own bottom spacing. */
+.page-section.is--flush-top {
+  padding-top: 0;
+}
+
+@media screen and (orientation: portrait) {
+  /* Taller crops on a phone: a 16/9 band is only ~190px on a 390px screen,
+     which is too short to read as a photograph. */
+  .figure.is--portrait .figure__img {
+    aspect-ratio: 3 / 4;
+  }
+
+  .figure.is--wide .figure__img {
+    aspect-ratio: 3 / 2;
+  }
+
+  .stat-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .stat {
+    padding: 1.8rem 1.6rem;
+  }
+
+  .stat__n {
+    font-size: 2.8rem;
+  }
+
+  /* The rail turns into a swipe. It keeps its own padding rather than sitting
+     inside .page-inner so the cards can run past the edge of the screen,
+     which is the thing that tells you it moves sideways. */
+  .photo-rail {
+    grid-auto-columns: 74%;
+    gap: 1.4rem;
+    padding-inline: 3rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .photo-rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .photo-rail__item {
+    scroll-snap-align: start;
+  }
+}
