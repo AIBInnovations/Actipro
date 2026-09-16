@@ -2421,14 +2421,19 @@ html[data-loading] .loading-layer {
     opacity: 0.78;
   }
 
+  /* These sit in the `1fr` track of .goals-swiper-slide__info, so without an
+     alignment they stack against the step list and leave the right of the card
+     empty. Push them to the end of the track and centre them on the list. */
   .goals-swiper-container .goals-swiper-slide__images {
     display: flex;
     gap: 0.8rem;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   .goals-swiper-container .goals-swiper-slide__images img {
-    width: 6rem;
-    height: 6rem;
+    width: 7rem;
+    height: 7rem;
     flex-shrink: 0;
     border-radius: 1rem;
   }
