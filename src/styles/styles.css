@@ -7427,6 +7427,30 @@ section[id],
     height: 32rem;
   }
 
+  /* The six chips hang off .bowl-indicators, which is anchored to the BOTTOM
+     of .bowl-bounds - so the top row lands wherever the 50rem box reaches up
+     to, and on the three-line titles ("Refined Sunflower Oil with Advanced
+     Dewaxing Technology") the top chip sat on the last line. Pushing this one
+     translate down moves all six together and keeps their stagger intact. */
+  .bowl .bowl-container .bowl-bounds .bowl-indicators {
+    transform: translate(-50%, 23%);
+  }
+
+  /* The pack then has to follow, or it is no longer in the middle of the ring.
+     `top` on the already-relative element, not the .bowl-center gap: the gap is
+     what holds the title clear of the pack, and moving it collides the two. */
+  .bowl .bowl-container .bowl-bounds .bowl-reference,
+  .bowl .bowl-container .bowl-bounds .bowl-reference-mock {
+    position: relative;
+    top: 2.6rem;
+  }
+
+  /* Purely room underneath, so the lowered bottom row is not cut off by the
+     next section. Nothing inside the section moves because of this. */
+  .bowl .bowl-container {
+    padding-bottom: 14rem;
+  }
+
   /* The assistant is viewport-fixed, so at full scroll it lands on whatever
      is in the bottom corner - which was the last footer links. Give the
      footer room so nothing important ends up underneath it. */
