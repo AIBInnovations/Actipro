@@ -7661,3 +7661,97 @@ section[id],
     scroll-snap-align: start;
   }
 }
+
+/* ========== JOIN FLOATS, PORTRAIT: AROUND THE HEADLINE ========== */
+/* The floats used to sit in a band above the closing copy, so on a phone they
+   read as a separate strip rather than framing "Ready To Upgrade Your
+   Everyday?". They now ring the header block instead: a top arc over the
+   eyebrow, two small accents at the edges of the headline, and a bottom arc
+   either side of the button.
+
+   Measured header geometry at 390px with the padding below (rem, from the
+   section top): eyebrow 15.5-17.9, headline 19.9-29.9 (x 3-40), paragraph
+   31.9-35, button 37-41.2 (x 13-30), cards from 50.7. Floats stay behind the
+   copy (.join-container is lifted to z-index 2 earlier), and everything on the
+   headline rows is kept to the ~3rem side margins so no glyph is covered.
+
+   `left` is a percentage of the 43rem phone canvas rather than rem, because
+   the copy is centred: in rem the ring stayed pinned left on a tablet and a
+   float landed on the button. */
+@media (orientation: portrait) {
+  .join {
+    padding-top: 15.5rem;
+  }
+
+  /* top arc */
+  .join .join-floating__img.is--6 {
+    width: 10.4rem;
+    height: 4.8rem;
+    top: 9.5rem;
+    left: 4.7%;
+  }
+  .join .join-floating__img.is--5 {
+    width: 4rem;
+    height: 4rem;
+    top: 13.2rem;
+    left: 25.1%;
+  }
+  .join .join-floating__img.is--7 {
+    width: 3.6rem;
+    height: 3.6rem;
+    top: 9rem;
+    left: 67.0%;
+  }
+  .join .join-floating__img.is--9 {
+    width: 7.5rem;
+    height: 7.5rem;
+    top: 8.2rem;
+    left: 78.6%;
+  }
+
+  /* flanking the headline, inside the side margins */
+  .join .join-floating__img.is--4 {
+    width: 2.4rem;
+    height: 2.4rem;
+    top: 21rem;
+    left: 0.9%;
+  }
+  .join .join-floating__img.is--8 {
+    width: 2.8rem;
+    height: 2.8rem;
+    top: 24.5rem;
+    left: 93.0%;
+  }
+
+  /* bottom arc, either side of the button */
+  .join .join-floating__img.is--1 {
+    width: 5.5rem;
+    height: 5.5rem;
+    top: 35.4rem;
+    left: 5.6%;
+  }
+  .join .join-floating__img.is--10 {
+    width: 8rem;
+    height: 5.5rem;
+    top: 35.4rem;
+    left: 76.7%;
+  }
+  .join .join-floating__img.is--2 {
+    width: 5rem;
+    height: 5rem;
+    top: 41.6rem;
+    left: 17.7%;
+  }
+  .join .join-floating__img.is--3 {
+    width: 7.5rem;
+    height: 7.5rem;
+    top: 42rem;
+    left: 70.7%;
+  }
+  .join .join-floating__img.is--11 {
+    width: 2.4rem;
+    height: 2.4rem;
+    top: 44rem;
+    left: 47.2%;
+  }
+}
