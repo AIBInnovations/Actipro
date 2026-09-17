@@ -13,7 +13,6 @@ dist-ssr
 *.local
 
 # Editor directories and files
-.vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
@@ -26,3 +25,4 @@ dist-ssr
 # Master video source: 130MB, over GitHub's 100MB file limit. Kept locally
 # only; the compressed web cut lives in public/assets/videos/.
 brand/video-source/
+config.bat
